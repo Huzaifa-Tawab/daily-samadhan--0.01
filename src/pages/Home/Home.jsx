@@ -4,6 +4,7 @@ import './home.css'
 import img1 from '../../assets/home-img.jpg';
 import Portals from '../../components/Complaint Portals/Portals';
 import Services from '../../components/services/Services';
+import Footer from '../../components/Footer/Footer';
 function Home() {
 return (
     <div className="Home">
@@ -18,6 +19,8 @@ return (
         <Portals/>
         {/* Services */}
         <Services/>
+        {/* Footer */}
+        <Footer/>
     </div>
 )
 }

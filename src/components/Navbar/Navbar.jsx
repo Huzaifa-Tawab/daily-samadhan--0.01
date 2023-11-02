@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { FaBeer, FaHamburger, FaMailBulk, FaPhone, FaPhoneAlt, FaVoicemail } from 'react-icons/fa';
+import {  FaHamburger, FaMailBulk,  FaPhoneAlt,  } from 'react-icons/fa';
 import './navbar.css'
 import logo from '../../assets/logo.png'
 
