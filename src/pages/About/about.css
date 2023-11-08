@@ -1,0 +1,55 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+
+
+.About{
+    padding: 0px 5vw;
+ 
+    font-family: 'Abril Fatface', serif;
+font-weight: 400;
+font-size: 24px;
+}
+.About span{
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 800;
+    font-size: 40px;
+}
+.About-hero{
+    text-align: center;
+}
+.About-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.About-flex img{
+    height: 100vh;
+}
+.About-flex-content{
+
+    text-align: center;
+    padding: 20px;
+   background-color:  #9EF1B099;
+   width: 30vw;
+}
+.About-services{
+    text-align: center;
+}
+.About-services-flex{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.About-services-card{
+    width: 20vw;
+    padding: 20px;
+    border: 1px solid #E8ED07;
+}
+.About-why-us{
+    width: 100%;
+    height: 100vh;
+}
+.About-why-us img{
+    width: 100%;
+    height: 100vh;
+}

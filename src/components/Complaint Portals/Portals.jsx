@@ -11,6 +11,11 @@ function Portals() {
         <div class="Portal-content-card"></div>
         <div class="Portal-content-card"></div>
         <div class="Portal-content-card"></div>
+        <div class="Portal-content-card"></div>
+        <div class="Portal-content-card"></div>
+        <div class="Portal-content-card"></div>
+        <div class="Portal-content-card"></div>
+        <div class="Portal-content-card"></div>
        
     
       </div>
