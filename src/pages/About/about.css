@@ -3,7 +3,8 @@
 
 
 .About{
-    padding: 0px 5vw;
+    padding: 0px 0vw;
+    background: #FFFCFC;
  
     font-family: 'Abril Fatface', serif;
 font-weight: 400;
@@ -17,30 +18,39 @@ font-size: 24px;
 .About-hero{
     text-align: center;
 }
+.About-hero h1{
+    font-size: 4vw;
+}
+.About-hero img{
+    width: 70vw;
+}
 .About-flex{
+    margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 .About-flex img{
     height: 100vh;
 }
 .About-flex-content{
-
+    font-size: 2vw;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
    background-color:  #9EF1B099;
    width: 30vw;
 }
 .About-services{
     text-align: center;
+    font-size: 1.8vw;
 }
 .About-services-flex{
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .About-services-card{
+    background: #FFF9F9;
     width: 20vw;
     padding: 20px;
     border: 1px solid #E8ED07;
@@ -52,4 +62,63 @@ font-size: 24px;
 .About-why-us img{
     width: 100%;
     height: 100vh;
+}
+.Why-choose{
+    width: 90vw;
+    background: #f3aa3a;
+    margin: 50px 5vw;
+    display: flex;
+    justify-content:space-evenly;
+}
+.typography{
+    width: 30vw;
+    padding: 40px 0;
+}
+.typography h1{
+    font-size: 4vw;
+    margin-bottom: 25px;
+}
+.typography p{
+    font-size: 1.5vw;
+}
+.question-marks img{
+   height: 100vh;
+   padding: 30px 0px;
+}
+.About-starting{
+    text-align: center;
+    margin-top: 50px;
+}
+.About-starting h1{
+    font-size: 4vw;
+}
+.About-starting-box{
+    background: #fff;
+    margin: 0 10vw;
+    width: 80vw;
+    margin-top: 30px;
+    border: 2px solid #E8ED07;
+}
+.About-starting-box p{
+    padding: 20px 0;
+    font-size: 1.5vw;
+}
+@media only screen and (max-width: 600px) {
+    .About-flex img{
+        height: 100%;
+    }
+    .About-flex-content{
+        width: 70%;
+    }
+    .About-flex{
+        flex-direction: column;
+    }
+    .About-services-flex{
+        align-items: center;
+        flex-direction: column;
+    }
+    .About-services-card{
+        width: 70%;
+        margin: 20px;
+    }
 }
