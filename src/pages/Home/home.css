@@ -3,6 +3,7 @@
 }
 .Home-main{
 height: 85vh;
+/* width: 100; */
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -13,12 +14,12 @@ font-size: 5rem;
 font-weight: 700;
 }
 .Home-main span{
-    color: #E8ED07E5;
+    color: #31A049;
 }
 
 .Home-main-img{
-    height: 500px;
-    width: 500px;
+    /* height: 500px;
+    width: 500px; */
 }
 @media (max-width: 768px) {
     .Home-main p{

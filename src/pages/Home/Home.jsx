@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import './home.css'
-import img1 from '../../assets/home-img.jpg';
+import img1 from '../../assets/home-img.png';
 import Portals from '../../components/Complaint Portals/Portals';
 import Services from '../../components/services/Services';
 import Footer from '../../components/Footer/Footer';
