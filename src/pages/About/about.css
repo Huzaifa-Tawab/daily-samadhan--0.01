@@ -37,7 +37,7 @@ font-size: 24px;
     font-size: 2vw;
     text-align: center;
     padding: 30px;
-   background-color:  #9EF1B099;
+   background-color:  rgba(67, 221, 100, 0.80);;
    width: 30vw;
 }
 .About-services{
@@ -50,10 +50,16 @@ font-size: 24px;
     justify-content: space-evenly;
 }
 .About-services-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: #FFF9F9;
     width: 20vw;
     padding: 20px;
-    border: 1px solid #E8ED07;
+    font-size: 1.3rem;
+    line-height: 30px;
+    line-break: anywhere;
+    border: 2px solid rgba(67, 221, 100, 0.80);;
 }
 .About-why-us{
     width: 100%;
@@ -65,7 +71,7 @@ font-size: 24px;
 }
 .Why-choose{
     width: 90vw;
-    background: #f3aa3a;
+    background: rgba(67, 221, 100, 0.80);
     margin: 50px 5vw;
     display: flex;
     justify-content:space-evenly;
@@ -97,7 +103,10 @@ font-size: 24px;
     margin: 0 10vw;
     width: 80vw;
     margin-top: 30px;
-    border: 2px solid #E8ED07;
+    line-height: 30px;
+    border: 10px solid rgba(67, 221, 100, 0.80);
+
+    ;
 }
 .About-starting-box p{
     padding: 20px 0;

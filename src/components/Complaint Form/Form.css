@@ -1,0 +1,155 @@
+.Form-main{
+    display: flex;
+    padding: 5%;
+    justify-content: space-evenly;
+}
+.Form-main> h1{
+    font-size: 6rem;
+    color: #43DD64;
+    line-height: 100px;
+    padding: 7%;
+}
+.form-fields{
+    border: 1px solid #0C0B4B;
+    text-align: center;
+    padding: 3%;
+    background: #FFF8F2;
+    width: 40%;
+}
+.form-fields> h3{
+    margin-bottom: 20px;
+}
+.form-name{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.form-name> input{
+    width: 70%;
+    height: 20px;
+}
+.form-email{
+    margin: 20px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.form-email> input{
+    width: 70%;
+    height: 20px;
+}
+.form-number{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.form-number>span{
+    margin-left: -30px;
+}
+.form-number> input{
+    width: 70%;
+    margin-right: 2px;
+    height: 20px;
+}
+.form-state{
+    margin: 20px;
+    
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.form-state> input{
+    width: 70%;
+    height: 20px;
+}
+.form-dispute{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-dispute> select{
+    margin: 10px;
+    width: 100%;
+    height: 30px;
+}
+.form-checkbox> span{
+    padding: 5px;
+    font-size: 10px;
+}
+.form-checkbox{
+    text-align: start;
+}
+.Form-main> button{
+    margin: 20px;
+}
+/* {City-potal} */
+.city-portal {
+    display: block;
+    text-align: center;
+    padding: 0px 5vw;
+}
+.city-Portal-card {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height:150px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+    transition: 100ms linear;
+}
+.city-Portal-card:hover{
+    background-color: #bef0c9;
+transform: scale(1.01);
+cursor: pointer;
+}
+
+.city-Portal-card p{
+color: #31A049;
+/* text-align: center; */
+font-family: Arimo Hebrew Subset;
+font-size: 1.1rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-top: 60px;
+
+}
+.city-Portal-card img{
+    height: 150px;
+    width: 150px;
+}
+/* File complaint Fields */
+.file-complaint-fields{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+.complain-file{
+    background: #31A049;
+    width: 35%;
+    padding: 2%;
+    font-size: 1.5rem;
+    color: #0C0B4B;
+    font-weight: 600;
+}
+.complain-file a{
+    color: #0C0B4B;
+}
+.not-city{
+    color: #31A049;
+    background: #0C0B4B;
+    width: 35%;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}

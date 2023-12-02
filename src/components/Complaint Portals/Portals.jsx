@@ -15,7 +15,7 @@ import Frame44 from '../../assets/portals/Frame 44.jpg'
 function Portals() {
   return (
     <div className="Portal">
-    <p>Online <span>Complaint Portals</span></p>
+    <p>Online <span style={{color:"#31A049"}}>Complaint Portals</span></p>
     <div id="Portal-content">
     <div class="Portal-content-card">
       <div className="con">
@@ -69,7 +69,9 @@ function Portals() {
         <div class="Portal-content-card">
       <div className="con">
       <img src={police}/>
+      <a href="/form">
           <p>Police Complaint</p>
+          </a>
       </div>
         </div>
         

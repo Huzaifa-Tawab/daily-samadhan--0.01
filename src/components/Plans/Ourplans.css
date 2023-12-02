@@ -1,0 +1,69 @@
+.Ourplans{
+    align-items: center;
+}
+.Ourplans p{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 5vh;
+    margin-top:  5vh;
+}
+.Complaint-Service> h5{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.Assistance-Service> h5{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.Assistance-Service> h3{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.Complaint-Service> h3{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.Expert-Cons> h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.Expert-Cons> h4{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.Ourplans span{
+        color: #31A049;
+}
+.plans-services{
+    /* width: 80%; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.Assistance-Service{
+    border:3px solid #31A049;
+    width: 30%;
+    padding: 2%;
+}
+.Complaint-Service{
+    border:3px solid #31A049;
+    width: 30%;
+    padding: 2%;
+    
+}
+.Expert-Cons{
+    align-items: center;
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 20%;
+    border: 3px solid #31A049;
+    padding: 2%;
+}
+.check{
+    display: flex;
+    
+}

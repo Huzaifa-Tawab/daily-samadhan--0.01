@@ -8,6 +8,10 @@ import Whyus from '../../assets/about/whyus.png';
 import question from '../../assets/about/questions.png';
 import './about.css'
 import Footer from '../../components/Footer/Footer';
+import Frame46 from '../../assets/about/Frame46.png'
+import Frame47 from '../../assets/about/Frame47.png'
+import Frame48 from '../../assets/about/Frame48.png'
+
 function About() {
     return (
 
@@ -50,15 +54,18 @@ function About() {
                     <h1>Our Comprehensive Services</h1>
                 <div className="About-services-flex">
                 <div className="About-services-card">
-                <strong> Consultation Services </strong> <br />
+                    <img src={Frame46} alt=""/>
+                <strong> Consultation Services </strong>
                 Our team of experts is ready to provide you with personalized consultation services tailored to your specific grievance. Whether you're facing consumer complaints, GST issues, or other challenges, we offer professional advice to help you navigate the complexities and find solutions.
                 </div>
                 <div className="About-services-card">
-                <strong> Grievance Filing Assistance</strong> <br />
+                    <img src={Frame47} alt="" />
+                <strong> Grievance Filing Assistance</strong>
                 We take the guesswork out of the filing process. Whether it's submitting a consumer complaint, managing GST-related matters, or addressing any other grievance mentioned in our portal, we offer hands-on assistance to ensure your filings are accurate and efficient.
                 </div>
                 <div className="About-services-card">
-                <strong> Expert Support</strong> <br />
+                    <img src={Frame48} alt="" />
+                <strong> Expert Support</strong> 
                 With Daily Samadhan, you have access to a team of seasoned professionals who are well-versed in resolving a wide range of grievances. We're here to answer your questions, address your concerns, and guide you toward successful resolutions.
                 </div>
                 </div>

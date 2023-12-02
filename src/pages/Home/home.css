@@ -8,10 +8,13 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0px 5vw;
+margin-bottom: 50px;
+border-bottom: 3px solid #2f2f48;
 }
 .Home-main p{
-font-size: 5rem;
+font-size: 3.8rem;
 font-weight: 700;
+line-height: 70px;
 }
 .Home-main span{
     color: #31A049;
@@ -20,6 +23,8 @@ font-weight: 700;
 .Home-main-img{
     /* height: 500px;
     width: 500px; */
+    width: 58%;
+    margin-bottom: 5vh;
 }
 @media (max-width: 768px) {
     .Home-main p{
