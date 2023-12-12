@@ -7,16 +7,23 @@ import uttarpardesh from '../../assets/Cities/Uttarpradesh.jpeg'
 import haryana from '../../assets/Cities/haryana.jpeg'
 import rajasthan from '../../assets/Cities/Rajasthan.jpeg'
 import maharashtra from '../../assets/Cities/maharashtra.png'
+import { useParams } from 'react-router-dom'
+import Popup from '../Modal/modal'
 
 
 
 
-function Form() {
+function Form(props) {
+  let id=props.id;
+  let x=useParams()
+  id=x.id;
+  console.log(id)
+
   return (
    <>
    <Navbar />
    <div className="Form-main">
-    <h1>Police Complaint</h1>
+    <h1>{id}</h1>
     <div className="form-fields">
         <h3>Need Help with Filing Complaint?</h3>
         <div className="form-name">
@@ -57,63 +64,83 @@ function Form() {
    <div class="city-Portal-card">
       <div className="con">
       <img src={delhi}/>
-          {/* <p>Delhi</p> */}
+      <div class="middle">
+    <div class="text">Delhi</div>
+  </div>
       </div>
         </div>
         <div class="city-Portal-card">
       <div className="con">
       <img src={uttarpardesh}/>
-          {/* <p>Uttar Pardesh</p> */}
+      <div class="middle">
+    <div class="text">Uttar Pradesh</div>
+  </div>
       </div>
         </div>
         <div class="city-Portal-card">
       <div className="con">
       <img src={haryana}/>
-          {/* <p>Haryana</p> */}
+      <div class="middle">
+    <div class="text">Haryana</div>
+  </div>
       </div>
         </div>
         <div class="city-Portal-card">
       <div className="con">
       <img src={rajasthan}/>
-          {/* <p>Rajasthan</p> */}
+      <div class="middle">
+    <div class="text">Rajasthan</div>
+  </div>
       </div>
         </div>
         <div class="city-Portal-card">
       <div className="con">
       <img src={maharashtra}/>
-          {/* <p>Maharashtra</p> */}
+      <div class="middle">
+    <div class="text">Maharashtra</div>
+  </div>
       </div>
         </div>
         </div>
         <div className="city-portal">
         <div class="city-Portal-card">
       <div className="con">
-      {/* <img src={Frame43}/> */}
-          <p>Madhya Pardesh</p>
+      <img src={maharashtra}/>
+      <div class="middle">
+    <div class="text">Madhya Pradesh</div>
+  </div>
       </div>
         </div>
         <div class="city-Portal-card">
       <div className="con">
-      {/* <img src={Frame43}/> */}
-          <p>Gujarat</p>
+      <img src={maharashtra}/>
+      <div class="middle">
+    <div class="text">Gujarat</div>
+  </div>
       </div>
         </div>
         <div class="city-Portal-card">
       <div className="con">
-      {/* <img src={Frame43}/> */}
-          <p>Tamil Nadu</p>
+      <img src={maharashtra}/>
+      <div class="middle">
+    <div class="text">Tamil Nadu</div>
+  </div>
       </div>
         </div>
         <div class="city-Portal-card">
       <div className="con">
-      {/* <img src={Frame43}/> */}
-          <p>Himachal Pardesh</p>
+      <img src={maharashtra}/>
+           <div class="middle">
+    <div class="text">Himachal Pradesh</div>
+  </div>
       </div>
         </div>
         <div class="city-Portal-card">
       <div className="con">
-      {/* <img src={Frame43}/> */}
-          <p>Bihar</p>
+      <img src={maharashtra}/>
+      <div class="middle">
+    <div class="text">Bihar</div>
+  </div>
       </div>
         </div>
    </div>
@@ -121,12 +148,13 @@ function Form() {
 <div className="file-complaint-fields">
     <div className="complain-file">
         <p>Want us to file your Complaint? <br />
-          <a href="">Click Here</a></p>
+          <Popup/></p>
     </div>
-    <div className="not-city">
+    {/* <div className="not-city">
         <p>Not Able to find your city ? <br /> give us a call on <br /> 1800 0000 0000</p>
-    </div>
+    </div> */}
 </div>
+
    <Footer />
    </>
   )

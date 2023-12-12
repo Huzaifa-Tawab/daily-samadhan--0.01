@@ -7,6 +7,8 @@ import Services from '../../components/services/Services';
 import Footer from '../../components/Footer/Footer';
 import Complaint from '../../components/File Complaints/Complaint';
 import Ourplans from '../../components/Plans/Ourplans';
+import WhyChooseUs from '../../components/Why Choose Us/whychooseus';
+import Offer from '../../components/Offers/offer';
 function Home() {
 return (
     <div className="Home">
@@ -22,9 +24,13 @@ return (
         {/* {Complaint} */}
         <Complaint />
         {/* Services */}
-        <Services/>
+        {/* <Services/> */}
+        {/* Why Choose Us */}
+        <WhyChooseUs/>
         {/* Our Plans */}
-        <Ourplans />
+        {/* <Ourplans /> */}
+        {/* Offers */}
+        <Offer />
         {/* Footer */}
         <Footer/>
     </div>

@@ -1,0 +1,33 @@
+.whychooseus{
+    text-align: center;
+    margin: 50px 8vw;
+}
+.header-choose{
+    text-align: center;
+    margin-top: 50px;
+}
+.header-choose> h1{
+    font-size: 3rem;
+    color: #0C0B4B;
+}
+.header-choose>h1> span{
+    color: #31A049;
+}
+.content-whychoose{
+    display: flex;
+    justify-content: space-between;
+}
+.content2{
+    width: 30vw;
+    margin: 80px 30vw;
+    display: flex;
+    justify-content: space-between;
+}
+.govt> h1{
+    line-height: 30px;
+    font-size: 25px;
+    font-weight: 600;
+}
+.govt> img{
+    width: 60px;
+}

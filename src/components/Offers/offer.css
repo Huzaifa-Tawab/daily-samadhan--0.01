@@ -1,0 +1,89 @@
+.header-offer{
+    text-align: center;
+    margin-top: 70px;
+}
+.header-offer> h1{
+    font-size: 3rem;
+    color: #0C0B4B;
+}
+.header-offer>h1> span{
+    color: #31A049;
+}
+.offer-cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+}
+.side-cards{
+    width: 20vw;
+    height: 80vh;
+    border: 1px solid #0C0B4B;
+    border-radius: 10px;
+    padding: 50px;
+    background: #EFF0F6;
+}
+.side-cards> h1{
+    margin-top: 15px;
+}
+.side-cards> h5{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.mid-card{
+    width: 27vw;
+    height: 100vh;
+    border: 1px solid #EFF0F6;
+    border-radius: 10px;
+    padding: 50px;
+    background: #0C0B4B;
+    color: #fff;
+}
+.mid-card> h1{
+    margin-top: 15px;
+}
+.mid-card> h5{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.offer-cards> p{
+    margin-top: 5px;
+}
+.check-text{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: start;
+    margin: 10px 0px;
+}
+.check-text> img{
+    padding-right: 15px;
+}
+.side-card-head{
+    display: flex;
+    align-items: center;
+}
+.side-card-head> h1{
+    font-size: 1.5rem;
+    line-height: 25px;
+    margin-left: 8px;
+}
+.side-card-head> img{
+    width: 70px;
+}
+/* Button */
+.button-started{
+    text-align: center;
+}
+.button-started> button{
+    background: #43DD64;
+    height: 10vh;
+    width: 20vw;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}

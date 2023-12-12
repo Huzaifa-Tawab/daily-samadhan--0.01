@@ -1,0 +1,52 @@
+.modal-button{
+    background: none;
+    font-size: 22px;
+    font-weight: 700;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #43DD64;
+}
+.modal-close{
+    background: none;
+    border: none;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #0C0B4B;
+
+}
+.modal-content1{
+    background:#43DD64;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 50px;
+    width: 30vw;
+    text-align: center;
+    color: #0C0B4B;
+}
+.modal-content1> a{
+    color: #0C0B4B;
+}
+.modal-content2{
+    background: #13124E;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 50px;
+    width: 30vw;
+    text-align: center;
+    color: #43DD64;
+    margin-left: 30px;
+}
+.modal-content2> a{
+    color: #43DD64;
+}
+.modal-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+.ReactModal__Content{
+    border: 10px solid #43DD64;
+    width: 75vw;
+}
