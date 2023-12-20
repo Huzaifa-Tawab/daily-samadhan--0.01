@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -43,6 +43,7 @@ height:8vh;
 }
 
 .nav-elements {
+
 }
 
 .nav-elements ul {
@@ -56,15 +57,16 @@ height:8vh;
 }
 
 .nav-elements ul a {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   color: #2f234f;
   text-decoration: none;
+
 }
 
 .nav-elements ul a.active {
   color: #574c4c;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
 }
 

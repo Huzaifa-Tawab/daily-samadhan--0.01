@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import {  FaHamburger, FaMailBulk,  FaPhoneAlt,  } from 'react-icons/fa';
 import './navbar.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.svg'
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -36,7 +36,7 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/complaints">Complaints</NavLink>
+              <NavLink to="/complaintportal">Complaints</NavLink>
             </li>
             <li>
               <NavLink to="/services">Services</NavLink>

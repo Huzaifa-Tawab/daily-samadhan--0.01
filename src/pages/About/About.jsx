@@ -12,6 +12,7 @@ import Frame46 from '../../assets/about/Frame46.png'
 import Frame47 from '../../assets/about/Frame47.png'
 import Frame48 from '../../assets/about/Frame48.png'
 
+
 function About() {
     return (
 
@@ -99,8 +100,9 @@ function About() {
                     </p>
                 </div>
                 </div>
-                <Footer/>
+                
             </div>
+            <Footer/>
             
         </>
     )

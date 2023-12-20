@@ -24,13 +24,17 @@ function Footer() {
                     <h1>Links</h1>
                     <br />
                     <br />
-                    <p>Privacy Policy</p>
+                    <p>FAQ</p>
                     <br />
-                    <p>Privacy Policy</p>
+                    <p>Terms & Conditions</p>
                     <br />
-                    <p>Privacy Policy</p>
+                    <p>Reporting</p>
                     <br />
-                    <p>Privacy Policy</p>
+                    <p>Documentation</p>
+                    <br />
+                    <p>Sopport Policy</p>
+                    <br />
+                    <p>Privacy</p>
                     <br />
 
                 </div>

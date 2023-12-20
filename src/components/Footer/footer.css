@@ -3,7 +3,8 @@ margin-top: 100px;
 }
 .Footer-main{
     border-top-left-radius: 100px;
-    background: #43DD64;
+    background: rgb(49,160,73);
+    background: linear-gradient(90deg, rgba(49,160,73,1) 30%, rgba(255,255,255,1) 100%);
     padding: 150px 150px 50px 150px;
     display: flex;
     justify-content: space-between;
@@ -75,13 +76,24 @@ width: 400px;
     padding: 10px 20px;
    
 }
+.Footer-links{
+    line-height: 20px;
+    font-weight: 600;
+}
+.Footer-social{
+    line-height: 20px;
+}
+.Footer-office{
+    line-height: 25px;
+}
 
 
 .Footer-watermark{
-    padding: 20px;
-    background-color: black;
+    padding: 25px;
+    background-color: #0C0B4B;
     color: white;
     text-align: center;
+    font-weight: 600;
 }
 @media (max-width: 768px) {
    .Footer-main{

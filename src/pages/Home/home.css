@@ -26,6 +26,18 @@ line-height: 70px;
     width: 58%;
     margin-bottom: 5vh;
 }
+.About-home{
+    text-align: center;
+    margin-bottom: 100vh;
+    
+}
+.About-home> h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+.About-home>h1> span{
+    color: #31A049;
+}
 @media (max-width: 768px) {
     .Home-main p{
         display: none;

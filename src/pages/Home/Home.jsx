@@ -19,6 +19,10 @@ return (
           </div>
           <img className="Home-main-img" src={img1} />
         </div>
+        {/* About Us */}
+        <div className="About-home">
+          <h1>About <span>Us</span></h1>
+        </div>
         {/* Portals */}
         <Portals/>
         {/* {Complaint} */}

@@ -1,14 +1,8 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
-
-
 .About{
     padding: 0px 0vw;
     background: #FFFCFC;
- 
-    font-family: 'Abril Fatface', serif;
-font-weight: 400;
-font-size: 24px;
+    font-weight: 400;
+    font-size: 24px;
 }
 .About span{
     font-family: 'Abhaya Libre', serif;
