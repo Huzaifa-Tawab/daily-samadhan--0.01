@@ -1,0 +1,40 @@
+.contact> h1{
+    font-size: 4rem;
+    color: #0C0B4B;
+    padding: 20px;
+}
+.contact>h1 > span{
+    color: #31A049;
+}
+.contact-box{
+    width: 50vw;
+    height: 75%;
+    margin-right: 100px;
+    background:
+    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
+    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
+    linear-gradient(90deg, #0c0b4b 20%, #31A049 60%, #31A049 94%);
+    box-sizing: border-box;
+    padding: 10px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.contact-box> img{
+    width: 60px;
+}
+.contact-button{
+    text-align: center;
+    margin-top: 50px;
+}
+.contact-button> button{
+    width: 30%;
+    height: 18vh;
+    border: none;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    background: rgb(12,11,75);
+background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
+
+}

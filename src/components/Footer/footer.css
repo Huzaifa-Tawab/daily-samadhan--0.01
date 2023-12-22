@@ -4,21 +4,23 @@ margin-top: 100px;
 .Footer-main{
     border-top-left-radius: 100px;
     background: rgb(49,160,73);
-    background: linear-gradient(90deg, rgba(49,160,73,1) 30%, rgba(255,255,255,1) 100%);
-    padding: 150px 150px 50px 150px;
+    background: linear-gradient(90deg, rgba(12,11,75,1) 20%, rgba(49,160,73,1) 70%);
+    padding: 150px 80px 50px 130px;
     display: flex;
     justify-content: space-between;
 }
 .Footer-info{
-width: 400px;
+width: 30%;
 }
 .Footer-info img{
-    width: 150px;
+    width: 200px;
     margin-bottom: 30px;
 }
 .Footer-info p{
     text-align: justify;
-    font-weight: 300;
+    font-weight: 400;
+    color: #FFF;
+    font-size: 1.2rem;
 }
 .Footer-social-icon{
     padding: 5px;
@@ -73,18 +75,27 @@ width: 400px;
 .newsletter button{
     background-color: #222;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
+    cursor: pointer;
    
 }
 .Footer-links{
     line-height: 20px;
     font-weight: 600;
+    color: #FFF;
+    font-size: 1.2rem;
 }
 .Footer-social{
     line-height: 20px;
+    color: #FFF;
+    font-size: 1.2rem;
+    width: 23%;
 }
 .Footer-office{
     line-height: 25px;
+    color: #FFF;
+    font-size: 1.2rem;
+    width: 19%;
 }
 
 

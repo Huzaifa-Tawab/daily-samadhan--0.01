@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaWhatsapp, FaFacebook, FaInstagram } from 'react-icons/fa';
 import './footer.css'
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.svg'
 function Footer() {
     return (
         <div className="Footer">
@@ -42,7 +42,7 @@ function Footer() {
                     <h1>Connect</h1>
                     <br />
                     <br />
-                    <p>never miss any update Sign-up now <br />and get connect with Daily Samadhan </p>
+                    <p>never miss any update Sign-up now and get connect with Daily Samadhan </p>
 <br />
                     <div className="newsletter">
                     
