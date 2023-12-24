@@ -19,71 +19,6 @@ function Portals() {
     <p>Online <span style={{color:"#31A049"}}>Complaint Portals</span></p>
     <div id="Portal-content">
     <div class="Portal-content-card">
-    <Link to={"/form/Industrial Dispute"}>
-      <div className="con">
-      <img src={Frame43}/>
-          <p>Industrial Dispute</p>
-      </div>
-      </Link>
-        </div>
-
-        <div class="Portal-content-card">
-        <Link to={"/form/e-Filling Consumer Commission"}>
-      <div className="con">
-      <img src={Frame42}/>
-      <p>e-Filling Consumer Commission</p>
-      </div>
-      </Link>
-        </div>
-
-        <div class="Portal-content-card">
-        <Link to={"/form/Consumer Help"}>
-      <div className="con">
-      <img src={Frame25}/>
-          <p> Consumer Help</p>
-      </div>
-      </Link>
-        </div>
-
-        <div class="Portal-content-card">
-        <Link to={"/form/Cyber Crime"}>
-      <div className="con">
-      <img src={Frame24}/>
-          <p>Cyber Crime</p>
-      </div>
-      </Link>
-        </div>
-
-        <div class="Portal-content-card">
-        <Link to={"/form/Women Helpline"}>
-      <div className="con">
-      <img src={Frame23}/>
-          <p>Women Helpline</p>
-      </div>
-      </Link>
-        </div>
-
-        <div class="Portal-content-card">
-        <Link to={"/form/Lost & Found"}>
-      <div className="con">
-      <img src={Frame21}/>
-          <p>Lost And Found</p>
-      </div>
-      </Link>
-        </div>
-
-        <div class="Portal-content-card">
-        <Link to="/form/Consumer Dispute">
-      <div className="con">
-     
-      <img src={Frame41}/>
-          <p>Consumer Dispute</p>
-          
-      </div>
-      </Link>
-        </div>
-
-        <div class="Portal-content-card">
         <Link to={"/form/Police Complaint"}>
       <div className="con">
       
@@ -94,8 +29,74 @@ function Portals() {
       </Link>
         </div>
         
+    <div class="Portal-content-card">
+    <Link to={"/contact"}>
+      <div className="con">
+      <img src={Frame43}/>
+          <p>Industrial Dispute</p>
+      </div>
+      </Link>
+        </div>
+
         <div class="Portal-content-card">
-        <Link to={"/form/Telecom Dispute"}>
+        <Link to={"/contact"}>
+      <div className="con">
+      <img src={Frame42}/>
+      <p>e-Filling Consumer Commission</p>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"/contact"}>
+      <div className="con">
+      <img src={Frame25}/>
+          <p> Consumer Help</p>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"/contact"}>
+      <div className="con">
+      <img src={Frame24}/>
+          <p>Cyber Crime</p>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"/contact"}>
+      <div className="con">
+      <img src={Frame23}/>
+          <p>Women Helpline</p>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"/contact"}>
+      <div className="con">
+      <img src={Frame21}/>
+          <p>Lost And Found</p>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"/contact"}>
+      <div className="con">
+     
+      <img src={Frame41}/>
+          <p>Consumer Dispute</p>
+          
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+    <Link to={"/contact"}>
+     
       <div className="con">
       <img src={Frame44}/>
           <p>Telecom Dispute</p>
@@ -105,7 +106,8 @@ function Portals() {
 
         
         <div class="Portal-content-card">
-        <Link to={"/form/Food Safety"}>
+        <Link to={"/contact"}>
+
       <div className="con">
       <img src={Frame45}/>
           <p>Food Safety</p>
@@ -115,7 +117,8 @@ function Portals() {
 
         
         <div class="Portal-content-card">
-        <Link to={"/form/Drone Certificate Flying License"}>
+        <Link to={"/contact"}>
+
       <div className="con">
       <img src={Frame46}/>
           <p>Drone Certificate Flying License</p>
@@ -125,7 +128,8 @@ function Portals() {
 
         
         <div class="Portal-content-card">
-        <Link to={"/form/National Test House"}>
+        <Link to={"/contact"}>
+
       <div className="con">
       <img src={Frame47}/>
           <p>National Test House</p>

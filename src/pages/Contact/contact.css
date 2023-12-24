@@ -20,8 +20,18 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
-.contact-box> img{
+.mail-div{
+    display: flex;
+    align-items: center;
+}
+.mail-div> img{
     width: 60px;
+}
+.mail-div h2{
+    color: #31A049;
+    margin-left: 20px;
+    font-size: 2rem;
+    
 }
 .contact-button{
     text-align: center;
@@ -37,4 +47,30 @@
     background: rgb(12,11,75);
 background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
 
+}
+@media (max-width: 600px) and (max-width: 768px) {
+       .Contact-form{
+        display: block;
+       }
+       .contact h1{
+        font-size: 3rem;
+       }
+       .contact-box{
+        margin-bottom: 20px;
+        width: 91vw;
+        padding: 10px 20px;
+       }
+       .mail-div img{
+        width: 30px;
+       }
+       .mail-div h2{
+        font-size: 22px;
+       }
+       .mail-div{
+        margin: 10px 0px;
+       }
+       .contact-button button{
+        width: auto;
+        height: 10vh;
+       }
 }

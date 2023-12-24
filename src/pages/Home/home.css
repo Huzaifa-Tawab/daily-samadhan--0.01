@@ -38,12 +38,21 @@ line-height: 70px;
 .About-home>h1> span{
     color: #31A049;
 }
-@media (max-width: 768px) {
-    .Home-main p{
-        display: none;
+@media (max-width: 600px) and (max-width: 768px) {
+    .Home-main{
+        text-align: center;
+        height: 50vh;
     }
     .Home-main-img{
-        height:100vw;
-        width:100%;
+      display: none;
+    }
+    .Home-main p{
+      font-size: 3rem;
+    }
+    .About-home{
+        margin-bottom: 50vh;
+    }
+    .About-home h1{
+        font-size: 3rem;
     }
 }

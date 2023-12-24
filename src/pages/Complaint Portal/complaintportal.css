@@ -11,3 +11,15 @@ background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
 .choose-complaint{
     margin-top: 80px;
 }
+@media (max-width: 600px) and (max-width: 768px) {
+    .complaint-portal-main{
+        display: block;
+    }
+    .complaint-portal-main h1{
+        font-size: 2.6rem;
+    }
+    .form-fields{
+        width: 80%;
+        padding: 3% 10%;
+    }
+}

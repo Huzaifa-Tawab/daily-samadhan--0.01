@@ -13,7 +13,7 @@ function Footer() {
                 <div className="Footer-office">
                     <h1>Office</h1>
                     <br />
-                    <br />
+                    {/* <br /> */}
                     <p>Office Number 0,<br />Somthing industrial area, <br />Abc City,<br /> India </p>
                     <br />
                     <p>info@demo.com</p>
@@ -23,7 +23,7 @@ function Footer() {
                 <div className="Footer-links">
                     <h1>Links</h1>
                     <br />
-                    <br />
+                    {/* <br /> */}
                     <p>FAQ</p>
                     <br />
                     <p>Terms & Conditions</p>

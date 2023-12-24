@@ -106,7 +106,7 @@ width: 30%;
     text-align: center;
     font-weight: 600;
 }
-@media (max-width: 768px) {
+@media (max-width: 600px) and (max-width: 768px) {
    .Footer-main{
     flex-direction: column;
     padding: 10px;
@@ -116,4 +116,19 @@ width: 30%;
    .Footer-info{
 width: 100%;
    }
+   .Footer-info p{
+    text-align: center;
+   }
+   .Footer-office{
+    margin-top: 15px;
+    line-height: 20px;
+    width: auto;
+   }
+   .Footer-links{
+    margin-top: 15px;
+   }
+   .Footer-social{
+    width: auto;
+   }
+   
 }

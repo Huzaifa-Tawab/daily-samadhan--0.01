@@ -50,7 +50,7 @@
     background: #FFF9F9;
     width: 20vw;
     padding: 20px;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     line-height: 30px;
     line-break: anywhere;
     border: 2px solid rgba(67, 221, 100, 0.80);;
@@ -98,15 +98,19 @@
     width: 80vw;
     margin-top: 30px;
     line-height: 30px;
-    border: 10px solid rgba(67, 221, 100, 0.80);
+    background:
+    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
+    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
+    linear-gradient(90deg, #0c0b4b 20%, #31A049 60%, #31A049 94%);
+    box-sizing: border-box;
 
     ;
 }
 .About-starting-box p{
-    padding: 20px 0;
+    padding: 20px 20px;
     font-size: 1.5vw;
 }
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) and (max-width: 768px) {
     .About-flex img{
         height: 100%;
     }
@@ -115,6 +119,7 @@
     }
     .About-flex{
         flex-direction: column;
+    
     }
     .About-services-flex{
         align-items: center;
@@ -124,4 +129,55 @@
         width: 70%;
         margin: 20px;
     }
+    .About-hero{
+        display: none;
+    }
+    .About-flex-mid{
+        flex-direction: column-reverse;
+    }
+    .About-flex-content h1{
+        font-size: 1.8rem;
+    }
+    .About-flex-content p{
+        font-size: 10px;
+    }
+    .About-services{
+        margin-top: 50px;
+    }
+    .About-services h1{
+        font-size: 2rem;
+    }
+    .question-marks{
+        display: none;
+    }
+    .Why-choose{
+        width: 80vw;
+        margin: 50px 10vw;
+        display: block;
+    }
+    .typography{
+        width: auto;
+        padding: 40px 20px;
+    }
+    .typography h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .typography p{
+        font-size: 20px;
+    }
+    .About-starting h1{
+        font-size: 2.5rem;
+    }
+    .About-starting-box{
+        margin: 50px 10vw;
+        margin-top: 10px;
+        line-height: 20px;
+    }
+    .About-starting-box p{
+        font-size: 10px;
+        padding: 20px 10px;
+        text-align: justify;
+    }
+    
 }

@@ -152,12 +152,16 @@ cursor: pointer;
     text-align: center;
 }
 .complain-file{
-    background: #13124E;
+    background: rgb(12,11,75);
+background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
     width: 75%;
     padding: 2%;
     font-size: 1.5rem;
-    color: #43DD64;
+    color: #fff;
     font-weight: 600;
+}
+.complain-file> p{
+    color: #fff;
 }
 .not-city{
     color: #31A049;
@@ -167,4 +171,15 @@ cursor: pointer;
     font-size: 1.5rem;
     font-weight: 600;
     
+}
+@media (max-width: 600px) and (max-width: 768px) {
+    .Form-main{
+        display: block;
+    }
+    .Form-main h1{
+        font-size: 2.5rem;
+    }
+    .complain-file{
+        width: auto;
+    }
 }

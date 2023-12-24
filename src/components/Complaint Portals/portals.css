@@ -60,3 +60,15 @@ line-height: normal;
       align-items: center;
       margin-top: 25px;
     }
+@media (max-width: 600px) and (max-width: 768px) {
+  .Portal p{
+    font-size: 3rem;
+  }
+  .Portal-content-card{
+    width: 250px;
+    height: 250px;
+  }
+  .Portal-content-card p{
+    font-size: 2.5rem;
+  }
+}

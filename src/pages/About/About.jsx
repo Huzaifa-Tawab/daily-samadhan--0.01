@@ -32,7 +32,7 @@ function About() {
                             </p>
                     </div>
                 </div>
-                <div className="About-flex">
+                <div className="About-flex About-flex-mid">
                     
                     <div className="About-flex-content">
                         <h1>Our Vision</h1>

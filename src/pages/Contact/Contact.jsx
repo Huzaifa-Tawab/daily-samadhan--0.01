@@ -13,8 +13,14 @@ function Contact() {
     <div className="contact">
     <h1>Contact <span>Now</span></h1>
     <div className="contact-box">
+        <div className="mail-div">
         <img src={email} alt="" />
+        <h2>info@dailysamadhan.com</h2>
+        </div>
+        <div className="mail-div">
         <img src={loc} alt="" />
+        <h2>PAN India</h2>
+        </div>
     </div>
     </div>
     <div className="form-fields">
