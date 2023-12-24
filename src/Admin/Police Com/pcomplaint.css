@@ -1,0 +1,31 @@
+.Admin{
+    background: rgb(12,11,75);
+    background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
+}
+.Admin-header{
+    text-align: center;
+}
+.Admin-header> h1{
+    color: #fff;
+    font-size: 3rem;
+    padding: 20px;
+}
+.table{
+    display: flex;
+    justify-content: center;
+}
+.table> table{
+    padding: 0px 20px;
+}
+table{
+    
+}
+th{
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+td{
+    font: 1rem;
+    color: #fff;
+}

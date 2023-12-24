@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { Link } from 'react-router-dom';
 import {  FaHamburger, FaMailBulk,  FaPhoneAlt,  } from 'react-icons/fa';
-import './navbar.css'
+import './Header.css'
 import logo from '../../assets/logo.svg'
 
-const Navbar = () => {
+const Header = () => {
   const [showNavbar, setShowNavbar] = useState(false)
 
   const handleShowNavbar = () => {
@@ -34,29 +33,19 @@ const Navbar = () => {
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
           <ul>
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/admin">Contact</NavLink>
             </li>
             <li>
-              <NavLink to="/complaintportal">Complaints</NavLink>
-            </li>
-            <li>
-              <NavLink to="/services">Services</NavLink>
-            </li>
-            <li>
-              <NavLink to="/faq">FAQ</NavLink>
-            </li>
-            <li>
-              <NavLink to="/about">About</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/adminpolicecomplaint">Police Complaints</NavLink>
             </li>
           </ul>
         </div>
-        <Link to='/login'><button className='nav-login'> Login </button></Link>
+      
+          <button className='nav-login' to="/login"> Login </button>
+        
       </div>
     </nav>
   )
 }
 
-export default Navbar
+export default Header
