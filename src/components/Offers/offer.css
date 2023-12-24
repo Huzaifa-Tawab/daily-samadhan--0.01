@@ -87,7 +87,7 @@
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
 }
-@media (max-width: 600px) and (max-width: 768px) {
+@media (max-width: 768px) {
     .header-offer h1{
         font-size: 2.5rem;
     }

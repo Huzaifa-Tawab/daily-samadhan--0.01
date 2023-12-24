@@ -38,7 +38,7 @@ line-height: 70px;
 .About-home>h1> span{
     color: #31A049;
 }
-@media (max-width: 600px) and (max-width: 768px) {
+@media (max-width: 768px) {
     .Home-main{
         text-align: center;
         height: 50vh;

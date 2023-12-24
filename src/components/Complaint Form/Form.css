@@ -21,8 +21,8 @@
 }
 .form-name{
     margin: 20px;
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
 
 }
 .form-name> input{
@@ -32,8 +32,8 @@
 .form-email{
     margin: 20px;
 
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
 
 }
 .form-email> input{
@@ -42,8 +42,8 @@
 }
 .form-number{
     margin: 20px;
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
 
 }
 .form-number>span{
@@ -57,8 +57,8 @@
 .form-state{
     margin: 20px;
     
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
 
 }
 .form-state> input{
@@ -67,8 +67,8 @@
 }
 .form-dispute{
     margin: 20px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     align-items: center;
 }
 .form-dispute> select{
@@ -172,7 +172,7 @@ background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
     font-weight: 600;
     
 }
-@media (max-width: 600px) and (max-width: 768px) {
+@media (max-width: 768px) {
     .Form-main{
         display: block;
     }

@@ -47,8 +47,13 @@
     background: rgb(12,11,75);
 background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
 
+
 }
-@media (max-width: 600px) and (max-width: 768px) {
+.errorLabel {
+    color: red;
+    font-size: 12px;
+  }
+@media (max-width: 768px) {
        .Contact-form{
         display: block;
        }

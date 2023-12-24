@@ -20,7 +20,7 @@ background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
     color: #fff;
 
 } 
-@media  (max-width: 600px) and (max-width: 768px) {
+@media (max-width: 768px) {
     .Complaint-main{
         height: 25vh;
     }
