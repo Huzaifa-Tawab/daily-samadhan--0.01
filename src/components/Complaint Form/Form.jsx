@@ -10,8 +10,9 @@ import rajasthan from '../../assets/Cities/Rajasthan.jpeg'
 import maharashtra from '../../assets/Cities/maharashtra.png'
 import { useParams } from 'react-router-dom'
 import Popup from '../Modal/modal'
-
-
+import { db } from "../../firebase";
+import { useNavigate } from "react-router";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 
 function Form(props) {
@@ -19,28 +20,31 @@ function Form(props) {
   let x=useParams()
   id=x.id;
   console.log(id)
+  const navi = useNavigate();
+  const [isLoading, setisLoading] = useState(false);
   const [Name, setname] = useState("");
   const [Email, setemail] = useState("");
   const [Phone, setphone] = useState("");
   const [State, setstate] = useState("");
-  const [Dispute, setdispute] = useState("");
+  const [Textarea, settextarea] = useState("");
   const [Check, setcheck] = useState(false);
   const [errorMessage, seterrorMessage] = useState("");
   const [emailError, setEmailError] = useState("");
   const [phoneerror, setphoneError] = useState("");
   const [Nameerror, setnameError] = useState("");
   const [Stateerror, setstateError] = useState("");
-  const [Disputeerror, setdisputeError] = useState("");
+  const [Textareaerror, settextareaError] = useState("");
   const [Checkerror, setcheckError] = useState("");
 
   const handleClick = () => setcheck(!Check)
-  const Submitform = () => {
+  async function SubmitPoliceComplaint(e) {
+    e.preventDefault();
     // Set initial error values to empty
     setnameError("");
     setEmailError("");
     setphoneError("");
     setstateError("");
-    setdisputeError("");
+    settextareaError("");
     setcheckError("");
 
     // Check if the user has entered both fields correctly
@@ -70,8 +74,8 @@ function Form(props) {
       setstateError("Please enter your State");
       return;
     }
-    if ("" === Dispute) {
-      setdisputeError("Please select an option");
+    if ("" === Textarea) {
+      settextareaError("Please write your query");
       return;
     }
     if (Check === false) {
@@ -79,7 +83,25 @@ function Form(props) {
       return;
     }
     // Authentication calls will be made here...
-    console.log(Check);
+    setisLoading(true);
+    try {
+      const docRef = await addDoc(collection(db, "PoliceComplaintUsers"), {
+        name: Name,
+        email: Email,
+        phone: Phone,
+        state: State,
+        textarea: Textarea,
+        check: Check,
+        time: serverTimestamp(),
+      });
+      // console.log("Document written with ID: ", docRef.id);
+      navi("/thanks/" + docRef.id);
+    } catch (e) {
+      setisLoading(false);
+
+      console.error("Error adding document: ", e);
+    }
+    setisLoading(false);
   };
 
   return (
@@ -141,21 +163,11 @@ function Form(props) {
 
           </div>
           <div className="form-dispute">
-            <span>Type of Dispute</span>
-            <select
-              name="dispute"
-              id="abc"
-              value={Dispute}
-              onChange={(e) => setdispute(e.target.value)}
-            >
-
-              <option value=""></option>
-
-              <option value="Good">Good</option>
-              <option value="Best">Best</option>
-              <option value="Excellent">Excellent</option>
-            </select>
-            <label className="errorLabel">{Disputeerror}</label>
+            <span>Your Query</span>
+              
+            <textarea name="" id="" cols="30" rows="4" onChange={(e) => settextarea(e.target.value)}></textarea>
+            <br />
+            <label className="errorLabel">{Textareaerror}</label>
 
           </div>
           <div className="form-checkbox">
@@ -176,7 +188,7 @@ function Form(props) {
             <label className="errorLabel">{Checkerror}</label>
 
           </div>
-          <button type="submit" onClick={Submitform}>
+          <button type="submit" onClick={SubmitPoliceComplaint}>
             Submit
           </button>
         </div>
