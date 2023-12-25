@@ -1,38 +1,41 @@
-.Admin{
-    height: 100%;
-    background: rgb(12,11,75);
-    background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
+.Admin {
+  height: 100%;
+  background: rgb(12, 11, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 11, 75, 1) 35%,
+    rgba(49, 160, 73, 1) 76%
+  );
 }
-.Admin-header{
-    text-align: center;
+.Admin-header {
+  text-align: center;
 }
-.Admin-header> h1{
-    color: #fff;
-    font-size: 3rem;
-    padding: 20px;
+.Admin-header > h1 {
+  color: #fff;
+  font-size: 3rem;
+  padding: 20px;
 }
-.table{
-    background: gray;
-    background:
-    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
-    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
-    linear-gradient(90deg, #0c0b4b 20%, #31A049 60%, #31A049 94%);
-    box-sizing: border-box;
-    width: 80%;
-    
+.table {
+  background: gray;
+  background: linear-gradient(#fefafa, #fefafa) 50% 50% / calc(100% - 16px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#fefafa, #fefafa) 50% 50% / calc(100% - 10px)
+      calc(100% - 10px) no-repeat,
+    linear-gradient(90deg, #0c0b4b 20%, #31a049 60%, #31a049 94%);
+  box-sizing: border-box;
+  width: 80%;
 }
-.table> table{
-    padding: 0px 20px;
+.table > table {
+  padding: 0px 20px;
 }
-table{
-   
+table {
 }
-th{
-    padding: 10px 30px;
-    color: #fff;
-    font-size: 1.5rem;
+th {
+  padding: 10px 30px;
+  color: #fff;
+  font-size: 1.5rem;
 }
-td{
-    font: 1rem;
-    color: #fff;
+td {
+  font: 1rem;
+  color: #000;
 }

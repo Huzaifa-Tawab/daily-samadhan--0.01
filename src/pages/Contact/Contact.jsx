@@ -5,9 +5,13 @@ import Footer from "../../components/Footer/Footer";
 import email from "../../assets/Contact/email.svg";
 import loc from "../../assets/Contact/location.svg";
 import { db } from "../../firebase";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import LoaderOverlay from "../../components/Loader/LoaderOverlay";
+import { useNavigate } from "react-router";
 
 function Contact() {
+  const navi = useNavigate();
+  const [isLoading, setisLoading] = useState(false);
   const [Name, setname] = useState("");
   const [Email, setemail] = useState("");
   const [Phone, setphone] = useState("");
@@ -22,8 +26,8 @@ function Contact() {
   const [Disputeerror, setdisputeError] = useState("");
   const [Checkerror, setcheckError] = useState("");
 
-  const handleClick = () => setcheck(!Check)
-  async function Submitform (e) {
+  const handleClick = () => setcheck(!Check);
+  async function Submitform(e) {
     e.preventDefault();
     // Set initial error values to empty
     setnameError("");
@@ -35,8 +39,8 @@ function Contact() {
 
     // Check if the user has entered both fields correctly
     if ("" === Name) {
-        setnameError("Please enter your Name");
-        return;
+      setnameError("Please enter your Name");
+      return;
     }
     if ("" === Email) {
       setEmailError("Please enter your email");
@@ -69,21 +73,26 @@ function Contact() {
       return;
     }
     // Authentication calls will be made here...
+    setisLoading(true);
     try {
-        const docRef = await addDoc(collection(db, "ContactsUsers"),{
-            name: Name,
-            email: Email,
-            phone: Phone,
-            state: State,
-            dispute: Dispute,
-            check: Check
-        });
-        console.log("Document written with ID: ", docRef.id);
-    } 
-    catch (e) {
+      const docRef = await addDoc(collection(db, "ContactsUsers"), {
+        name: Name,
+        email: Email,
+        phone: Phone,
+        state: State,
+        dispute: Dispute,
+        check: Check,
+        time: serverTimestamp(),
+      });
+      // console.log("Document written with ID: ", docRef.id);
+      navi("/thanks/" + docRef.id);
+    } catch (e) {
+      setisLoading(false);
+
       console.error("Error adding document: ", e);
     }
-  };
+    setisLoading(false);
+  }
 
   return (
     <>
@@ -113,11 +122,9 @@ function Contact() {
               value={Name}
               placeholder="Name"
               onChange={(e) => setname(e.target.value)}
-              
             />
             <br />
             <label className="errorLabel">{Nameerror}</label>
-
           </div>
           <div className="form-email">
             <span>Email</span>
@@ -131,7 +138,6 @@ function Contact() {
             />
             <br />
             <label className="errorLabel">{emailError}</label>
-
           </div>
           <div className="form-number">
             <span>Phone No</span>
@@ -143,7 +149,6 @@ function Contact() {
             />
             <br />
             <label className="errorLabel">{phoneerror}</label>
-
           </div>
           <div className="form-state">
             <span>State</span>
@@ -155,7 +160,6 @@ function Contact() {
             />
             <br />
             <label className="errorLabel">{Stateerror}</label>
-
           </div>
           <div className="form-dispute">
             <span>Type of Dispute</span>
@@ -165,7 +169,6 @@ function Contact() {
               value={Dispute}
               onChange={(e) => setdispute(e.target.value)}
             >
-
               <option value=""></option>
 
               <option value="Good">Good</option>
@@ -173,7 +176,6 @@ function Contact() {
               <option value="Excellent">Excellent</option>
             </select>
             <label className="errorLabel">{Disputeerror}</label>
-
           </div>
           <div className="form-checkbox">
             <input
@@ -191,7 +193,6 @@ function Contact() {
             </span>
             <br />
             <label className="errorLabel">{Checkerror}</label>
-
           </div>
           <button type="submit" onClick={Submitform}>
             Submit
@@ -201,6 +202,9 @@ function Contact() {
       <div className="contact-button">
         <button>Contatct Us Now</button>
       </div>
+      <LoaderOverlay loading={isLoading} />
+      {/* <LoaderOverlay loading={true} /> */}
+
       <Footer />
     </>
   );

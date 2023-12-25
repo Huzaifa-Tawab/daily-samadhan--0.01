@@ -47,11 +47,11 @@ const Login = () => {
         console.log(userCredential.user.uid);
 
         const docSnap = await getDoc(
-          doc(db, "userDetails", userCredential.user.uid)
+          doc(db, "ContactsUsers", userCredential.user.uid)
         );
 
         if (docSnap.exists()) {
-          //    console.log("Document data:", docSnap.data().userType);
+          console.log("Document data:", docSnap.data().userType);
           if (docSnap.data().userType === "admin") {
             navigate("/admin");
             localStorage.setItem("name", docSnap.data().name);
