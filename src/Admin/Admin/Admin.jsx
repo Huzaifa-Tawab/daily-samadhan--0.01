@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 import Header from "../Nav/Header";
 import "./admin.css";
 import { db } from "../../firebase";
 import { collection, getDocs } from "@firebase/firestore";
 import LoaderOverlay from "../../components/Loader/LoaderOverlay";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function Admin() {
   const [isLoading, setisLoading] = useState(true);
   const [contacts, setContacts] = useState([]);
+  const [user, setuser] = useState(null); // Change the initial state to null
+  const navigate = useNavigate(); // Get the navigate function for redirection
+
+  const auth = getAuth();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "ContactsUsers"));
 
-        // Extract data from the snapshot
         const contacts = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -32,16 +37,36 @@ function Admin() {
       }
     };
 
-    fetchData();
-  }, []);
+    // Use onAuthStateChanged to observe changes in authentication state
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setuser(user);
+        fetchData();
+      } else {
+        setuser(null);
+        // Redirect to the login page if not authenticated
+        navigate("/login");
+      }
+    });
+
+    // Cleanup the subscription when the component unmounts
+    return () => unsubscribe();
+  }, [auth, navigate]);
+
+  if (isLoading || user === null) {
+    return <LoaderOverlay loading={isLoading} />;
+  }
 
   return (
     <>
       <Header />
-      <LoaderOverlay loading={isLoading} />
       <div className="Admin">
         <div className="Admin-header">
-          <h1>Welcome to DailySamadhan Admin Pannel</h1>
+          <h1>Welcome to DailySamadhan Admin Panel</h1>
+          <h1 className="res">
+            To Access User's Data please Switch Your Screen to your Laptop or
+            Desktop. <br /> Sorry For Inconvenience
+          </h1>
           <div className="table">
             <table>
               <thead>
@@ -51,7 +76,7 @@ function Admin() {
                   <th>Phone No</th>
                   <th>State</th>
                   <th>Type of Dispute</th>
-                  <th>time</th>
+                  <th>Time & Date</th>
                 </tr>
               </thead>
               <tbody>
@@ -63,7 +88,9 @@ function Admin() {
                     <td>{contact.state}</td>
                     <td>{contact.dispute}</td>
                     <td>
-                      {contact.time ? contact.time.toDate().toString() : "N/A"}
+                      {contact.time
+                        ? contact.time.toDate().toString()
+                        : "N/A"}
                     </td>
                   </tr>
                 ))}

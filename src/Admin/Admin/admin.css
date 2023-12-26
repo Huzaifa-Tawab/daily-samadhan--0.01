@@ -16,26 +16,31 @@
   padding: 20px;
 }
 .table {
-  background: gray;
-  background: linear-gradient(#fefafa, #fefafa) 50% 50% / calc(100% - 16px)
-      calc(100% - 16px) no-repeat,
-    linear-gradient(#fefafa, #fefafa) 50% 50% / calc(100% - 10px)
-      calc(100% - 10px) no-repeat,
-    linear-gradient(90deg, #0c0b4b 20%, #31a049 60%, #31a049 94%);
-  box-sizing: border-box;
-  width: 80%;
 }
 .table > table {
   padding: 0px 20px;
 }
-table {
-}
 th {
-  padding: 10px 30px;
+  padding: 20px 28px;
   color: #fff;
   font-size: 1.5rem;
+  border-bottom: 2px solid #fff;
 }
 td {
+  border-bottom: 1px solid #fff;
+  padding: 10px 0px;
   font: 1rem;
-  color: #000;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .table{
+    display: none;
+  }
+
+}
+@media (min-width: 768px) {
+  .res{
+    display: none;
+  }
+  
 }

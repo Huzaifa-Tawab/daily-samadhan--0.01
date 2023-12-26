@@ -77,3 +77,12 @@
     border-radius: 8px;
     cursor: pointer;
 }
+@media (max-width:  768px) {
+  .inputBox{
+    width: auto;
+  }
+  .mainContainer{
+    margin-left: 20%;
+  }
+  
+}

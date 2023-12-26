@@ -4,18 +4,21 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./complaintportal.css";
 import { Link } from "react-router-dom";
-import police from "../../assets/portals/police.png";
-import Frame43 from "../../assets/portals/Frame 43.jpg";
-import Frame42 from "../../assets/portals/Frame 42.jpg";
-import Frame41 from "../../assets/portals/Frame 41.png";
-import Frame25 from "../../assets/portals/Frame 25.jpg";
-import Frame24 from "../../assets/portals/Frame 24.jpg";
-import Frame23 from "../../assets/portals/Frame 23.jpg";
-import Frame21 from "../../assets/portals/Frame 21.jpg";
-import Frame47 from "../../assets/portals/Frame 47.jpg";
-import Frame46 from "../../assets/portals/Frame 46.jpg";
-import Frame45 from "../../assets/portals/Frame 45.jpg";
-import Frame44 from "../../assets/portals/Frame 44.jpg";
+import police from '../../assets/portals/police.svg'
+import Frame43 from '../../assets/portals/industrialdispute.svg'
+import Frame42 from '../../assets/portals/ebilling.svg'
+import Frame41 from '../../assets/portals/consumer.svg'
+import Frame25 from '../../assets/portals/nch.svg'
+import Frame24 from '../../assets/portals/cyber.svg'
+import Frame23 from '../../assets/portals/women.svg'
+import Frame21 from '../../assets/portals/lost.svg'
+import Frame47 from '../../assets/portals/nationaltest.svg'
+import Frame46 from '../../assets/portals/drone.svg'
+import Frame45 from '../../assets/portals/foodsafety.svg'
+import Frame44 from '../../assets/portals/telecom.svg'
+import TM from '../../assets/portals/tm.svg'
+import GST from '../../assets/portals/gstportal.svg'
+import phblk from '../../assets/portals/blockph.svg'
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../../firebase";
 
@@ -196,116 +199,259 @@ function Complainportal() {
 
       {/* Portals */}
       <div className="Portal complaint-portal">
-        {/* <p>Online <span style={{color:"#31A049"}}>Complaint Portals</span></p> */}
         <div id="Portal-content">
-          <div class="Portal-content-card">
-            <Link to={"/form/Industrial Dispute"}>
-              <div className="con">
-                <img src={Frame43} />
-                <p>Industrial Dispute</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/e-Filling Consumer Commission"}>
-              <div className="con">
-                <img src={Frame42} />
-                <p>e-Filling Consumer Commission</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/Consumer Help"}>
-              <div className="con">
-                <img src={Frame25} />
-                <p> Consumer Help</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/Cyber Crime"}>
-              <div className="con">
-                <img src={Frame24} />
-                <p>Cyber Crime</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/Women Helpline"}>
-              <div className="con">
-                <img src={Frame23} />
-                <p>Women Helpline</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/Lost & Found"}>
-              <div className="con">
-                <img src={Frame21} />
-                <p>Lost And Found</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to="/form/Consumer Dispute">
-              <div className="con">
-                <img src={Frame41} />
-                <p>Consumer Dispute</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/Police Complaint"}>
-              <div className="con">
-                <img src={police} />
-                <p>Police Complaint</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/Telecom Dispute"}>
-              <div className="con">
-                <img src={Frame44} />
-                <p>Telecom Dispute</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/Food Safety"}>
-              <div className="con">
-                <img src={Frame45} />
-                <p>Food Safety</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/Drone Certificate Flying License"}>
-              <div className="con">
-                <img src={Frame46} />
-                <p>Drone Certificate Flying License</p>
-              </div>
-            </Link>
-          </div>
-
-          <div class="Portal-content-card">
-            <Link to={"/form/National Test House"}>
-              <div className="con">
-                <img src={Frame47} />
-                <p>National Test House</p>
-              </div>
-            </Link>
-          </div>
+    <div class="Portal-content-card">
+        <Link to={"/form/Police Complaint"}>
+      <div className="con">
+      
+      <img src={police}/>
+          <p>Police Complaint</p>
+          <div class="middle-portal">
+      <div class="text-links"></div>
+  </div>
+      </div>
+      </Link>
         </div>
+        
+    <div class="Portal-content-card">
+    <Link to={"https://samadhan.labour.gov.in/"}>
+      <div className="con">
+      <img src={Frame43}/>
+          <p>Industrial Dispute</p>
+          <div class="middle-portal">
+      <div class="text-links">https://samadhan.labour.gov.in/</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://edaakhil.nic.in/edaakhil"}>
+      <div className="con">
+      <img src={Frame42}/>
+      <p>e-Filling Consumer Commission</p>
+      <div class="middle-portal">
+      <div class="text-links">https://edaakhil.nic.in/edaakhil</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"/contact"}>
+      <div className="con">
+      <img src={Frame25}/>
+          <p> Consumer Help</p>
+          <div class="middle-portal">
+      <div class="text-links"></div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://cybercrime.gov.in/"}>
+      <div className="con">
+      <img src={Frame24}/>
+          <p>Cyber Crime</p>
+          <div class="middle-portal">
+      <div class="text-links">https://cybercrime.gov.in/</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://www.ncwwomenhelpline.in/"}>
+      <div className="con">
+      <img src={Frame23}/>
+          <p>Women Helpline</p>
+          <div class="middle-portal">
+      <div class="text-links">https://www.ncwwomenhelpline.in/</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://lostfound.delhipolice.gov.in/"}>
+      <div className="con">
+      <img src={Frame21}/>
+          <p>Lost And Found</p>
+          <div class="middle-portal">
+      <div class="text-links">https://lostfound.delhipolice.gov.in/</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://ncdrc.nic.in/"}>
+      <div className="con">
+     
+      <img src={Frame41}/>
+          <p>Consumer Dispute</p>
+          <div class="middle-portal">
+      <div class="text-links">https://ncdrc.nic.in/</div>
+  </div>
+          
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+    <Link to={"https://tdsat.gov.in/Delhi/Delhi.php"}>
+     
+      <div className="con">
+      <img src={Frame44}/>
+          <p>Telecom Dispute</p>
+          <div class="middle-portal">
+      <div class="text-links">https://tdsat.gov.in/Delhi/Delhi.php</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        
+        <div class="Portal-content-card">
+        <Link to={"https://fssai.gov.in/cms/grievances.php"}>
+
+      <div className="con">
+      <img src={Frame45}/>
+          <p>Food Safety</p>
+          <div class="middle-portal">
+      <div class="text-links">https://fssai.gov.in/cms/grievances.php</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        
+        <div class="Portal-content-card">
+        <Link to={"https://digitalsky.dgca.gov.in/home"}>
+
+      <div className="con">
+      <img src={Frame46}/>
+          <p>Drone Certificate Flying License</p>
+          <div class="middle-portal">
+      <div class="text-links">https://digitalsky.dgca.gov.in/home</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        
+        <div class="Portal-content-card">
+        <Link to={"https://www.nth.gov.in/"}>
+
+      <div className="con">
+      <img src={Frame47}/>
+          <p>National Test House</p>
+          <div class="middle-portal">
+      <div class="text-links">https://www.nth.gov.in/</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://ipindiaonline.gov.in/trademarkefiling/user/frmNewRegistration.aspx"}>
+
+      <div className="con">
+      <img src={TM}/>
+          <p>TradeMark Registration</p>
+          <div class="middle-portal">
+      <div class="text-links">https://ipindiaonline.gov.in/trademarkefiling/user/frmNewRegistration.aspx</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://services.gst.gov.in/services/login"}>
+      <div className="con">
+      <img src={GST}/>
+          <p>GST Portal for Filling</p>
+          <div class="middle-portal">
+      <div class="text-links">https://services.gst.gov.in/services/login</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://ncte.gov.in/website/grievance.aspx"}>
+      <div className="con">
+      <img src={Frame47} />
+          <p>Educational Complaints</p>
+          <div class="middle-portal">
+      <div class="text-links">https://ncte.gov.in/website/grievance.aspx</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://www.ceir.gov.in/Home/index.jsp"}>
+      <div className="con">
+      <img src={phblk} />
+          <p>Phone Block Theft</p>
+          <div class="middle-portal">
+      <div class="text-links">https://www.ceir.gov.in/Home/index.jsp</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://stopncii.org/"}>
+      <div className="con">
+      <img src= {""} />
+          <p>Inappropriate Photo Portal</p>
+          <div class="middle-portal">
+      <div class="text-links">https://stopncii.org/</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://irdai.gov.in/igms1"}>
+      <div className="con">
+      <img src= {""} />
+          <p>Insurance Complaint Portal</p>
+          <div class="middle-portal">
+      <div class="text-links">https://irdai.gov.in/igms1</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"www.amalegalsolutions.com"}>
+      <div className="con">
+      <img src= {""} />
+          <p>Online Dispute Resolution</p>
+          <div class="middle-portal">
+      <div class="text-links">www.amalegalsolutions.com</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+        <div class="Portal-content-card">
+        <Link to={"https://airsewa.gov.in/grievance/grievance-redressal"}>
+      <div className="con">
+      <img src= {""} />
+          <p>Airlines Complaint Portal</p>
+          <div class="middle-portal">
+      <div class="text-links">https://airsewa.gov.in/grievance/grievance-redressal</div>
+  </div>
+      </div>
+      </Link>
+        </div>
+
+      </div>
       </div>
 
       {/* Why Choose Us */}

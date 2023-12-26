@@ -21,6 +21,7 @@ height: 10vh;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .pre-nav-contact{
     display: flex;
@@ -33,6 +34,17 @@ height: 10vh;
   /* background-color: #fef7e5; */
   position: relative;
 }
+.container{
+  display: flex;
+  justify-content: space-between !important;
+}
+.login{
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+}
 
 .logo img {
 height:8vh;
@@ -43,7 +55,7 @@ height:8vh;
 }
 
 .nav-elements {
-
+  margin-right: 20vw;
 }
 
 .nav-elements ul {
@@ -82,7 +94,7 @@ height:8vh;
 
 @media (max-width: 768px) {
     .nav-login{
-        display: none;
+        /* display: none; */
     }
   .nav-elements ul li:not(:last-child) {
     margin-right: 30px;
@@ -94,6 +106,9 @@ height:8vh;
     display: block;
     cursor: pointer;
   }
+  .login{
+  
+  }
 
   .nav-elements {
     position: absolute;
@@ -104,6 +119,7 @@ height:8vh;
     height: calc(100vh - 60px);
     transition: all 0.3s ease-in;
     overflow: hidden;
+    margin-right: auto;
   }
 
   .nav-elements.active {

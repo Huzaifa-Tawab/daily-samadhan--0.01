@@ -20,7 +20,7 @@ const Navbar = () => {
           <p> <FaMailBulk/> 03169301238 </p>
         </div>
         <div className="pre-nav-info">
-
+            <Link className='login' to={'/login'}>Login</Link>
         </div>
       </div>
       <div className="container">
@@ -52,8 +52,9 @@ const Navbar = () => {
               <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
+          {/* <NavLink to='/login'><button className='nav-login'> Login </button></NavLink> */}
         </div>
-        <Link to='/login'><button className='nav-login'> Login </button></Link>
+        
       </div>
     </nav>
   )

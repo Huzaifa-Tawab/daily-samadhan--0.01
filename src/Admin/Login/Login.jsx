@@ -13,8 +13,7 @@ const Login = () => {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [Error, setError] = useState(false);
-
-  const navigate = useNavigate();
+  const Navigate = useNavigate();
 
   async function onButtonClick(e) {
     e.preventDefault();
@@ -47,13 +46,14 @@ const Login = () => {
         console.log(userCredential.user.uid);
 
         const docSnap = await getDoc(
-          doc(db, "ContactsUsers", userCredential.user.uid)
+          doc(db, "users", userCredential.user.uid)
         );
+        console.log('done')
 
         if (docSnap.exists()) {
-          console.log("Document data:", docSnap.data().userType);
+          console.log("Document data:");
           if (docSnap.data().userType === "admin") {
-            navigate("/admin");
+            Navigate("/admin");
             localStorage.setItem("name", docSnap.data().name);
           }
         } else {

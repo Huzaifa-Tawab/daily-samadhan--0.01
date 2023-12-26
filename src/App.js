@@ -1,16 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./pages/pages.css";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Form from "./components/Complaint Form/Form";
-import Complainportal from "./pages/Complaint Portal/Complainportal";
-import Contact from "./pages/Contact/Contact";
-import Login from "./Admin/Login/Login";
-import Admin from "./Admin/Admin/Admin";
-import PComplaint from "./Admin/Police Com/PComplaint";
-import ThankYou from "./pages/ThankYou/ThankYou";
+// App.js
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './pages/pages.css';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Form from './components/Complaint Form/Form';
+import Complainportal from './pages/Complaint Portal/Complainportal';
+import Contact from './pages/Contact/Contact';
+import Login from './Admin/Login/Login';
+import Admin from './Admin/Admin/Admin';
+import PComplaint from './Admin/Police Com/PComplaint';
+import ThankYou from './pages/ThankYou/ThankYou';
 
-export default function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -26,4 +28,6 @@ export default function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+};
+
+export default App;

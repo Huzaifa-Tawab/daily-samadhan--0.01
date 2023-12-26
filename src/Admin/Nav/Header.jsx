@@ -30,7 +30,7 @@ const Header = () => {
         <FaHamburger/>
 
         </div>
-        <div className={`nav-elements  ${showNavbar && 'active'}`}>
+        <div className={`nav-elements admin-nav  ${showNavbar && 'active'}`}>
           <ul>
             <li>
               <NavLink to="/admin">Contact</NavLink>
@@ -41,7 +41,7 @@ const Header = () => {
           </ul>
         </div>
       
-          <button className='nav-login' to="/login"> Login </button>
+          {/* <button className='nav-login' to="/login"> Login </button> */}
         
       </div>
     </nav>
