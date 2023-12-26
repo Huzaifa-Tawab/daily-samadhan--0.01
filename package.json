@@ -22,12 +22,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "parser": "babel-eslint",
-    "plugins": ["react"],
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
-    "rules": {
-
-    }
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
@@ -40,8 +38,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0"
   }
 }
