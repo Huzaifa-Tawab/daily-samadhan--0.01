@@ -17,7 +17,7 @@
 }
 .side-cards{
     width: 20vw;
-    height: 80vh;
+    /* height: 80vh; */
     border: 1px solid #0C0B4B;
     border-radius: 10px;
     padding: 50px;
@@ -33,7 +33,7 @@
 }
 .mid-card{
     width: 27vw;
-    height: 100vh;
+    /* height: 100vh; */
     border: 1px solid #EFF0F6;
     border-radius: 10px;
     padding: 50px;

@@ -81,10 +81,10 @@ function Offer() {
             <img src={check} alt="" />
             <p>On call assistance to file the complaint</p>
            </div>
-           <div className="check-text">
+           {/* <div className="check-text">
             <img src={check} alt="" />
             <p>Dedicated support from our service dedicated expert</p>
-           </div>
+           </div> */}
            <div className="button-started">
             <button>Get Started</button>
            </div>
