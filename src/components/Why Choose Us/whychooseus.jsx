@@ -27,13 +27,14 @@ function WhyChooseUs() {
         <img src={experts} alt="" />
         <h1>Trained Professionla Experts</h1>
         </div>
-        <div className="govt">
-        <img src={security} alt="" />
-        <h1>Data Security and Trust </h1>
-        </div>
+       
         
     </div>
     <div className="content2">
+    <div className="govt">
+        <img src={security} alt="" />
+        <h1>Data Security and Trust </h1>
+        </div>
         <div className="govt">
             <img src={price} alt="" />
         <h1>Affordable Price </h1>

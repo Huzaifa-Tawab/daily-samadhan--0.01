@@ -33,6 +33,9 @@
     font-size: 2rem;
     
 }
+.mail-div a> h2{
+    text-decoration: underline #31A049;
+}
 .contact-button{
     text-align: center;
     margin-top: 50px;

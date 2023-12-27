@@ -9,27 +9,29 @@
 .header-choose> h1{
     font-size: 3.5rem;
     color: #0C0B4B;
+    text-decoration: underline #0C0B4B;
 }
 .header-choose>h1> span{
     color: #31A049;
+    text-decoration: underline #31A049;
 }
 .content-whychoose{
     display: flex;
     justify-content: space-between;
 }
 .content2{
-    width: 30vw;
-    margin: 80px 30vw;
+    /* width: 30vw; */
+    margin: 80px 0;
     display: flex;
     justify-content: space-between;
 }
 .govt> h1{
     line-height: 30px;
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: 600;
 }
 .govt> img{
-    width: 60px;
+    width: 80px;
 }
 @media (max-width: 768px) {
     .header-choose h1{

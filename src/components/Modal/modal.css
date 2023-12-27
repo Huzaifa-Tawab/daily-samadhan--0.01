@@ -17,29 +17,31 @@
 
 }
 .modal-content1{
-    background:#43DD64;
+    background: rgb(12,11,75);
+background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
     font-size: 22px;
     font-weight: 600;
     padding: 50px;
     width: 30vw;
     text-align: center;
-    color: #0C0B4B;
+    color: #fff;
 }
 .modal-content1> a{
-    color: #0C0B4B;
+    color: #fff;
 }
 .modal-content2{
-    background: #13124E;
+    background: rgb(12,11,75);
+background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
     font-size: 22px;
     font-weight: 600;
     padding: 50px;
     width: 30vw;
     text-align: center;
-    color: #43DD64;
+    color: #fff;
     margin-left: 30px;
 }
 .modal-content2> a{
-    color: #43DD64;
+    color: #fff;
 }
 .modal-content{
     display: flex;
@@ -47,6 +49,23 @@
     margin: 30px;
 }
 .ReactModal__Content{
-    border: 10px solid #43DD64;
+    border-top: 10px solid #43DD64;
+    border-right: 10px solid #43DD64;
+    border-bottom: 10px solid #0C0B4B;
+    border-left: 10px solid #0C0B4B;
     width: 75vw;
+}
+@media (max-width: 768px) {
+    .modal-content{
+        flex-direction: column;
+    }
+    .modal-content1{
+        width: auto;
+    }
+    .modal-content2{
+        width: auto;
+        margin-left: auto;
+        margin-top: 20px;
+    }
+    
 }

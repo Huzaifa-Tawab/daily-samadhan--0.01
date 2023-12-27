@@ -4,6 +4,7 @@ import check from '../../assets/Check.png'
 import complaint from '../../assets/Offer/complaint.png'
 import expor from '../../assets/Offer/export.png'
 import end from '../../assets/Offer/end-to-end.png'
+import { Link } from 'react-router-dom'
 
 function Offer() {
   return (
@@ -29,7 +30,9 @@ function Offer() {
             <p>Explaining a procedure to file a complaint</p>
            </div>
            <div className="button-started">
+           <Link className='button-started' to={"/contact"}>
             <button>Get Started</button>
+            </Link>
            </div>
         </div>
         <div className="mid-card">
@@ -61,7 +64,9 @@ function Offer() {
             <p>Explaining a procedure to file a complaint</p>
            </div>
            <div className="button-started">
+            <Link className='button-started' to={"/contact"}>
             <button>Get Started</button>
+            </Link>
            </div>
         </div>
 
@@ -86,7 +91,9 @@ function Offer() {
             <p>Dedicated support from our service dedicated expert</p>
            </div> */}
            <div className="button-started">
+           <Link className='button-started' to={"/contact"}>
             <button>Get Started</button>
+            </Link>
            </div>
         </div>
     </div>

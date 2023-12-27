@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Link } from 'react-router-dom';
-import {  FaHamburger, FaMailBulk,  FaPhoneAlt,  } from 'react-icons/fa';
+import { FaHamburger, FaMailBulk, FaUserLock,  } from 'react-icons/fa';
 import './navbar.css'
 import logo from '../../assets/logo.svg'
 
@@ -16,11 +16,11 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="pre-nav">
         <div className="pre-nav-contact">
-          <p> <FaPhoneAlt/> 03169301238 </p>
-          <p> <FaMailBulk/> 03169301238 </p>
+          {/* <p> <FaPhoneAlt/> 03169301238 </p> */}
+          <p> <FaMailBulk/> Dailysamadhanindia@gmail.com </p>
         </div>
         <div className="pre-nav-info">
-            <Link className='login' to={'/login'}>Login</Link>
+            <Link className='login' to={'/login'}><FaUserLock/> Login</Link>
         </div>
       </div>
       <div className="container">
@@ -46,7 +46,7 @@ const Navbar = () => {
               <NavLink to="/faq">FAQ</NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about">About Us</NavLink>
             </li>
             <li>
               <NavLink to="/contact">Contact</NavLink>

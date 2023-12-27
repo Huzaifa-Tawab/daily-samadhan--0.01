@@ -1,25 +1,24 @@
-import {React, useState} from 'react'
+import { React, useState } from "react";
 
-import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
-import './Form.css'
-import delhi from '../../assets/Cities/Delhi.jpeg'
-import uttarpardesh from '../../assets/Cities/Uttarpradesh.jpeg'
-import haryana from '../../assets/Cities/haryana.jpeg'
-import rajasthan from '../../assets/Cities/Rajasthan.jpeg'
-import maharashtra from '../../assets/Cities/maharashtra.png'
-import { useParams } from 'react-router-dom'
-import Popup from '../Modal/modal'
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+import "./Form.css";
+import delhi from "../../assets/Cities/Delhi.jpeg";
+import uttarpardesh from "../../assets/Cities/Uttarpradesh.jpeg";
+import haryana from "../../assets/Cities/haryana.jpeg";
+import rajasthan from "../../assets/Cities/Rajasthan.jpeg";
+import maharashtra from "../../assets/Cities/maharashtra.png";
+import { useParams } from "react-router-dom";
+import Popup from "../Modal/modal";
 import { db } from "../../firebase";
 import { useNavigate } from "react-router";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
-
 function Form(props) {
-  let id=props.id;
-  let x=useParams()
-  id=x.id;
-  console.log(id)
+  let id = props.id;
+  let x = useParams();
+  id = x.id;
+  console.log(id);
   const navi = useNavigate();
   const [isLoading, setisLoading] = useState(false);
   const [Name, setname] = useState("");
@@ -36,7 +35,7 @@ function Form(props) {
   const [Textareaerror, settextareaError] = useState("");
   const [Checkerror, setcheckError] = useState("");
 
-  const handleClick = () => setcheck(!Check)
+  const handleClick = () => setcheck(!Check);
   async function SubmitPoliceComplaint(e) {
     e.preventDefault();
     // Set initial error values to empty
@@ -49,8 +48,8 @@ function Form(props) {
 
     // Check if the user has entered both fields correctly
     if ("" === Name) {
-        setnameError("Please enter your Name");
-        return;
+      setnameError("Please enter your Name");
+      return;
     }
     if ("" === Email) {
       setEmailError("Please enter your email");
@@ -102,14 +101,14 @@ function Form(props) {
       console.error("Error adding document: ", e);
     }
     setisLoading(false);
-  };
+  }
 
   return (
-   <>
-   <Navbar />
-   <div className="Form-main">
-    <h1>{id}</h1>
-    <div className="form-fields">
+    <>
+      <Navbar />
+      <div className="Form-main">
+        <h1>{id}</h1>
+        <div className="form-fields">
           <h3>Need Help with Filing Complaint?</h3>
           <div className="form-name">
             <span>Name</span>
@@ -118,11 +117,9 @@ function Form(props) {
               value={Name}
               placeholder="Name"
               onChange={(e) => setname(e.target.value)}
-              
             />
             <br />
             <label className="errorLabel">{Nameerror}</label>
-
           </div>
           <div className="form-email">
             <span>Email</span>
@@ -136,7 +133,6 @@ function Form(props) {
             />
             <br />
             <label className="errorLabel">{emailError}</label>
-
           </div>
           <div className="form-number">
             <span>Phone No</span>
@@ -148,7 +144,6 @@ function Form(props) {
             />
             <br />
             <label className="errorLabel">{phoneerror}</label>
-
           </div>
           <div className="form-state">
             <span>State</span>
@@ -160,15 +155,20 @@ function Form(props) {
             />
             <br />
             <label className="errorLabel">{Stateerror}</label>
-
           </div>
+          <span>Your Query</span>
           <div className="form-dispute">
-            <span>Your Query</span>
-              
-            <textarea name="" id="" cols="30" rows="4" onChange={(e) => settextarea(e.target.value)}></textarea>
+            {/* <span>Your Query</span> */}
+
+            <textarea
+              name=""
+              id=""
+              cols="33"
+              rows="3"
+              onChange={(e) => settextarea(e.target.value)}
+            ></textarea>
             <br />
             <label className="errorLabel">{Textareaerror}</label>
-
           </div>
           <div className="form-checkbox">
             <input
@@ -186,112 +186,113 @@ function Form(props) {
             </span>
             <br />
             <label className="errorLabel">{Checkerror}</label>
-
           </div>
           <button type="submit" onClick={SubmitPoliceComplaint}>
             Submit
           </button>
         </div>
-   </div>
-   {/* Cities */}
-   <div className="city-portal">
-   <div class="city-Portal-card">
-      <div className="con">
-      <img src={delhi}/>
-      <div class="middle">
-    <div class="text">Delhi</div>
-  </div>
       </div>
+      {/* Cities */}
+      <div className="city-portal">
+        <div class="city-Portal-card">
+          <div className="con">
+            <img src={delhi} />
+            <div class="middle">
+              <div class="text">Delhi</div>
+            </div>
+          </div>
         </div>
         <div class="city-Portal-card">
-      <div className="con">
-      <img src={uttarpardesh}/>
-      <div class="middle">
-    <div class="text">Uttar Pradesh</div>
-  </div>
-      </div>
+          <div className="con">
+            <img src={uttarpardesh} />
+            <div class="middle">
+              <div class="text">Uttar Pradesh</div>
+            </div>
+          </div>
         </div>
         <div class="city-Portal-card">
-      <div className="con">
-      <img src={haryana}/>
-      <div class="middle">
-    <div class="text">Haryana</div>
-  </div>
-      </div>
+          <div className="con">
+            <img src={haryana} />
+            <div class="middle">
+              <div class="text">Haryana</div>
+            </div>
+          </div>
         </div>
         <div class="city-Portal-card">
-      <div className="con">
-      <img src={rajasthan}/>
-      <div class="middle">
-    <div class="text">Rajasthan</div>
-  </div>
-      </div>
+          <div className="con">
+            <img src={rajasthan} />
+            <div class="middle">
+              <div class="text">Rajasthan</div>
+            </div>
+          </div>
         </div>
         <div class="city-Portal-card">
-      <div className="con">
-      <img src={maharashtra}/>
-      <div class="middle">
-    <div class="text">Maharashtra</div>
-  </div>
+          <div className="con">
+            <img src={maharashtra} />
+            <div class="middle">
+              <div class="text">Maharashtra</div>
+            </div>
+          </div>
+        </div>
       </div>
-        </div>
-        </div>
-        <div className="city-portal">
+      <div className="city-portal">
         <div class="city-Portal-card">
-      <div className="con">
-      <img src={maharashtra}/>
-      <div class="middle">
-    <div class="text">Madhya Pradesh</div>
-  </div>
-      </div>
-        </div>
-        <div class="city-Portal-card">
-      <div className="con">
-      <img src={maharashtra}/>
-      <div class="middle">
-    <div class="text">Gujarat</div>
-  </div>
-      </div>
+          <div className="con">
+            <img src={maharashtra} />
+            <div class="middle">
+              <div class="text">Madhya Pradesh</div>
+            </div>
+          </div>
         </div>
         <div class="city-Portal-card">
-      <div className="con">
-      <img src={maharashtra}/>
-      <div class="middle">
-    <div class="text">Tamil Nadu</div>
-  </div>
-      </div>
+          <div className="con">
+            <img src={maharashtra} />
+            <div class="middle">
+              <div class="text">Gujarat</div>
+            </div>
+          </div>
         </div>
         <div class="city-Portal-card">
-      <div className="con">
-      <img src={maharashtra}/>
-           <div class="middle">
-    <div class="text">Himachal Pradesh</div>
-  </div>
-      </div>
+          <div className="con">
+            <img src={maharashtra} />
+            <div class="middle">
+              <div class="text">Tamil Nadu</div>
+            </div>
+          </div>
         </div>
         <div class="city-Portal-card">
-      <div className="con">
-      <img src={maharashtra}/>
-      <div class="middle">
-    <div class="text">Bihar</div>
-  </div>
-      </div>
+          <div className="con">
+            <img src={maharashtra} />
+            <div class="middle">
+              <div class="text">Himachal Pradesh</div>
+            </div>
+          </div>
         </div>
-   </div>
-{/* File Complaint */}
-<div className="file-complaint-fields">
-    <div className="complain-file">
-        <p>Want us to file your Complaint? <br />
-          <Popup/></p>
-    </div>
-    {/* <div className="not-city">
+        <div class="city-Portal-card">
+          <div className="con">
+            <img src={maharashtra} />
+            <div class="middle">
+              <div class="text">Bihar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* File Complaint */}
+      <div className="file-complaint-fields">
+        <div className="complain-file">
+          <p>
+            Want us to file your Complaint? <br />
+            <Popup />
+          </p>
+        </div>
+        {/* <div className="not-city">
         <p>Not Able to find your city ? <br /> give us a call on <br /> 1800 0000 0000</p>
     </div> */}
-</div>
+      </div>
 
-   <Footer />
-   </>
-  )
+      <Footer />
+    </>
+  );
 }
 
-export default Form
+export default Form;

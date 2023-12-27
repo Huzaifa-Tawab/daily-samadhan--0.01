@@ -25,6 +25,21 @@
     justify-content: space-evenly; */
 
 }
+.form-name> span{
+    padding: 5px;
+}
+.form-email> span{
+    padding: 5px;
+}
+.form-number> span{
+    padding: 5px;
+}
+.form-state> span{
+    padding: 5px;
+}
+.form-dispute> span{
+    padding: 5px;
+}
 .form-name> input{
     width: 70%;
     height: 20px;
@@ -70,21 +85,37 @@
     /* display: flex;
     flex-direction: column; */
     align-items: center;
+    /* width: 100%; */
 }
-.form-dispute> select{
+/* .form-dispute> select{
     margin: 10px;
     width: 100%;
     height: 30px;
-}
+} */
 .form-checkbox> span{
     padding: 5px;
     font-size: 10px;
 }
 .form-checkbox{
     text-align: start;
+
 }
 .Form-main> button{
     margin: 20px;
+}
+.form-fields> button{
+    background: #31A049;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 30px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 20px;
+}
+.form-fields> button:hover{
+    background: #0C0B4B;
+
 }
 /* {City-potal} */
 .city-portal {

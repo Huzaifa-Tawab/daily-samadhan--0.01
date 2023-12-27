@@ -4,12 +4,18 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import email from "../../assets/Contact/email.svg";
 import loc from "../../assets/Contact/location.svg";
+import web from "../../assets/Contact/web.svg";
 import { db } from "../../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import LoaderOverlay from "../../components/Loader/LoaderOverlay";
 import { useNavigate } from "react-router";
+import { Link, useParams } from "react-router-dom";
 
-function Contact() {
+function Contact(props) {
+  let id = props.id;
+  let x = useParams();
+  id = x.id;
+  console.log(id);
   const navi = useNavigate();
   const [isLoading, setisLoading] = useState(false);
   const [Name, setname] = useState("");
@@ -17,13 +23,14 @@ function Contact() {
   const [Phone, setphone] = useState("");
   const [State, setstate] = useState("");
   const [Dispute, setdispute] = useState("");
+  const [Textarea, settextarea] = useState("");
   const [Check, setcheck] = useState(false);
   const [errorMessage, seterrorMessage] = useState("");
   const [emailError, setEmailError] = useState("");
   const [phoneerror, setphoneError] = useState("");
   const [Nameerror, setnameError] = useState("");
   const [Stateerror, setstateError] = useState("");
-  const [Disputeerror, setdisputeError] = useState("");
+  const [Textareaerror, settextareaError] = useState("");
   const [Checkerror, setcheckError] = useState("");
 
   const handleClick = () => setcheck(!Check);
@@ -34,7 +41,7 @@ function Contact() {
     setEmailError("");
     setphoneError("");
     setstateError("");
-    setdisputeError("");
+    settextareaError("");
     setcheckError("");
 
     // Check if the user has entered both fields correctly
@@ -65,7 +72,7 @@ function Contact() {
       return;
     }
     if ("" === Dispute) {
-      setdisputeError("Please select an option");
+      settextareaError("Please describe your issue");
       return;
     }
     if (Check === false) {
@@ -80,7 +87,7 @@ function Contact() {
         email: Email,
         phone: Phone,
         state: State,
-        dispute: Dispute,
+        textarea: Textarea,
         check: Check,
         time: serverTimestamp(),
       });
@@ -103,6 +110,13 @@ function Contact() {
             Contact <span>Now</span>
           </h1>
           <div className="contact-box">
+            <div className="mail-div">
+              <img src={web} alt="" />
+              <Link to={"/"}>
+                {" "}
+                <h2>https://{id}</h2>
+              </Link>
+            </div>
             <div className="mail-div">
               <img src={email} alt="" />
               <h2>info@dailysamadhan.com</h2>
@@ -161,9 +175,17 @@ function Contact() {
             <br />
             <label className="errorLabel">{Stateerror}</label>
           </div>
+          <span>Type of Dispute</span>
+
           <div className="form-dispute">
-            <span>Type of Dispute</span>
-            <select
+            <textarea
+              name=""
+              id=""
+              cols="33"
+              rows="3"
+              onChange={(e) => settextarea(e.target.value)}
+            ></textarea>
+            {/* <select
               name="dispute"
               id="abc"
               value={Dispute}
@@ -174,8 +196,8 @@ function Contact() {
               <option value="Good">Good</option>
               <option value="Best">Best</option>
               <option value="Excellent">Excellent</option>
-            </select>
-            <label className="errorLabel">{Disputeerror}</label>
+            </select> */}
+            <label className="errorLabel">{Textareaerror}</label>
           </div>
           <div className="form-checkbox">
             <input

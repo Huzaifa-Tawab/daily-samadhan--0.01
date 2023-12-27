@@ -5,15 +5,17 @@
 .header-offer> h1{
     font-size: 3rem;
     color: #0C0B4B;
+    text-decoration: underline #0C0B4B;
 }
 .header-offer>h1> span{
     color: #31A049;
+    text-decoration: underline #31A049;
 }
 .offer-cards{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .side-cards{
     width: 20vw;
@@ -77,7 +79,7 @@
     text-align: center;
 }
 .button-started> button{
-    background: #43DD64;
+    background: #4FB052;
     height: 10vh;
     width: 20vw;
     border-radius: 30px;
@@ -85,7 +87,7 @@
     color: white;
     font-size: 1rem;
     font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
 }
 @media (max-width: 768px) {
     .header-offer h1{

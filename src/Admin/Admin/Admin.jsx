@@ -86,7 +86,7 @@ function Admin() {
                     <td>{contact.email}</td>
                     <td>{contact.phone}</td>
                     <td>{contact.state}</td>
-                    <td>{contact.dispute}</td>
+                    <td>{contact.textarea}</td>
                     <td>
                       {contact.time
                         ? contact.time.toDate().toString()
