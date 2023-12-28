@@ -49,6 +49,7 @@ const Login = () => {
           doc(db, "users", userCredential.user.uid)
         );
         console.log('done')
+        localStorage.setItem('auth', true);
 
         if (docSnap.exists()) {
           console.log("Document data:");
@@ -68,6 +69,7 @@ const Login = () => {
         console.log(error);
         // const errorCode = error.code;
         setError("Email/Password Not correct");
+        alert(Error)
       });
   }
 

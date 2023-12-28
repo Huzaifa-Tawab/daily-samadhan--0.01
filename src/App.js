@@ -11,6 +11,7 @@ import Login from './Admin/Login/Login';
 import Admin from './Admin/Admin/Admin';
 import PComplaint from './Admin/Police Com/PComplaint';
 import ThankYou from './pages/ThankYou/ThankYou';
+import PrivateRoutes from './PrivateRoute';
 
 const App = () => {
   return (
@@ -24,8 +25,10 @@ const App = () => {
         <Route path="/form/:id" element={<Form />} />
         <Route path="/thanks/:id" element={<ThankYou />} />
         <Route path="/login" element={<Login />} />
+        <Route element={<PrivateRoutes />}>
         <Route path="/admin" element={<Admin />} />
         <Route path="/adminpolicecomplaint" element={<PComplaint />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

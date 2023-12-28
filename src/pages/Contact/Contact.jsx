@@ -112,8 +112,7 @@ function Contact(props) {
           <div className="contact-box">
             <div className="mail-div">
               <img src={web} alt="" />
-              <Link to={"/"}>
-                {" "}
+              <Link>
                 <h2>https://{id}</h2>
               </Link>
             </div>

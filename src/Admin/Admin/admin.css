@@ -19,6 +19,7 @@
 }
 .table > table {
   padding: 0px 20px;
+  margin: 0 50px;
 }
 th {
   padding: 20px 28px;

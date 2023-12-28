@@ -75,7 +75,7 @@ function Admin() {
                   <th>Email</th>
                   <th>Phone No</th>
                   <th>State</th>
-                  <th>Type of Dispute</th>
+                  <th>Dispute</th>
                   <th>Time & Date</th>
                 </tr>
               </thead>

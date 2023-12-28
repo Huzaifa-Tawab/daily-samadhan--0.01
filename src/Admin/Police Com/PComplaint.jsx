@@ -4,17 +4,24 @@ import "./pcomplaint.css";
 import { db } from "../../firebase";
 import { collection, getDocs } from "@firebase/firestore";
 import LoaderOverlay from "../../components/Loader/LoaderOverlay";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
+
+
 
 function Admin() {
   const [isLoading, setisLoading] = useState(true);
   const [contacts, setContacts] = useState([]);
+  const [user, setuser] = useState(null); // Change the initial state to null
+  const navigate = useNavigate(); // Get the navigate function for redirection
+
+  const auth = getAuth();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "PoliceComplaintUsers"));
 
-        // Extract data from the snapshot
         const contacts = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -32,8 +39,25 @@ function Admin() {
       }
     };
 
-    fetchData();
-  }, []);
+    // Use onAuthStateChanged to observe changes in authentication state
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setuser(user);
+        fetchData();
+      } else {
+        setuser(null);
+        // Redirect to the login page if not authenticated
+        navigate("/login");
+      }
+    });
+
+    // Cleanup the subscription when the component unmounts
+    return () => unsubscribe();
+  }, [auth, navigate]);
+
+  if (isLoading || user === null) {
+    return <LoaderOverlay loading={isLoading} />;
+  }
 
   return (
     <>

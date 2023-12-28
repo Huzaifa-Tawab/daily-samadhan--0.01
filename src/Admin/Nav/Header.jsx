@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import {  FaHamburger, FaMailBulk,  FaPhoneAlt,  } from 'react-icons/fa';
 import './Header.css'
 import logo from '../../assets/logo.svg'
+import { getAuth } from 'firebase/auth';
 
 const Header = () => {
   const [showNavbar, setShowNavbar] = useState(false)
@@ -10,7 +11,10 @@ const Header = () => {
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar)
   }
-
+    function logout() {
+    const auth = getAuth();
+    auth.signOut();
+    }
   return (
     <nav className="navbar">
       <div className="pre-nav">
@@ -41,7 +45,7 @@ const Header = () => {
           </ul>
         </div>
       
-          {/* <button className='nav-login' to="/login"> Login </button> */}
+          <button className='nav-login' onClick={logout}> Log Out </button>
         
       </div>
     </nav>

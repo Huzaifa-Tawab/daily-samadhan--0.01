@@ -1,14 +1,22 @@
-import React from 'react';
-import { Route, Navigate } from 'react-router-dom';
-import { auth } from './firebase';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useEffect, useState } from 'react';
+import { Outlet, Navigate } from 'react-router-dom'
+import { getAuth } from "firebase/auth";
 
-const ProtectedRoute = ({ element: Element, ...rest }) => {
-  const isAuthenticated = !!auth.currentUser;
-  return isAuthenticated ? (
-    <Route {...rest} element={<Element />} />
-  ) : (
-    <Navigate to="/login" />
-  );
-};
 
-export default ProtectedRoute;
+const PrivateRoutes = () => {
+    const [Auth, setauth] = useState(false)
+    const auth = getAuth();
+    const user = auth.currentUser;
+    useEffect(() => {   
+      if (user !== null) {
+       setauth(true);
+      }
+      
+    }, []);
+    return(
+        auth ? <Outlet/> : <Navigate to="/login"/>
+    )
+}
+
+export default PrivateRoutes
