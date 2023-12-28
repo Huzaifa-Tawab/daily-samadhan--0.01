@@ -110,11 +110,15 @@ function Contact(props) {
             Contact <span>Now</span>
           </h1>
           <div className="contact-box">
+          <span>You can visit officail website by copying this link</span>
+
             <div className="mail-div">
+              
               <img src={web} alt="" />
-              <Link>
+              
+              <Link to=""></Link>
                 <h2>https://{id}</h2>
-              </Link>
+              
             </div>
             <div className="mail-div">
               <img src={email} alt="" />

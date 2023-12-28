@@ -20,6 +20,9 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+.contact-box> span{
+    text-align: center;
+}
 .mail-div{
     display: flex;
     align-items: center;
