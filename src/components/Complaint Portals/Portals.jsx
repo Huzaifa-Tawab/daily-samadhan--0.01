@@ -249,7 +249,11 @@ function Portals() {
         </div>
 
         <div class="Portal-content-card">
-          <Link to={"/contact/online-dispute-resolution"}>
+          <Link
+            onClick={() => {
+              window.location.href = "www.amalegalsolutions.com";
+            }}
+          >
             <div className="con">
               <img src={ama} />
               <p>Online Dispute Resolution</p>
