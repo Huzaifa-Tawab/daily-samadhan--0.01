@@ -3,11 +3,16 @@ import { React, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import "./Form.css";
-import delhi from "../../assets/Cities/Delhi.jpeg";
-import uttarpardesh from "../../assets/Cities/Uttarpradesh.jpeg";
-import haryana from "../../assets/Cities/haryana.jpeg";
-import rajasthan from "../../assets/Cities/Rajasthan.jpeg";
-import maharashtra from "../../assets/Cities/maharashtra.png";
+import delhi from "../../assets/Cities/Delhi.png";
+import ahmadabd from "../../assets/Cities/Ahmadabad.png";
+import mumbai from "../../assets/Cities/mumbai.png";
+import chennai from "../../assets/Cities/chennai.png";
+import jaipur from "../../assets/Cities/jaipur.png";
+import kolkata from "../../assets/Cities/kolkata.png";
+import lukhnaw from "../../assets/Cities/likhnaw.png";
+import bangaluru from "../../assets/Cities/Bangaluru.png";
+import hyderabad from "../../assets/Cities/hyderabad.png";
+import puny from "../../assets/Cities/puny.png";
 import { useParams } from "react-router-dom";
 import Popup from "../Modal/modal";
 import { db } from "../../firebase";
@@ -204,33 +209,33 @@ function Form(props) {
         </div>
         <div class="city-Portal-card">
           <div className="con">
-            <img src={uttarpardesh} />
+            <img src={ahmadabd} />
             <div class="middle">
-              <div class="text">Uttar Pradesh</div>
+              <div class="text">Ahmadabad</div>
             </div>
           </div>
         </div>
         <div class="city-Portal-card">
           <div className="con">
-            <img src={haryana} />
+            <img src={mumbai} />
             <div class="middle">
-              <div class="text">Haryana</div>
+              <div class="text">Mumbai</div>
             </div>
           </div>
         </div>
         <div class="city-Portal-card">
           <div className="con">
-            <img src={rajasthan} />
+            <img src={chennai} />
             <div class="middle">
-              <div class="text">Rajasthan</div>
+              <div class="text">Chennai</div>
             </div>
           </div>
         </div>
         <div class="city-Portal-card">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={jaipur} />
             <div class="middle">
-              <div class="text">Maharashtra</div>
+              <div class="text">Jaipur</div>
             </div>
           </div>
         </div>
@@ -238,41 +243,41 @@ function Form(props) {
       <div className="city-portal">
         <div class="city-Portal-card">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={kolkata} />
             <div class="middle">
-              <div class="text">Madhya Pradesh</div>
+              <div class="text">Kolkata</div>
             </div>
           </div>
         </div>
         <div class="city-Portal-card">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={lukhnaw} />
             <div class="middle">
-              <div class="text">Gujarat</div>
+              <div class="text">Lukhnaw</div>
             </div>
           </div>
         </div>
         <div class="city-Portal-card">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={puny} />
             <div class="middle">
-              <div class="text">Tamil Nadu</div>
+              <div class="text">Puny</div>
             </div>
           </div>
         </div>
         <div class="city-Portal-card">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={hyderabad} />
             <div class="middle">
-              <div class="text">Himachal Pradesh</div>
+              <div class="text">Hyderabad</div>
             </div>
           </div>
         </div>
         <div class="city-Portal-card">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={bangaluru} />
             <div class="middle">
-              <div class="text">Bihar</div>
+              <div class="text">Bangaluru</div>
             </div>
           </div>
         </div>

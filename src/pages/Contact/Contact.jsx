@@ -187,7 +187,7 @@ function Contact(props) {
               <></>
             ) : (
               <>
-                <span>You can visit officail website by copying this link</span>
+                <span>You can visit officail website by click on below link</span>
                 <div className="mail-div">
                   <img src={web} alt="" />
                   <a href={Url} target="_blank" rel="noopener noreferrer">
