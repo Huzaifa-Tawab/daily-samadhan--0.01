@@ -1,37 +1,41 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import { Link } from 'react-router-dom';
-import { FaHamburger, FaMailBulk, FaUserLock,  } from 'react-icons/fa';
-import './navbar.css'
-import logo from '../../assets/logo.svg'
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaHamburger, FaMailBulk, FaUserLock } from "react-icons/fa";
+import "./navbar.css";
+import logo from "../../assets/logo.svg";
 
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState(false)
+  const [showNavbar, setShowNavbar] = useState(false);
 
   const handleShowNavbar = () => {
-    setShowNavbar(!showNavbar)
-  }
+    setShowNavbar(!showNavbar);
+  };
 
   return (
     <nav className="navbar">
       <div className="pre-nav">
         <div className="pre-nav-contact">
           {/* <p> <FaPhoneAlt/> 03169301238 </p> */}
-          <p> <FaMailBulk/> Dailysamadhanindia@gmail.com </p>
+          <p>
+            {" "}
+            <FaMailBulk /> Dailysamadhanindia@gmail.com{" "}
+          </p>
         </div>
         <div className="pre-nav-info">
-            <Link className='login' to={'/login'}><FaUserLock/> Login</Link>
+          <Link className="login" to={"/login"}>
+            <FaUserLock /> Login
+          </Link>
         </div>
       </div>
       <div className="container">
         <div className="logo">
-         <img src={logo} alt='logo' />
+          <img src={logo} alt="logo" />
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
-        <FaHamburger/>
-
+          <FaHamburger />
         </div>
-        <div className={`nav-elements  ${showNavbar && 'active'}`}>
+        <div className={`nav-elements  ${showNavbar && "active"}`}>
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -49,15 +53,14 @@ const Navbar = () => {
               <NavLink to="/about">About Us</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">Contact</NavLink>
+              <NavLink to="/contact/in">Contact</NavLink>
             </li>
           </ul>
           {/* <NavLink to='/login'><button className='nav-login'> Login </button></NavLink> */}
         </div>
-        
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

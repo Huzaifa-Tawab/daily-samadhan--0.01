@@ -164,6 +164,9 @@ function Contact(props) {
       case "airlines-complaint-portal":
         setUrl("https://airsewa.gov.in/grievance/grievance-redressal");
         break;
+      case "in":
+        setUrl("");
+        break;
 
       default:
         navi("/404");
@@ -180,14 +183,20 @@ function Contact(props) {
             Contact <span>Now</span>
           </h1>
           <div className="contact-box">
-            <span>You can visit officail website by copying this link</span>
+            {Url == "" ? (
+              <></>
+            ) : (
+              <>
+                <span>You can visit officail website by copying this link</span>
+                <div className="mail-div">
+                  <img src={web} alt="" />
+                  <a href={Url} target="_blank" rel="noopener noreferrer">
+                    <h2>{Url}</h2>
+                  </a>
+                </div>
+              </>
+            )}
 
-            <div className="mail-div">
-              <img src={web} alt="" />
-              <a href={Url} target="_blank" rel="noopener noreferrer">
-                <h2>{Url}</h2>
-              </a>
-            </div>
             <div className="mail-div">
               <img src={email} alt="" />
               <h2>info@dailysamadhan.com</h2>
