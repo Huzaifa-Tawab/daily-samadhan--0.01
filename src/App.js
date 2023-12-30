@@ -13,26 +13,29 @@ import PComplaint from "./Admin/Police Com/PComplaint";
 import ThankYou from "./pages/ThankYou/ThankYou";
 import PrivateRoutes from "./PrivateRoute";
 import NotFoundPage from "./pages/404/NotFoundPage";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/404" element={<NotFoundPage />} />
-        <Route path="*" element={<Navigate replace to="/404" />} />
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/complaintportal" element={<Complainportal />} />
-        <Route path="/contact/:id" element={<Contact />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/form/:id" element={<Form />} />
-        <Route path="/thanks/:id" element={<ThankYou />} />
-        <Route path="/login" element={<Login />} />
-        <Route element={<PrivateRoutes />}>
-          <Route path="/admin" element={<Admin />} />
-          <Route path="/adminpolicecomplaint" element={<PComplaint />} />
-        </Route>
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/404" element={<NotFoundPage />} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/complaintportal" element={<Complainportal />} />
+          <Route path="/contact/:id" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/form/:id" element={<Form />} />
+          <Route path="/thanks/:id" element={<ThankYou />} />
+          <Route path="/login" element={<Login />} />
+          <Route element={<PrivateRoutes />}>
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/adminpolicecomplaint" element={<PComplaint />} />
+          </Route>
+        </Routes>
+      </ScrollToTop>
     </BrowserRouter>
   );
 };
