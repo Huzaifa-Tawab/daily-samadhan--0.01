@@ -14,6 +14,7 @@ import ThankYou from "./pages/ThankYou/ThankYou";
 import PrivateRoutes from "./PrivateRoute";
 import NotFoundPage from "./pages/404/NotFoundPage";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import Services from "./pages/Services/services";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/form/:id" element={<Form />} />
           <Route path="/thanks/:id" element={<ThankYou />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/services" element={<Services />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/admin" element={<Admin />} />
             <Route path="/adminpolicecomplaint" element={<PComplaint />} />

@@ -26,34 +26,33 @@ function Footer() {
                     <h1>Links</h1>
                     <br />
                     {/* <br /> */}
-                    <p>FAQ</p>
+                    <p>Home</p>
                     <br />
-                    <p>Terms & Conditions</p>
+                    <p>Complaints</p>
                     <br />
-                    <p>Reporting</p>
+                    <p>Services</p>
                     <br />
-                    <p>Documentation</p>
+                    <p>FAQ's</p>
                     <br />
-                    <p>Sopport Policy</p>
-                    <br />
-                    <p>Privacy</p>
-                    <br />
+                    <p>Contact</p>
 
                 </div>
                 <div className="Footer-social">
                     <h1>Connect</h1>
                     <br />
-                    {/* <br /> */}
-                    <p>Never miss any update Sign-up now and get connect with Daily Samadhan </p>
+                    <br />
+                    <br />
+                  
+                    {/* <p>Never miss any update Sign-up now and get connect with Daily Samadhan </p>
 <br />
                     <Link to="/contact/in"> <div className="newsletter">
                     
-                    {/* <input type="text" /> */}
+                    <input type="text" />
                     <div className="n"></div>
                     <button> Submit</button>
                     </div>
                     </Link>
-                    <br />
+                    <br /> */}
                 
                  
               <Link className='social-style' to="https://www.google.com">      <FaFacebook size={'40px'} className='Footer-social-icon'/></Link>

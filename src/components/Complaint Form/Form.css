@@ -10,13 +10,22 @@
     padding: 7%;
 }
 .form-fields{
-    border: 1px solid #0C0B4B;
+    /* border: 1px solid #0C0B4B; */
     text-align: center;
     padding: 3%;
     background: #FFF;
     width: 40%;
+    background:
+    linear-gradient(#FFFFFF, #fff) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
+    linear-gradient(#fff, #fff) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
+    linear-gradient(90deg, #0c0b4b 20%, #31A049 60%, #31A049 94%);
+    box-sizing: border-box;
+
 }
 .form-fields> h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0C0B4B;
     margin-bottom: 20px;
 }
 .form-name{
@@ -27,22 +36,37 @@
 }
 .form-name> span{
     padding: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .form-email> span{
     padding: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .form-number> span{
+    /* padding: 0px -5px 0px 0px; */
     padding: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .form-state> span{
     padding: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .form-dispute> span{
     padding: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .form-name> input{
     width: 70%;
-    height: 20px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 2px solid#0C0B4B;
+
 }
 .form-email{
     margin: 20px;
@@ -53,7 +77,11 @@
 }
 .form-email> input{
     width: 70%;
-    height: 20px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    border: 2px solid#0C0B4B;
 }
 .form-number{
     margin: 20px;
@@ -62,12 +90,17 @@
 
 }
 .form-number>span{
-    margin-left: -30px;
+    margin-left: -40px;
+
 }
 .form-number> input{
     width: 70%;
-    margin-right: 2px;
-    height: 20px;
+    /* margin-right: 2px; */
+    height: 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 2px solid#0C0B4B;
+
 }
 .form-state{
     margin: 20px;
@@ -78,7 +111,11 @@
 }
 .form-state> input{
     width: 70%;
-    height: 20px;
+    height: 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 2px solid#0C0B4B;
+
 }
 .form-dispute{
     margin: 20px;
@@ -87,6 +124,19 @@
     align-items: center;
     /* width: 100%; */
 }
+.form-fields> span{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.form-dispute> textarea{
+    border: 2px solid#0C0B4B;
+    width: 80%;
+    margin: 0px 0px 0px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+
+
+}
 /* .form-dispute> select{
     margin: 10px;
     width: 100%;
@@ -94,10 +144,11 @@
 } */
 .form-checkbox> span{
     padding: 5px;
-    font-size: 10px;
+    font-size: 12px;
 }
 .form-checkbox{
     text-align: start;
+    color: #0C0B4B;
 
 }
 .Form-main> button{

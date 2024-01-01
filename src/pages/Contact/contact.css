@@ -11,8 +11,8 @@
     height: 75%;
     margin-right: 100px;
     background:
-    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
-    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
+    linear-gradient(#fff, #fff) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
+    linear-gradient(#fff, #fff) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
     linear-gradient(90deg, #0c0b4b 20%, #31A049 60%, #31A049 94%);
     box-sizing: border-box;
     padding: 10px 80px;

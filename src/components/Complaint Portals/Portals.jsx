@@ -26,7 +26,7 @@ function Portals() {
   return (
     <div className="Portal">
       <p>
-        Online{" "}
+        Online
         <span style={{ color: "#31A049", textDecoration: "underline #31A049" }}>
           Complaint Portals
         </span>

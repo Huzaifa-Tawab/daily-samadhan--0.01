@@ -30,7 +30,7 @@ function Offer() {
             <p>Explaining a procedure to file a complaint</p>
            </div>
            <div className="button-started">
-           <Link className='button-started' to={"/contact"}>
+           <Link className='button-started' to={"/contact/in"}>
             <button>Get Started</button>
             </Link>
            </div>
@@ -64,7 +64,7 @@ function Offer() {
             <p>Explaining a procedure to file a complaint</p>
            </div>
            <div className="button-started">
-            <Link className='button-started' to={"/contact"}>
+            <Link className='button-started' to={"/contact/in"}>
             <button>Get Started</button>
             </Link>
            </div>
@@ -91,7 +91,7 @@ function Offer() {
             <p>Dedicated support from our service dedicated expert</p>
            </div> */}
            <div className="button-started">
-           <Link className='button-started' to={"/contact"}>
+           <Link className='button-started' to={"/contact/in"}>
             <button>Get Started</button>
             </Link>
            </div>

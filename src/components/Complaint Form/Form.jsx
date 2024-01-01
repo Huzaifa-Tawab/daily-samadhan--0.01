@@ -13,7 +13,7 @@ import lukhnaw from "../../assets/Cities/likhnaw.png";
 import bangaluru from "../../assets/Cities/Bangaluru.png";
 import hyderabad from "../../assets/Cities/hyderabad.png";
 import puny from "../../assets/Cities/puny.png";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Popup from "../Modal/modal";
 import { db } from "../../firebase";
 import { useNavigate } from "react-router";
@@ -169,7 +169,7 @@ function Form(props) {
               name=""
               id=""
               cols="33"
-              rows="3"
+              rows="5"
               onChange={(e) => settextarea(e.target.value)}
             ></textarea>
             <br />
@@ -200,86 +200,106 @@ function Form(props) {
       {/* Cities */}
       <div className="city-portal">
         <div class="city-Portal-card">
+          <Link to="https://www.delhipolice.nic.in/">
           <div className="con">
             <img src={delhi} />
             <div class="middle">
               <div class="text">Delhi</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://uppolice.gov.in/">
           <div className="con">
             <img src={ahmadabd} />
             <div class="middle">
-              <div class="text">Ahmadabad</div>
+              <div class="text">Uttar Pradesh</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://haryanapoliceonline.gov.in/">
           <div className="con">
             <img src={mumbai} />
             <div class="middle">
-              <div class="text">Mumbai</div>
+              <div class="text">Haryana</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://police.rajasthan.gov.in/">
           <div className="con">
             <img src={chennai} />
             <div class="middle">
-              <div class="text">Chennai</div>
+              <div class="text">Rajasthan</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://citizen.mahapolice.gov.in/">
           <div className="con">
             <img src={jaipur} />
             <div class="middle">
-              <div class="text">Jaipur</div>
+              <div class="text">Maharastra</div>
             </div>
           </div>
+          </Link>
         </div>
       </div>
       <div className="city-portal">
         <div class="city-Portal-card">
+          <Link to="https://www.mppolice.gov.in/">
           <div className="con">
             <img src={kolkata} />
             <div class="middle">
-              <div class="text">Kolkata</div>
+              <div class="text">Madhya Pradesh</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://gujhome.gujarat.gov.in/">
           <div className="con">
             <img src={lukhnaw} />
             <div class="middle">
-              <div class="text">Lukhnaw</div>
+              <div class="text">Gujarat</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://eservices.tnpolice.gov.in/">
           <div className="con">
             <img src={puny} />
             <div class="middle">
-              <div class="text">Puny</div>
+              <div class="text">Tamil Nadu</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://jofs.jhpolice.gov.in/">
           <div className="con">
             <img src={hyderabad} />
             <div class="middle">
-              <div class="text">Hyderabad</div>
+              <div class="text">Jharkhand</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://police.bihar.gov.in">
           <div className="con">
             <img src={bangaluru} />
             <div class="middle">
-              <div class="text">Bangaluru</div>
+              <div class="text">Bihar</div>
             </div>
           </div>
+          </Link>
         </div>
       </div>
       {/* File Complaint */}

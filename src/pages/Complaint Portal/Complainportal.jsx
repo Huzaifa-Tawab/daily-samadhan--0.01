@@ -215,12 +215,12 @@ function Complainportal() {
       <Portals />
 
       {/* Why Choose Us */}
-      <div className="header-choose choose-complaint">
+      {/* <div className="header-choose choose-complaint"> */}
         {/* <h1>
           Why <span>Choose</span> Us ?
         </h1> */}
-        <WhyChooseUs />
-      </div>
+        {/* <WhyChooseUs />
+      </div> */}
 
       {/* Footer */}
       <Footer />

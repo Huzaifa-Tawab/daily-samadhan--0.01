@@ -4,7 +4,7 @@
     font-size: 24px;
 }
 .About span{
-    font-family: 'Abhaya Libre', serif;
+    /* font-family: 'Abhaya Libre', serif; */
     font-weight: 800;
     font-size: 40px;
 }
@@ -12,10 +12,18 @@
     text-align: center;
 }
 .About-hero h1{
-    font-size: 4vw;
+    font-size: 4rem;
+    color: #0c0b4b;
+    text-decoration: underline #0c0b4b;
+}
+.About-hero> h1> span{
+    color: #31A049;
+    font-size: 4rem;
+    text-decoration: underline #31A049;
+
 }
 .About-hero img{
-    width: 70vw;
+    width: 60vw;
 }
 .About-flex{
     margin-top: 40px;
@@ -28,6 +36,7 @@
 }
 .About-flex-content{
     font-size: 2vw;
+    color: #0c0b4b;
     text-align: center;
     padding: 30px;
    background-color:  rgba(67, 221, 100, 0.80);;
@@ -35,7 +44,19 @@
 }
 .About-services{
     text-align: center;
-    font-size: 1.8vw;
+    margin: 50px 0px;
+}
+.About-services> h1{
+    font-size: 4rem;
+    color: #0c0b4b;
+    text-decoration: underline #0c0b4b;
+
+
+}
+.About-services> h1> span{
+    font-size: 4rem;
+    color: #31A049;
+    text-decoration: underline #31A049;
 }
 .About-services-flex{
     margin-top: 50px;
@@ -49,7 +70,8 @@
     background: #FFF9F9;
     width: 25vw;
     padding: 20px;
-    font-size: 1.25rem;
+    font-size: 1.25vw;
+    color: #0c0b4b;
     line-height: 30px;
     line-break: anywhere;
     /* border: 2px solid rgba(67, 221, 100, 0.80);; */
@@ -82,9 +104,11 @@
 .typography h1{
     font-size: 4vw;
     margin-bottom: 25px;
+    color: #0c0b4b;
 }
 .typography p{
     font-size: 1.5vw;
+    color: #0c0b4b;
 }
 .question-marks img{
    height: 100vh;
@@ -95,7 +119,14 @@
     margin-top: 50px;
 }
 .About-starting h1{
-    font-size: 4vw;
+    font-size: 4rem;
+    color: #0c0b4b;
+    text-decoration: underline #0c0b4b;
+}
+.About-starting> h1> span{
+    font-size: 4rem;
+    color: #31A049;
+    text-decoration: underline #31A049;
 }
 .About-starting-box{
     background: #fff;
@@ -104,8 +135,8 @@
     margin-top: 30px;
     line-height: 30px;
     background:
-    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
-    linear-gradient(#FEFAFA, #FEFAFA) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
+    linear-gradient(#fff, #fff) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
+    linear-gradient(#fff, #fff) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
     linear-gradient(90deg, #0c0b4b 20%, #31A049 60%, #31A049 94%);
     box-sizing: border-box;
 
@@ -114,6 +145,7 @@
 .About-starting-box p{
     padding: 20px 20px;
     font-size: 1.5vw;
+    color: #0c0b4b;
 }
 @media (max-width: 768px) {
     .About-flex img{

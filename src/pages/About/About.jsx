@@ -1,16 +1,16 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
-import Hero from '../../assets/about/Hero.png';
-import Img1 from '../../assets/about/about1.png';
-import Img2 from '../../assets/about/about2.png';
-import Img3 from '../../assets/about/about3.png';
+import Hero from '../../assets/about/Hero.svg';
+import Img1 from '../../assets/about/about1.svg';
+import Img2 from '../../assets/about/about2.svg';
+import Img3 from '../../assets/about/about3.svg';
 import Whyus from '../../assets/about/whyus.png';
 import question from '../../assets/about/questions.png';
 import './about.css'
 import Footer from '../../components/Footer/Footer';
-import Frame46 from '../../assets/about/Frame46.png'
-import Frame47 from '../../assets/about/Frame47.png'
-import Frame48 from '../../assets/about/Frame48.png'
+import Frame46 from '../../assets/about/Frame 46.svg'
+import Frame47 from '../../assets/about/Frame 47.svg'
+import Frame48 from '../../assets/about/Frame 48.svg'
 
 
 function About() {
@@ -21,7 +21,7 @@ function About() {
             <div className="About">
                 <div className="About-hero">
                     <img src={Hero}/>
-                    <h1>Welcome to Daily Samadhan!</h1>
+                    <h1><span>Welcome</span> to Daily Samadhan!</h1>
                 </div>
                 <div className="About-flex">
                     <img src={Img2} alt="" />
@@ -52,21 +52,21 @@ function About() {
                     </div>
                 </div>
                 <div className="About-services">
-                    <h1>Our Comprehensive Services</h1>
+                    <h1>Our <span>Comprehensive</span> Services</h1>
                 <div className="About-services-flex">
                 <div className="About-services-card">
-                    <img src={Frame46} alt=""/>
-                <strong> Consultation Services </strong>
+                    <img src={Frame46} alt="" style={{width: "60px"}}/>
+                <strong style={{fontSize:"1.5rem"}}> Consultation Services </strong>
                 Our team of experts is ready to provide you with personalized consultation services tailored to your specific grievance. Whether you're facing consumer complaints, GST issues, or other challenges, we offer professional advice to help you navigate the complexities and find solutions.
                 </div>
                 <div className="About-services-card">
-                    <img src={Frame47} alt="" />
-                <strong> Grievance Filing Assistance</strong>
+                    <img src={Frame47} alt="" style={{width: "60px"}}/>
+                <strong style={{fontSize:"1.4rem"}}> Grievance Filing Assistance</strong>
                 We take the guesswork out of the filing process. Whether it's submitting a consumer complaint, managing GST-related matters, or addressing any other grievance mentioned in our portal, we offer hands-on assistance to ensure your filings are accurate and efficient.
                 </div>
                 <div className="About-services-card">
-                    <img src={Frame48} alt="" />
-                <strong> Expert Support</strong> 
+                    <img src={Frame48} alt="" style={{width: "60px"}}/>
+                <strong style={{fontSize:"1.5rem"}}> Expert Support</strong> 
                 With Daily Samadhan, you have access to a team of seasoned professionals who are well-versed in resolving a wide range of grievances. We're here to answer your questions, address your concerns, and guide you toward successful resolutions.
                 </div>
                 </div>
@@ -92,7 +92,7 @@ function About() {
                     </div>
                 </div>
                 <div className="About-starting">
-                <h1>Get Started Today</h1>
+                <h1>Get <span>Started</span> Today</h1>
                 <div className="About-starting-box">
                     <p>
                     Don't let daily struggles and grievances hold you back. Daily Samadhan is here to provide the guidance and support you need. Explore our website, access our resources, and take the first step toward resolving your challenges.
