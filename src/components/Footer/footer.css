@@ -5,7 +5,7 @@ margin-top: 100px;
     /* border-top-left-radius: 100px; */
     background: rgb(49,160,73);
     background: linear-gradient(90deg, rgba(12,11,75,1) 20%, rgba(49,160,73,1) 70%);
-    padding: 150px 80px 50px 130px;
+    padding: 80px 50px 40px 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -13,8 +13,10 @@ margin-top: 100px;
 width: 30%;
 }
 .Footer-info img{
-    width: 200px;
-    margin-bottom: 30px;
+    width: 300px;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 10px;
 }
 .Footer-info p{
     text-align: justify;

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaHamburger, FaMailBulk, FaUserLock } from "react-icons/fa";
 import "./navbar.css";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo.gif";
 
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(false);

@@ -164,9 +164,10 @@ function Complainportal() {
             <br />
             <label className="errorLabel">{Stateerror}</label>
           </div>
-          <span>Type of Dispute</span>
 
           <div className="form-dispute">
+          <span>Type of Dispute</span>
+
             <textarea
               name=""
               id=""

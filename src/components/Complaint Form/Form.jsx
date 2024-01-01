@@ -161,9 +161,9 @@ function Form(props) {
             <br />
             <label className="errorLabel">{Stateerror}</label>
           </div>
-          <span>Your Query</span>
+          {/* <span>Your Query</span> */}
           <div className="form-dispute">
-            {/* <span>Your Query</span> */}
+            <span>Your Query</span>
 
             <textarea
               name=""

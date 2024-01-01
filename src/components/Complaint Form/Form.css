@@ -85,8 +85,8 @@
 }
 .form-number{
     margin: 20px;
-    /* display: flex;
-    justify-content: space-evenly; */
+    /* display: flex; */
+    /* justify-content: space-evenly; */
 
 }
 .form-number>span{
@@ -264,4 +264,28 @@ background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
     .complain-file{
         width: auto;
     }
+    .form-name, .form-email, .form-number, .form-state, .form-dispute{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0px 10px;
+    }
+    .form-number>span {
+        margin-left: 0px;
+    }
+    .form-name> input, .form-email> input, .form-number> input, .form-state> input, .form-dispute> textarea{
+       
+        width: 100%;
+    
+    }
+    .form-dispute> textarea{
+        margin: 0px;
+    }
+    .form-fields> span{
+        text-align: start;
+    }
+    .form-checkbox{
+        margin: 20px 12px;
+    }
+
 }

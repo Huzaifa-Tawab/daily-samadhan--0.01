@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaWhatsapp, FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import './footer.css'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/fotlogo.gif'
 import { Link } from 'react-router-dom';
 function Footer() {
     return (
@@ -13,6 +13,7 @@ function Footer() {
                     </p>
                 </div>
                 <div className="Footer-office">
+                    <br />
                     <h1>Office</h1>
                     <br />
                     {/* <br /> */}
@@ -23,6 +24,7 @@ function Footer() {
                     <p>+91 000 0000000</p>
                 </div>
                 <div className="Footer-links">
+                    <br />
                     <h1>Links</h1>
                     <br />
                     {/* <br /> */}
@@ -38,8 +40,8 @@ function Footer() {
 
                 </div>
                 <div className="Footer-social">
-                    <h1>Connect</h1>
                     <br />
+                    <h1>Connect</h1>
                     <br />
                     <br />
                   

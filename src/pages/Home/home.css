@@ -63,9 +63,14 @@ color: #0C0B4B;
       font-size: 3rem;
     }
     .About-home{
-        margin-bottom: 50vh;
+        /* margin-bottom: 50vh; */
+        padding: 20px;
     }
     .About-home h1{
         font-size: 3rem;
+    }
+    .About-home> p{
+        text-align: center;
+        font-size: 1rem;
     }
 }
