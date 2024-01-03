@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import {  FaHamburger, FaMailBulk,  FaPhoneAlt,  } from 'react-icons/fa';
 import './Header.css'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.gif'
 import { getAuth } from 'firebase/auth';
 
 const Header = () => {

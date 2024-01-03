@@ -12,7 +12,7 @@ margin-bottom: 50px;
 /* border-bottom: 3px solid #2f2f48; */
 }
 .Home-main p{
-font-size: 3.8rem;
+font-size: 4rem;
 font-weight: 700;
 line-height: 70px;
 color: #0C0B4B;
@@ -28,16 +28,17 @@ color: #0C0B4B;
     margin-bottom: 5vh;
 }
 .About-home{
-    text-align: center;
+    /* text-align: center; */
     /* margin-bottom: 100vh; */
-    padding: 50px;
+    padding: 100px;
     
 }
 .About-home> h1{
     font-size: 4rem;
+    text-align: center;
     font-weight: 600;
     text-decoration: underline #0C0B4B;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     color: #0C0B4B;
 }
 .About-home>h1> span{
@@ -45,7 +46,10 @@ color: #0C0B4B;
     text-decoration: underline #31A049;
 }
 .About-home> p{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+    line-break: auto;
+    text-align: justify;
+
 }
 @media (max-width: 768px) {
     .Home-main{
@@ -59,9 +63,14 @@ color: #0C0B4B;
       font-size: 3rem;
     }
     .About-home{
-        margin-bottom: 50vh;
+        /* margin-bottom: 50vh; */
+        padding: 20px;
     }
     .About-home h1{
         font-size: 3rem;
+    }
+    .About-home> p{
+        text-align: center;
+        font-size: 1rem;
     }
 }

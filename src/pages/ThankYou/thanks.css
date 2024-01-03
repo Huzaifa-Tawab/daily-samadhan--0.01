@@ -1,0 +1,15 @@
+.thanks{
+    text-align: center;
+    margin: 10%;
+    line-height: 50px;
+}
+.thanks> h2{
+    font-size: 3rem;
+}
+.thanks> p{
+    font-size: 2rem;
+}
+.link-thanks{
+    border-radius: 10px;
+    color: #000;
+}

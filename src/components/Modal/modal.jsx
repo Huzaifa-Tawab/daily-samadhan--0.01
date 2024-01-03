@@ -48,8 +48,8 @@ function Popup() {
         <h2 ref={(_subtitle) => (subtitle = _subtitle)}></h2>
         <button className='modal-close' onClick={closeModal}>x</button>
         <div className="modal-content">
-        <div className='modal-content1'><a href=""> Click Here</a> to file your Complaint for lost & found</div>
-        <div className='modal-content2'>Want us to file your complaint ? <a href=""> Click Here </a></div>
+        <div className='modal-content1'><a href="/contact/in"> Click Here</a> to file your Complaint for lost & found</div>
+        <div className='modal-content2'>Want us to file your complaint ? <a href="/contact/in"> Click Here </a></div>
         </div>
       </Modal>
     </div>

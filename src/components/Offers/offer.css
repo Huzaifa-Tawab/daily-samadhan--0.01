@@ -3,7 +3,7 @@
     margin-top: 70px;
 }
 .header-offer> h1{
-    font-size: 3rem;
+    font-size: 4rem;
     color: #0C0B4B;
     text-decoration: underline #0C0B4B;
 }
@@ -80,7 +80,7 @@
 }
 .button-started> button{
     background: #4FB052;
-    height: 10vh;
+    height: 50px;
     width: 20vw;
     border-radius: 30px;
     border: none;

@@ -3,12 +3,17 @@ import { React, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import "./Form.css";
-import delhi from "../../assets/Cities/Delhi.jpeg";
-import uttarpardesh from "../../assets/Cities/Uttarpradesh.jpeg";
-import haryana from "../../assets/Cities/haryana.jpeg";
-import rajasthan from "../../assets/Cities/Rajasthan.jpeg";
-import maharashtra from "../../assets/Cities/maharashtra.png";
-import { useParams } from "react-router-dom";
+import delhi from "../../assets/Cities/Delhi.png";
+import ahmadabd from "../../assets/Cities/Ahmadabad.png";
+import mumbai from "../../assets/Cities/mumbai.png";
+import chennai from "../../assets/Cities/chennai.png";
+import jaipur from "../../assets/Cities/jaipur.png";
+import kolkata from "../../assets/Cities/kolkata.png";
+import lukhnaw from "../../assets/Cities/likhnaw.png";
+import bangaluru from "../../assets/Cities/Bangaluru.png";
+import hyderabad from "../../assets/Cities/hyderabad.png";
+import puny from "../../assets/Cities/puny.png";
+import { Link, useParams } from "react-router-dom";
 import Popup from "../Modal/modal";
 import { db } from "../../firebase";
 import { useNavigate } from "react-router";
@@ -156,15 +161,15 @@ function Form(props) {
             <br />
             <label className="errorLabel">{Stateerror}</label>
           </div>
-          <span>Your Query</span>
+          {/* <span>Your Query</span> */}
           <div className="form-dispute">
-            {/* <span>Your Query</span> */}
+            <span>Your Query</span>
 
             <textarea
               name=""
               id=""
               cols="33"
-              rows="3"
+              rows="5"
               onChange={(e) => settextarea(e.target.value)}
             ></textarea>
             <br />
@@ -195,86 +200,106 @@ function Form(props) {
       {/* Cities */}
       <div className="city-portal">
         <div class="city-Portal-card">
+          <Link to="https://www.delhipolice.nic.in/">
           <div className="con">
             <img src={delhi} />
             <div class="middle">
               <div class="text">Delhi</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://uppolice.gov.in/">
           <div className="con">
-            <img src={uttarpardesh} />
+            <img src={ahmadabd} />
             <div class="middle">
               <div class="text">Uttar Pradesh</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://haryanapoliceonline.gov.in/">
           <div className="con">
-            <img src={haryana} />
+            <img src={mumbai} />
             <div class="middle">
               <div class="text">Haryana</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://police.rajasthan.gov.in/">
           <div className="con">
-            <img src={rajasthan} />
+            <img src={chennai} />
             <div class="middle">
               <div class="text">Rajasthan</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://citizen.mahapolice.gov.in/">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={jaipur} />
             <div class="middle">
-              <div class="text">Maharashtra</div>
+              <div class="text">Maharastra</div>
             </div>
           </div>
+          </Link>
         </div>
       </div>
       <div className="city-portal">
         <div class="city-Portal-card">
+          <Link to="https://www.mppolice.gov.in/">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={kolkata} />
             <div class="middle">
               <div class="text">Madhya Pradesh</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://gujhome.gujarat.gov.in/">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={lukhnaw} />
             <div class="middle">
               <div class="text">Gujarat</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://eservices.tnpolice.gov.in/">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={puny} />
             <div class="middle">
               <div class="text">Tamil Nadu</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://jofs.jhpolice.gov.in/">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={hyderabad} />
             <div class="middle">
-              <div class="text">Himachal Pradesh</div>
+              <div class="text">Jharkhand</div>
             </div>
           </div>
+          </Link>
         </div>
         <div class="city-Portal-card">
+          <Link to="https://police.bihar.gov.in">
           <div className="con">
-            <img src={maharashtra} />
+            <img src={bangaluru} />
             <div class="middle">
               <div class="text">Bihar</div>
             </div>
           </div>
+          </Link>
         </div>
       </div>
       {/* File Complaint */}
