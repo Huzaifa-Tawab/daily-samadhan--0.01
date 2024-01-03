@@ -204,11 +204,17 @@ function Contact(props) {
               <></>
             ) : (
               <>
-                <span>You can visit officail website by copying this link</span>
+                <span>
+                  You can visit offical{" "}
+                  <a href={Url} target="_blank" rel="noopener noreferrer">
+                    website
+                  </a>{" "}
+                  by clicking on the text below
+                </span>
                 <div className="mail-div">
                   <img src={web} alt="" />
                   <a href={Url} target="_blank" rel="noopener noreferrer">
-                    <h2>{Url}</h2>
+                    <h2>{id}</h2>
                   </a>
                 </div>
               </>
