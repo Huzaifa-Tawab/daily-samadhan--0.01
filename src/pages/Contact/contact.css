@@ -1,87 +1,94 @@
-.contact> h1{
-    font-size: 4rem;
-    color: #0C0B4B;
-    padding: 20px;
+.contact > h1 {
+  font-size: 4rem;
+  color: #0c0b4b;
+  padding: 20px;
 }
-.contact>h1 > span{
-    color: #31A049;
+.contact > h1 > span {
+  color: #31a049;
 }
-.contact-box{
-    width: 50vw;
-    height: 75%;
-    margin-right: 100px;
-    background:
-    linear-gradient(#fff, #fff) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
-    linear-gradient(#fff, #fff) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
-    linear-gradient(90deg, #0c0b4b 20%, #31A049 60%, #31A049 94%);
-    box-sizing: border-box;
-    padding: 10px 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.contact-box {
+  width: 50vw;
+  height: 75%;
+  margin-right: 100px;
+  background: linear-gradient(#fff, #fff) 50% 50% / calc(100% - 16px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#fff, #fff) 50% 50% / calc(100% - 10px) calc(100% - 10px)
+      no-repeat,
+    linear-gradient(90deg, #0c0b4b 20%, #31a049 60%, #31a049 94%);
+  box-sizing: border-box;
+  padding: 10px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-.contact-box> span{
-    text-align: center;
+.contact-box > span {
+  text-align: center;
 }
-.mail-div{
-    display: flex;
-    align-items: center;
+.mail-div {
+  display: flex;
+  align-items: center;
 }
-.mail-div> img{
-    width: 60px;
+.mail-div > img {
+  width: 60px;
 }
-.mail-div h2{
-    color: #31A049;
-    margin-left: 20px;
-    font-size: 2rem;
-    
+.mail-div h2 {
+  color: #31a049;
+  margin-left: 20px;
+  font-size: 2rem;
 }
-.mail-div a> h2{
-    text-decoration: underline #31A049;
+.mail-div a > h2 {
+  text-decoration: underline #31a049;
 }
-.contact-button{
-    text-align: center;
-    margin-top: 50px;
+.contact-button {
+  text-align: center;
+  margin-top: 50px;
 }
-.contact-button> button{
-    width: 30%;
-    height: 18vh;
-    border: none;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #fff;
-    background: rgb(12,11,75);
-background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
-
-
+.contact-button > button {
+  width: 30%;
+  height: 18vh;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgb(12, 11, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 11, 75, 1) 35%,
+    rgba(49, 160, 73, 1) 76%
+  );
 }
 .errorLabel {
-    color: red;
-    font-size: 12px;
-  }
+  color: red;
+  font-size: 12px;
+}
+.bold-a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+}
 @media (max-width: 768px) {
-       .Contact-form{
-        display: block;
-       }
-       .contact h1{
-        font-size: 3rem;
-       }
-       .contact-box{
-        margin-bottom: 20px;
-        width: 91vw;
-        padding: 10px 20px;
-       }
-       .mail-div img{
-        width: 30px;
-       }
-       .mail-div h2{
-        font-size: 22px;
-       }
-       .mail-div{
-        margin: 10px 0px;
-       }
-       .contact-button button{
-        width: auto;
-        height: 10vh;
-       }
+  .Contact-form {
+    display: block;
+  }
+  .contact h1 {
+    font-size: 3rem;
+  }
+  .contact-box {
+    margin-bottom: 20px;
+    width: 91vw;
+    padding: 10px 20px;
+  }
+  .mail-div img {
+    width: 30px;
+  }
+  .mail-div h2 {
+    font-size: 22px;
+  }
+  .mail-div {
+    margin: 10px 0px;
+  }
+  .contact-button button {
+    width: auto;
+    height: 10vh;
+  }
 }

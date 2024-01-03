@@ -206,7 +206,12 @@ function Contact(props) {
               <>
                 <span>
                   You can visit offical{" "}
-                  <a href={Url} target="_blank" rel="noopener noreferrer">
+                  <a
+                    className="bold-a"
+                    href={Url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     website
                   </a>{" "}
                   by clicking on the text below
