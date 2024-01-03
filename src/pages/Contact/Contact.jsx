@@ -26,83 +26,100 @@ function Contact(props) {
   const [Phone, setphone] = useState("");
   const [State, setstate] = useState("");
   const [Dispute, setdispute] = useState("");
-  const [Textarea, settextarea] = useState("");
+
   const [Check, setcheck] = useState(false);
-  const [errorMessage, seterrorMessage] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [phoneerror, setphoneError] = useState("");
-  const [Nameerror, setnameError] = useState("");
-  const [Stateerror, setstateError] = useState("");
-  const [Textareaerror, settextareaError] = useState("");
-  const [Checkerror, setcheckError] = useState("");
-
+  // const [errorMessage, seterrorMessage] = useState("");
+  // const [emailError, setEmailError] = useState("");
+  // const [phoneerror, setphoneError] = useState("");
+  // const [Nameerror, setnameError] = useState("");
+  // const [Stateerror, setstateError] = useState("");
+  // const [Textareaerror, settextareaError] = useState("");
+  // const [Checkerror, setcheckError] = useState("");
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    state: "",
+    textarea: "",
+    check: "",
+  });
   const handleClick = () => setcheck(!Check);
-  async function Submitform(e) {
+  const validateForm = () => {
+    const newErrors = {
+      name: "",
+      email: "",
+      phone: "",
+      state: "",
+      textarea: "",
+      check: "",
+    };
+
+    if (!Name.trim()) {
+      newErrors.name = "Please enter your Name";
+    } else if (!/^[A-Za-z\s]+$/.test(Name.trim())) {
+      newErrors.name = "Name can only contain letters and spaces";
+    }
+
+    if (!Email.trim()) {
+      newErrors.email = "Please enter your email";
+    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(Email)) {
+      newErrors.email = "Please enter a valid email";
+    }
+
+    if (!Phone.trim()) {
+      newErrors.phone = "Please enter your Phone number";
+    } else if (Phone.length < 10) {
+      newErrors.phone = "The number must be correct";
+    }
+
+    if (!State.trim()) {
+      newErrors.state = "Please enter your State";
+    }
+
+    if (!Dispute.trim()) {
+      newErrors.textarea = "Please describe your issue";
+    }
+
+    if (!Check) {
+      newErrors.check = "Please check the box to agree to our terms";
+    }
+
+    setErrors(newErrors);
+
+    // Check if there are no errors
+    return Object.values(newErrors).every((error) => !error);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Set initial error values to empty
-    setnameError("");
-    setEmailError("");
-    setphoneError("");
-    setstateError("");
-    settextareaError("");
-    setcheckError("");
 
-    // Check if the user has entered both fields correctly
-    if ("" === Name) {
-      setnameError("Please enter your Name");
-      return;
-    }
-    if ("" === Email) {
-      setEmailError("Please enter your email");
-      return;
-    }
+    // Validate the form
+    const isValid = validateForm();
 
-    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(Email)) {
-      setEmailError("Please enter a valid email");
-      return;
-    }
-    if ("" === Phone) {
-      setphoneError("Please enter your Phone number");
-      return;
-    }
+    if (isValid) {
+      // Your existing code for form submission
+      setisLoading(true);
 
-    if (Phone.length < 11) {
-      setphoneError("The number must be correct");
-      return;
-    }
-    if ("" === State) {
-      setstateError("Please enter your State");
-      return;
-    }
-    if ("" === Dispute) {
-      settextareaError("Please describe your issue");
-      return;
-    }
-    if (Check === false) {
-      setcheckError("Please check the box to agree our terms");
-      return;
-    }
-    // Authentication calls will be made here...
-    setisLoading(true);
-    try {
-      const docRef = await addDoc(collection(db, "ContactsUsers"), {
-        name: Name,
-        email: Email,
-        phone: Phone,
-        state: State,
-        textarea: Textarea,
-        check: Check,
-        time: serverTimestamp(),
-      });
-      // console.log("Document written with ID: ", docRef.id);
-      navi("/thanks/" + docRef.id);
-    } catch (e) {
+      try {
+        const docRef = await addDoc(collection(db, "ContactsUsers"), {
+          name: Name,
+          portal: id,
+          email: Email,
+          phone: Phone,
+          state: State,
+          Dispute: Dispute,
+          check: Check,
+          time: serverTimestamp(),
+        });
+
+        navi("/thanks/" + docRef.id);
+      } catch (e) {
+        console.error("Error adding document: ", e);
+      }
+
       setisLoading(false);
-
-      console.error("Error adding document: ", e);
     }
-    setisLoading(false);
-  }
+  };
   useEffect(() => {
     switch (id) {
       case "edaakhil":
@@ -218,7 +235,7 @@ function Contact(props) {
               onChange={(e) => setname(e.target.value)}
             />
             <br />
-            <label className="errorLabel">{Nameerror}</label>
+            <label className="errorLabel">{errors.name}</label>
           </div>
           <div className="form-email">
             <span>Email</span>
@@ -231,7 +248,7 @@ function Contact(props) {
               onChange={(e) => setemail(e.target.value)}
             />
             <br />
-            <label className="errorLabel">{emailError}</label>
+            <label className="errorLabel">{errors.email}</label>
           </div>
           <div className="form-number">
             <span>Phone No</span>
@@ -242,7 +259,7 @@ function Contact(props) {
               onChange={(e) => setphone(e.target.value)}
             />
             <br />
-            <label className="errorLabel">{phoneerror}</label>
+            <label className="errorLabel">{errors.phone}</label>
           </div>
           <div className="form-state">
             <span>State</span>
@@ -253,7 +270,7 @@ function Contact(props) {
               onChange={(e) => setstate(e.target.value)}
             />
             <br />
-            <label className="errorLabel">{Stateerror}</label>
+            <label className="errorLabel">{errors.state}</label>
           </div>
           <span>Type of Dispute</span>
 
@@ -263,7 +280,7 @@ function Contact(props) {
               id=""
               cols="33"
               rows="3"
-              onChange={(e) => settextarea(e.target.value)}
+              onChange={(e) => setdispute(e.target.value)}
             ></textarea>
             {/* <select
               name="dispute"
@@ -277,7 +294,7 @@ function Contact(props) {
               <option value="Best">Best</option>
               <option value="Excellent">Excellent</option>
             </select> */}
-            <label className="errorLabel">{Textareaerror}</label>
+            <label className="errorLabel">{errors.textarea}</label>
           </div>
           <div className="form-checkbox">
             <input
@@ -294,9 +311,9 @@ function Contact(props) {
               emails, etc.
             </span>
             <br />
-            <label className="errorLabel">{Checkerror}</label>
+            <label className="errorLabel">{errors.check}</label>
           </div>
-          <button type="submit" onClick={Submitform}>
+          <button type="submit" onClick={handleSubmit}>
             Submit
           </button>
         </div>
