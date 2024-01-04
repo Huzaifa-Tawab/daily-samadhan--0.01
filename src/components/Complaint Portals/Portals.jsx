@@ -21,6 +21,7 @@ import insurance from "../../assets/portals/insurance.png";
 import photo from "../../assets/portals/photo.png";
 import ama from "../../assets/portals/ama.png";
 import airline from "../../assets/portals/airline.png";
+import induslogo from  "./indus.png"
 
 function Portals() {
   return (
@@ -47,7 +48,7 @@ function Portals() {
         <div class="Portal-content-card">
           <Link to={"/contact/industrial-dispute/"}>
             <div className="con">
-              <img src={Frame43} />
+              <img src={induslogo} />
               <p>Industrial Dispute</p>
               <div class="middle-portal">
                 {/* <div class="text-links">https://samadhan.labour.gov.in/</div> */}

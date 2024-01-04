@@ -19,7 +19,7 @@ function Footer() {
                     {/* <br /> */}
                     <p>Office Number 0,<br />Somthing industrial area, <br />Abc City,<br /> India </p>
                     <br />
-                    <p>dailysamadhanindia@gmail.com</p>
+                    <p>info@dailysamadhan.com</p>
                     <br />
                     <p>+91 000 0000000</p>
                 </div>

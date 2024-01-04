@@ -19,7 +19,7 @@ const Navbar = () => {
           {/* <p> <FaPhoneAlt/> 03169301238 </p> */}
           <p>
             {" "}
-            <FaMailBulk /> Dailysamadhanindia@gmail.com{" "}
+            <FaMailBulk /> info@dailysamadhan.com{" "}
           </p>
         </div>
         <div className="pre-nav-info">
