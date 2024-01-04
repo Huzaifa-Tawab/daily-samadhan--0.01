@@ -57,10 +57,10 @@ function Footer() {
                     <br /> */}
                 
                  
-              <Link className='social-style' to="https://www.google.com">      <FaFacebook size={'40px'} className='Footer-social-icon'/></Link>
-              <Link className='social-style' to="https://www.google.com">     <FaInstagram size={'40px'} className='Footer-social-icon'/></Link>
-              <Link className='social-style' to="https://www.google.com">     <FaWhatsapp size={'40px'} className='Footer-social-icon'/></Link>
-              <Link className='social-style' to="https://www.google.com">     <FaLinkedin size={'40px'} className='Footer-social-icon'/></Link>
+              <Link className='social-style' to="https://www.facebook.com/profile.php?id=61551985065966&mibextid=LQQJ4d">      <FaFacebook size={'40px'} className='Footer-social-icon'/></Link>
+              <Link className='social-style' to="https://www.instagram.com/dailysamadhanind?igsh=MTlmdXkwenBxOHVtZQ==">     <FaInstagram size={'40px'} className='Footer-social-icon'/></Link>
+              {/* <Link className='social-style' to="https://www.google.com">     <FaWhatsapp size={'40px'} className='Footer-social-icon'/></Link> */}
+              <Link className='social-style' to="https://www.linkedin.com/company/daily-samadhan/">     <FaLinkedin size={'40px'} className='Footer-social-icon'/></Link>
                     
                 </div>
             </div>
