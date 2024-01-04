@@ -18,7 +18,7 @@ function Offer() {
             <img src={complaint} alt="" />
             <h1>Complaint Assistance</h1>
             </div>
-           <p style={{marginTop: "10px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, temporibus?</p>
+           {/* <p style={{marginTop: "10px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, temporibus?</p> */}
            <h1>₹99/-</h1>
            <h5>What's include</h5>
            <div className="check-text">
@@ -40,7 +40,7 @@ function Offer() {
             <img src={end} alt="" />
             <h1>End-to-End Assistance</h1>
             </div>
-           <p style={{marginTop: "10px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, temporibus?</p>
+           {/* <p style={{marginTop: "10px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, temporibus?</p> */}
            <h1>₹999/-</h1>
            <h5>What's include</h5>
            <div className="check-text">
@@ -49,7 +49,7 @@ function Offer() {
            </div>
            <div className="check-text">
             <img src={check} alt="" />
-            <p>Form Filling / Complaint Registration</p>
+            <p>Form Filling / Complaint Registration By Our Experts</p>
            </div>
            <div className="check-text">
             <img src={check} alt="" />
@@ -75,7 +75,7 @@ function Offer() {
             <img src={expor} alt="" />
             <h1>Export & Advice Complaint Assistsnce</h1>
             </div>
-           <p style={{marginTop: "10px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, temporibus?</p>
+           {/* <p style={{marginTop: "10px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, temporibus?</p> */}
            <h1>₹499/-</h1>
            <h5>What's include</h5>
            <div className="check-text">
