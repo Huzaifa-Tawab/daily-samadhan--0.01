@@ -14,12 +14,12 @@
 .About-hero h1{
     font-size: 4rem;
     color: #0c0b4b;
-    text-decoration: underline #0c0b4b;
+    /* text-decoration: underline #0c0b4b; */
 }
 .About-hero> h1> span{
     color: #31A049;
     font-size: 4rem;
-    text-decoration: underline #31A049;
+    /* text-decoration: underline #31A049; */
 
 }
 .About-hero img{

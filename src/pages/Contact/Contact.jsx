@@ -68,17 +68,19 @@ function Contact(props) {
 
     if (!Phone.trim()) {
       newErrors.phone = "Please enter your Phone number";
-    } else if (Phone.length < 10) {
-      newErrors.phone = "The number must be correct";
+    } else if (Phone.length ==10) {
+      
+    }else{
+      newErrors.phone = "The number must be 10 digits";
     }
 
     if (!State.trim()) {
       newErrors.state = "Please enter your State";
     }
 
-    if (!Dispute.trim()) {
-      newErrors.textarea = "Please describe your issue";
-    }
+    // if (!Dispute.trim()) {
+    //   newErrors.textarea = "Please describe your issue";
+    // }
 
     if (!Check) {
       newErrors.check = "Please check the box to agree to our terms";
@@ -317,8 +319,8 @@ function Contact(props) {
               onClick={(e) => handleClick(e.target.value)}
             />
             <span>
-              I have read & agreed to the company's Terms and Conditions,
-              disclaimer and refund policy, and also ready to accept calls, SMS,
+              I have read & agreed to the Company's Terms and Conditions,
+              disclaimer and refund policy, and also ready to accept calls, sms,
               emails, etc.
             </span>
             <br />

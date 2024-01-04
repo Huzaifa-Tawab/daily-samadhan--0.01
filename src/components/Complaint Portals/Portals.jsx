@@ -26,8 +26,8 @@ function Portals() {
   return (
     <div className="Portal">
       <p>
-        Online
-        <span style={{ color: "#31A049", textDecoration: "underline #31A049" }}>
+        Online&nbsp;
+        <span style={{ color: "#31A049"}}>
           Complaint Portals
         </span>
       </p>
@@ -60,7 +60,7 @@ function Portals() {
           <Link to={"/contact/edaakhil"}>
             <div className="con">
               <img src={Frame42} />
-              <p>e-Filling Consumer Commission</p>
+              <p>E-Filling Consumer Commission</p>
               <div class="middle-portal">
                 {/* <div class="text-links">https://edaakhil.nic.in/edaakhil</div> */}
               </div>
@@ -251,7 +251,7 @@ function Portals() {
         <div class="Portal-content-card">
           <Link
             onClick={() => {
-              window.location.href = "www.amalegalsolutions.com";
+              window.location.href = "https://www.amalegalsolutions.com";
             }}
           >
             <div className="con">

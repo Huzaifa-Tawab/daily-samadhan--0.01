@@ -37,13 +37,13 @@ color: #0C0B4B;
     font-size: 4rem;
     text-align: center;
     font-weight: 600;
-    text-decoration: underline #0C0B4B;
+    
     margin-bottom: 50px;
     color: #0C0B4B;
 }
 .About-home>h1> span{
     color: #31A049;
-    text-decoration: underline #31A049;
+    
 }
 .About-home> p{
     font-size: 1.7rem;

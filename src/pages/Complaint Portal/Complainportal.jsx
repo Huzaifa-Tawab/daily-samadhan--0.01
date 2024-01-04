@@ -199,8 +199,8 @@ function Complainportal() {
               checked={Check}
             />
             <span>
-              I have read & agreed to the company's Terms and Conditions,
-              disclaimer and refund policy, and also ready to accept calls, SMS,
+              I have read & agreed to the Company's Terms and Conditions,
+              disclaimer and refund policy, and also ready to accept calls, sms,
               emails, etc.
             </span>
             <br />

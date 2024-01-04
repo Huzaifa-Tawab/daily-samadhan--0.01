@@ -9,11 +9,11 @@
 .header-choose> h1{
     font-size: 4rem;
     color: #0C0B4B;
-    text-decoration: underline #0C0B4B;
+    /* text-decoration: underline #0C0B4B; */
 }
 .header-choose>h1> span{
     color: #31A049;
-    text-decoration: underline #31A049;
+    /* text-decoration: underline #31A049; */
 }
 .content-whychoose{
     display: flex;

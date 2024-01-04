@@ -25,7 +25,7 @@ function WhyChooseUs() {
         </div>
         <div className="govt">
         <img src={experts} alt="" />
-        <h1>Trained Professionla Experts</h1>
+        <h1>Trained Professional Experts</h1>
         </div>
        
         

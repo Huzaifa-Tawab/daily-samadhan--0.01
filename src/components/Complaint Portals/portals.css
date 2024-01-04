@@ -20,7 +20,7 @@
   }
   .Portal-content-card:hover{
     background-color: #bef0c9;
-transform: scale(1.01);
+  transform: scale(1.01);
 cursor: pointer;
   }
   .Portal-content-card :Link{
@@ -32,7 +32,7 @@ cursor: pointer;
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 5vh;
-    text-decoration: underline #0C0B4B;
+    
     color: #0C0B4B;
     }
     .Portal > span{
@@ -74,7 +74,7 @@ line-height: normal;
       line-break: anywhere;
   }
   .con:hover img {
-      opacity: 0.3;
+      /* opacity: 0.3; */
       cursor: pointer;
     }
   .con:hover .middle-portal {
