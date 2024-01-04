@@ -154,48 +154,48 @@ function Complainportal() {
             <label className="errorLabel">{phoneerror}</label>
           </div>
           <div className="form-state">
-  <label htmlFor="state">State</label>
-  <select
-    id="stat"
-    value={State}
-    onChange={(e) => setstate(e.target.value)}
-  >
-    <option value="">Select a State</option>
-    <option value="Andhra Pradesh">Andhra Pradesh</option>
-    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-    <option value="Assam">Assam</option>
-    <option value="Bihar">Bihar</option>
-    <option value="Chhattisgarh">Chhattisgarh</option>
-    <option value="Goa">Goa</option>
-    <option value="Gujarat">Gujarat</option>
-    <option value="Haryana">Haryana</option>
-    <option value="Himachal Pradesh">Himachal Pradesh</option>
-    <option value="Jharkhand">Jharkhand</option>
-    <option value="Karnataka">Karnataka</option>
-    <option value="Kerala">Kerala</option>
-    <option value="Madhya Pradesh">Madhya Pradesh</option>
-    <option value="Maharashtra">Maharashtra</option>
-    <option value="Manipur">Manipur</option>
-    <option value="Meghalaya">Meghalaya</option>
-    <option value="Mizoram">Mizoram</option>
-    <option value="Nagaland">Nagaland</option>
-    <option value="Odisha">Odisha</option>
-    <option value="Punjab">Punjab</option>
-    <option value="Rajasthan">Rajasthan</option>
-    <option value="Sikkim">Sikkim</option>
-    <option value="Tamil Nadu">Tamil Nadu</option>
-    <option value="Telangana">Telangana</option>
-    <option value="Tripura">Tripura</option>
-    <option value="Uttarakhand">Uttarakhand</option>
-    <option value="Uttar Pradesh">Uttar Pradesh</option>
-    <option value="West Bengal">West Bengal</option>
-  </select>
+            <label htmlFor="state">State</label>
+            <select
+              id="stat"
+              value={State}
+              onChange={(e) => setstate(e.target.value)}
+            >
+              <option value="">Select a State</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="West Bengal">West Bengal</option>
+            </select>
             <br />
             <label className="errorLabel">{Stateerror}</label>
           </div>
 
           <div className="form-dispute">
-          <span>Type of Dispute</span>
+            <span>Type of Dispute</span>
 
             <textarea
               name=""
@@ -204,18 +204,7 @@ function Complainportal() {
               rows="3"
               onChange={(e) => settextarea(e.target.value)}
             ></textarea>
-            {/* <select
-    name="dispute"
-    id="abc"
-    value={Dispute}
-    onChange={(e) => setdispute(e.target.value)}
-  >
-    <option value=""></option>
 
-    <option value="Good">Good</option>
-    <option value="Best">Best</option>
-    <option value="Excellent">Excellent</option>
-  </select> */}
             <br />
             <label className="errorLabel">{Textareaerror}</label>
           </div>
@@ -246,10 +235,10 @@ function Complainportal() {
 
       {/* Why Choose Us */}
       {/* <div className="header-choose choose-complaint"> */}
-        {/* <h1>
+      {/* <h1>
           Why <span>Choose</span> Us ?
         </h1> */}
-        {/* <WhyChooseUs />
+      {/* <WhyChooseUs />
       </div> */}
 
       {/* Footer */}

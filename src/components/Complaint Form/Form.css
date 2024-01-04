@@ -1,291 +1,290 @@
-.Form-main{
-    display: flex;
-    padding: 5%;
-    justify-content: space-evenly;
+.Form-main {
+  display: flex;
+  padding: 5%;
+  justify-content: space-evenly;
 }
-.Form-main> h1{
-    font-size: 6rem;
-    color: #43DD64;
-    line-height: 100px;
-    padding: 7%;
+.Form-main > h1 {
+  font-size: 6rem;
+  color: #43dd64;
+  line-height: 100px;
+  padding: 7%;
 }
-.form-fields{
-    /* border: 1px solid #0C0B4B; */
-    text-align: center;
-    padding: 3%;
-    background: #FFF;
-    width: 40%;
-    background:
-    linear-gradient(#FFFFFF, #fff) 50% 50%/calc(100% - 16px) calc(100% - 16px) no-repeat,
-    linear-gradient(#fff, #fff) 50% 50%/calc(100% - 10px) calc(100% - 10px) no-repeat,
-    linear-gradient(90deg, #0c0b4b 20%, #31A049 60%, #31A049 94%);
-    box-sizing: border-box;
-
+.form-fields {
+  /* border: 1px solid #0C0B4B; */
+  text-align: center;
+  padding: 3%;
+  background: #fff;
+  width: 40%;
+  background: linear-gradient(#ffffff, #fff) 50% 50% / calc(100% - 16px)
+      calc(100% - 16px) no-repeat,
+    linear-gradient(#fff, #fff) 50% 50% / calc(100% - 10px) calc(100% - 10px)
+      no-repeat,
+    linear-gradient(90deg, #0c0b4b 20%, #31a049 60%, #31a049 94%);
+  box-sizing: border-box;
 }
-.form-fields> h3{
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0C0B4B;
-    margin-bottom: 20px;
+.form-fields > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0c0b4b;
+  margin-bottom: 20px;
 }
-.form-name{
-    margin: 20px;
-    /* display: flex;
+.form-name {
+  margin: 20px;
+  /* display: flex;
     justify-content: space-evenly; */
+}
+.form-name > span {
+  padding: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.form-email > span {
+  padding: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.form-number > span {
+  /* padding: 0px -5px 0px 0px; */
+  padding: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.form-state > span {
+  padding: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.form-dispute > span {
+  padding: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.form-name > input {
+  width: 70%;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 2px solid#0C0B4B;
+}
+.form-email {
+  margin: 20px;
 
-}
-.form-name> span{
-    padding: 5px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-.form-email> span{
-    padding: 5px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-.form-number> span{
-    /* padding: 0px -5px 0px 0px; */
-    padding: 5px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-.form-state> span{
-    padding: 5px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-.form-dispute> span{
-    padding: 5px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-.form-name> input{
-    width: 70%;
-    height: 25px;
-    border-radius: 5px;
-    font-size: 1rem;
-    border: 2px solid#0C0B4B;
-
-}
-.form-email{
-    margin: 20px;
-
-    /* display: flex;
+  /* display: flex;
     justify-content: space-evenly; */
-
 }
-.form-email> input{
-    width: 70%;
-    height: 25px;
-    border-radius: 5px;
-    font-size: 1rem;
+.form-email > input {
+  width: 70%;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 1rem;
 
-    border: 2px solid#0C0B4B;
+  border: 2px solid#0C0B4B;
 }
-.form-number{
-    margin: 20px;
-    /* display: flex; */
-    /* justify-content: space-evenly; */
+.form-number {
+  margin: 20px;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+}
+.form-number > span {
+  margin-left: -40px;
+}
+.form-number > input {
+  width: 70%;
+  /* margin-right: 2px; */
+  height: 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: 2px solid#0C0B4B;
+}
+.form-state {
+  margin: 0px 20px;
 
-}
-.form-number>span{
-    margin-left: -40px;
-
-}
-.form-number> input{
-    width: 70%;
-    /* margin-right: 2px; */
-    height: 25px;
-    border-radius: 5px;
-    font-size: 1rem;
-    border: 2px solid#0C0B4B;
-
-}
-.form-state{
-    margin: 20px;
-    
-    /* display: flex;
+  /* display: flex;
     justify-content: space-evenly; */
-
 }
-.form-state> input{
-    width: 70%;
-    height: 25px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 2px solid#0C0B4B;
-
+.form-state > input {
+  width: 70%;
+  height: 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid#0C0B4B;
 }
-.form-dispute{
-    margin: 20px;
-    /* display: flex;
+.form-dispute {
+  margin: 0px 20px;
+  /* display: flex;
     flex-direction: column; */
-    align-items: center;
-    /* width: 100%; */
+  align-items: center;
+  /* width: 100%; */
 }
-.form-fields> span{
-    font-size: 1.5rem;
-    font-weight: 600;
+.form-dispute span {
+  padding: 10px;
 }
-.form-dispute> textarea{
-    border: 2px solid#0C0B4B;
-    width: 80%;
-    margin: 0px 0px 0px 30px;
-    border-radius: 5px;
-    font-size: 1rem;
-
-
+.form-fields > span {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.form-dispute > textarea {
+  border: 2px solid#0C0B4B;
+  width: 80%;
+  margin: 0px 0px 0px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 /* .form-dispute> select{
     margin: 10px;
     width: 100%;
     height: 30px;
 } */
-.form-checkbox> span{
-    padding: 5px;
-    font-size: 12px;
+.form-checkbox > span {
+  padding: 5px;
+  font-size: 12px;
 }
-.form-checkbox{
-    text-align: start;
-    color: #0C0B4B;
-
+.form-checkbox {
+  text-align: start;
+  color: #0c0b4b;
 }
-.Form-main> button{
-    margin: 20px;
+.Form-main > button {
+  margin: 20px;
 }
-.form-fields> button{
-    background: #31A049;
-    color: #fff;
-    border-radius: 20px;
-    padding: 5px 30px;
-    border: none;
-    font-size: 1rem;
-    font-weight: 600;
-    margin: 20px;
+.form-fields > button {
+  background: #31a049;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 20px;
 }
-.form-fields> button:hover{
-    background: #0C0B4B;
-
+.form-fields > button:hover {
+  background: #0c0b4b;
 }
 /* {City-potal} */
 .city-portal {
-    display: block;
-    text-align: center;
-    padding: 0px 5vw;
+  display: block;
+  text-align: center;
+  padding: 0px 5vw;
 }
 .city-Portal-card {
-    display: inline-block;
-    position: relative;
-    width: 180px;
-    height:180px;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid black;
-    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
-    transition: 100ms linear;
+  display: inline-block;
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: 100ms linear;
 }
 /* .city-Portal-card:hover{
     background-color: #bef0c9;
 transform: scale(1.01);
 cursor: pointer;
 } */
-.city-Portal-card img{
-    height: 180px;
-    /* width: 180px; */
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
+.city-Portal-card img {
+  height: 180px;
+  /* width: 180px; */
+  opacity: 1;
+  display: block;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
 .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 .city-Portal-card:hover img {
-    opacity: 0.3;
-    cursor: pointer;
-  }
+  opacity: 0.3;
+  cursor: pointer;
+}
 .city-Portal-card:hover .middle {
-    opacity: 1;
+  opacity: 1;
 }
 .text {
-    background: rgba(0,0,0,0.8);
-    color: #fff;
-    font-size: 28px;
-    padding: 6px 12px;
-    font-weight: 700;
-    font-family: Arimo Hebrew Subset;
-
-  }
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 28px;
+  padding: 6px 12px;
+  font-weight: 700;
+  font-family: Arimo Hebrew Subset;
+}
 /* File complaint Fields */
-.file-complaint-fields{
-    margin-top: 70px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+.file-complaint-fields {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
-.complain-file{
-    background: rgb(12,11,75);
-background: linear-gradient(90deg, rgba(12,11,75,1) 35%, rgba(49,160,73,1) 76%);
-    width: 75%;
-    padding: 2%;
-    font-size: 1.5rem;
-    color: #fff;
-    font-weight: 600;
+.complain-file {
+  background: rgb(12, 11, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 11, 75, 1) 35%,
+    rgba(49, 160, 73, 1) 76%
+  );
+  width: 75%;
+  padding: 2%;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 600;
 }
-.complain-file> p{
-    color: #fff;
+.complain-file > p {
+  color: #fff;
 }
-.not-city{
-    color: #31A049;
-    background: #0C0B4B;
-    width: 35%;
-    padding: 10px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    
+.not-city {
+  color: #31a049;
+  background: #0c0b4b;
+  width: 35%;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 @media (max-width: 768px) {
-    .Form-main{
-        display: block;
-    }
-    .Form-main h1{
-        font-size: 2.5rem;
-    }
-    .complain-file{
-        width: auto;
-    }
-    .form-name, .form-email, .form-number, .form-state, .form-dispute{
-        display: flex;
-        align-items: flex-start;
-        flex-direction: column;
-        margin: 0px 10px;
-    }
-    .form-number>span {
-        margin-left: 0px;
-    }
-    .form-name> input, .form-email> input, .form-number> input, .form-state> input, .form-dispute> textarea{
-       
-        width: 100%;
-    
-    }
-    .form-dispute> textarea{
-        margin: 0px;
-    }
-    .form-fields> span{
-        text-align: start;
-    }
-    .form-checkbox{
-        margin: 20px 12px;
-    }
-
+  .Form-main {
+    display: block;
+  }
+  .Form-main h1 {
+    font-size: 2.5rem;
+  }
+  .complain-file {
+    width: auto;
+  }
+  .form-name,
+  .form-email,
+  .form-number,
+  .form-state,
+  .form-dispute {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0px 10px;
+  }
+  .form-number > span {
+    margin-left: 0px;
+  }
+  .form-name > input,
+  .form-email > input,
+  .form-number > input,
+  .form-state > input,
+  .form-dispute > textarea {
+    width: 100%;
+  }
+  .form-dispute > textarea {
+    margin: 0px;
+  }
+  .form-fields > span {
+    text-align: start;
+  }
+  .form-checkbox {
+    margin: 20px 12px;
+  }
 }
