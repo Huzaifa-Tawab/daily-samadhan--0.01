@@ -17,11 +17,11 @@ function Footer() {
                     <h1>Office</h1>
                     <br />
                     {/* <br /> */}
-                    <p>Office Number 0,<br />Somthing industrial area, <br />Abc City,<br /> India </p>
+                    <p>PAN India</p>
                     <br />
                     <p>info@dailysamadhan.com</p>
                     <br />
-                    <p>+91 000 0000000</p>
+                    {/* <p>+91 000 0000000</p> */}
                 </div>
                 <div className="Footer-links">
                     <br />
