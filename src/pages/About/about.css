@@ -12,18 +12,18 @@
     text-align: center;
 }
 .About-hero h1{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #0c0b4b;
     /* text-decoration: underline #0c0b4b; */
 }
 .About-hero> h1> span{
     color: #31A049;
-    font-size: 4rem;
+    font-size: 3rem;
     /* text-decoration: underline #31A049; */
 
 }
 .About-hero img{
-    width: 60vw;
+    width: 40vw;
 }
 .About-flex{
     margin-top: 40px;
@@ -32,10 +32,10 @@
     align-items: center;
 }
 .About-flex img{
-    height: 100vh;
+    height: 80vh;
 }
 .About-flex-content{
-    font-size: 2vw;
+    font-size: 1.3vw;
     color: #0c0b4b;
     text-align: center;
     padding: 30px;
@@ -47,16 +47,16 @@
     margin: 50px 0px;
 }
 .About-services> h1{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #0c0b4b;
-    text-decoration: underline #0c0b4b;
+    /* text-decoration: underline #0c0b4b; */
 
 
 }
 .About-services> h1> span{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #31A049;
-    text-decoration: underline #31A049;
+    /* text-decoration: underline #31A049; */
 }
 .About-services-flex{
     margin-top: 50px;
@@ -102,31 +102,31 @@
     padding: 40px 0;
 }
 .typography h1{
-    font-size: 4vw;
+    font-size: 3vw;
     margin-bottom: 25px;
     color: #0c0b4b;
 }
 .typography p{
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     color: #0c0b4b;
 }
 .question-marks img{
-   height: 100vh;
-   padding: 30px 0px;
+   height: 60vh;
+   padding: 50px 0px;
 }
 .About-starting{
     text-align: center;
     margin-top: 50px;
 }
 .About-starting h1{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #0c0b4b;
-    text-decoration: underline #0c0b4b;
+    /* text-decoration: underline #0c0b4b; */
 }
 .About-starting> h1> span{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #31A049;
-    text-decoration: underline #31A049;
+    /* text-decoration: underline #31A049; */
 }
 .About-starting-box{
     background: #fff;
@@ -144,7 +144,7 @@
 }
 .About-starting-box p{
     padding: 20px 20px;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     color: #0c0b4b;
 }
 @media (max-width: 768px) {
