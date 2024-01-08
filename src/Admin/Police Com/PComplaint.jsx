@@ -7,8 +7,6 @@ import LoaderOverlay from "../../components/Loader/LoaderOverlay";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 
-
-
 function Admin() {
   const [isLoading, setisLoading] = useState(true);
   const [contacts, setContacts] = useState([]);
@@ -20,7 +18,9 @@ function Admin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "PoliceComplaintUsers"));
+        const querySnapshot = await getDocs(
+          collection(db, "PoliceComplaintUsers")
+        );
 
         const contacts = querySnapshot.docs.map((doc) => ({
           id: doc.id,
@@ -66,7 +66,12 @@ function Admin() {
       <div className="Admin">
         <div className="Admin-header">
           <h1>Welcome to DailySamadhan Admin Pannel</h1>
-          <h1 className="res"> To Access User's Data please Switch Your Screen to your Laptop or Dekstop. <br /> Sorry For Inconvenience </h1>
+          <h1 className="res">
+            {" "}
+            To Access User's Data please Switch Your Screen to your Laptop or
+            Dekstop.
+            <br /> Sorry For Inconvenience{" "}
+          </h1>
           <div className="table">
             <table>
               <thead>

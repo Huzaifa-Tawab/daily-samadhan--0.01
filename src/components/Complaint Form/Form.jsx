@@ -200,105 +200,105 @@ function Form(props) {
       {/* Cities */}
       <div className="city-portal">
         <div class="city-Portal-card">
-          <Link to="https://www.delhipolice.nic.in/">
-          <div className="con">
-            <img src={delhi} />
-            <div class="middle">
-              <div class="text">Delhi</div>
+          <Link to="https://delhipolice.gov.in/">
+            <div className="con">
+              <img src={delhi} />
+              <div class="middle">
+                <div class="text">Delhi</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div class="city-Portal-card">
           <Link to="https://uppolice.gov.in/">
-          <div className="con">
-            <img src={ahmadabd} />
-            <div class="middle">
-              <div class="text">Uttar Pradesh</div>
+            <div className="con">
+              <img src={ahmadabd} />
+              <div class="middle">
+                <div class="text">Uttar Pradesh</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div class="city-Portal-card">
           <Link to="https://haryanapoliceonline.gov.in/">
-          <div className="con">
-            <img src={mumbai} />
-            <div class="middle">
-              <div class="text">Haryana</div>
+            <div className="con">
+              <img src={mumbai} />
+              <div class="middle">
+                <div class="text">Haryana</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div class="city-Portal-card">
           <Link to="https://police.rajasthan.gov.in/">
-          <div className="con">
-            <img src={chennai} />
-            <div class="middle">
-              <div class="text">Rajasthan</div>
+            <div className="con">
+              <img src={chennai} />
+              <div class="middle">
+                <div class="text">Rajasthan</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div class="city-Portal-card">
           <Link to="https://citizen.mahapolice.gov.in/">
-          <div className="con">
-            <img src={jaipur} />
-            <div class="middle">
-              <div class="text">Maharastra</div>
+            <div className="con">
+              <img src={jaipur} />
+              <div class="middle">
+                <div class="text">Maharastra</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
       </div>
       <div className="city-portal">
         <div class="city-Portal-card">
           <Link to="https://www.mppolice.gov.in/">
-          <div className="con">
-            <img src={kolkata} />
-            <div class="middle">
-              <div class="text">Madhya Pradesh</div>
+            <div className="con">
+              <img src={kolkata} />
+              <div class="middle">
+                <div class="text">Madhya Pradesh</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div class="city-Portal-card">
           <Link to="https://gujhome.gujarat.gov.in/">
-          <div className="con">
-            <img src={lukhnaw} />
-            <div class="middle">
-              <div class="text">Gujarat</div>
+            <div className="con">
+              <img src={lukhnaw} />
+              <div class="middle">
+                <div class="text">Gujarat</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div class="city-Portal-card">
           <Link to="https://eservices.tnpolice.gov.in/">
-          <div className="con">
-            <img src={puny} />
-            <div class="middle">
-              <div class="text">Tamil Nadu</div>
+            <div className="con">
+              <img src={puny} />
+              <div class="middle">
+                <div class="text">Tamil Nadu</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div class="city-Portal-card">
           <Link to="https://jofs.jhpolice.gov.in/">
-          <div className="con">
-            <img src={hyderabad} />
-            <div class="middle">
-              <div class="text">Jharkhand</div>
+            <div className="con">
+              <img src={hyderabad} />
+              <div class="middle">
+                <div class="text">Jharkhand</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
         <div class="city-Portal-card">
           <Link to="https://police.bihar.gov.in">
-          <div className="con">
-            <img src={bangaluru} />
-            <div class="middle">
-              <div class="text">Bihar</div>
+            <div className="con">
+              <img src={bangaluru} />
+              <div class="middle">
+                <div class="text">Bihar</div>
+              </div>
             </div>
-          </div>
           </Link>
         </div>
       </div>
