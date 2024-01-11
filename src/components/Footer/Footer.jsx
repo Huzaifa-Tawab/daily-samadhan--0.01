@@ -65,7 +65,7 @@ function Footer() {
                 </div>
             </div>
             <div className="Footer-watermark">
-                <p>Design By SoftXion</p>
+                <p>Design & Develop By SoftXion</p>
             </div>
         </div>
     )

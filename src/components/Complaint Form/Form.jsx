@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
@@ -18,6 +18,9 @@ import Popup from "../Modal/modal";
 import { db } from "../../firebase";
 import { useNavigate } from "react-router";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
+import LoaderOverlay from "../Loader/LoaderOverlay";
+
 
 function Form(props) {
   let id = props.id;
@@ -25,7 +28,7 @@ function Form(props) {
   id = x.id;
   console.log(id);
   const navi = useNavigate();
-  const [isLoading, setisLoading] = useState(false);
+  const [isLoading, setisLoading] = useState(true);
   const [Name, setname] = useState("");
   const [Email, setemail] = useState("");
   const [Phone, setphone] = useState("");
@@ -39,7 +42,24 @@ function Form(props) {
   const [Stateerror, setstateError] = useState("");
   const [Textareaerror, settextareaError] = useState("");
   const [Checkerror, setcheckError] = useState("");
+  const [Portal, setPortal] = useState({});
 
+  useEffect(() => {
+    getData();
+  }, []);
+  async function getData() {
+    const docRef = doc(db, "Portals", id);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      console.log("Document data:", docSnap.data());
+      setPortal(docSnap.data());
+      setisLoading(false);
+    } else {
+      // docSnap.data() will be undefined in this case
+      console.log("No such document!");
+    }
+  }
   const handleClick = () => setcheck(!Check);
   async function SubmitPoliceComplaint(e) {
     e.preventDefault();
@@ -96,6 +116,7 @@ function Form(props) {
         state: State,
         textarea: Textarea,
         check: Check,
+        porat: Portal.tittle,
         time: serverTimestamp(),
       });
       // console.log("Document written with ID: ", docRef.id);
@@ -108,216 +129,220 @@ function Form(props) {
     setisLoading(false);
   }
 
-  return (
-    <>
-      <Navbar />
-      <div className="Form-main">
-        <h1>{id}</h1>
-        <div className="form-fields">
-          <h3>Need Help with Filing Complaint?</h3>
-          <div className="form-name">
-            <span>Name</span>
-            <input
-              type="text"
-              value={Name}
-              placeholder="Name"
-              onChange={(e) => setname(e.target.value)}
-            />
-            <br />
-            <label className="errorLabel">{Nameerror}</label>
-          </div>
-          <div className="form-email">
-            <span>Email</span>
-            <input
-              type="email"
-              name=""
-              id=""
-              value={Email}
-              placeholder="jhonson@abc.com"
-              onChange={(e) => setemail(e.target.value)}
-            />
-            <br />
-            <label className="errorLabel">{emailError}</label>
-          </div>
-          <div className="form-number">
-            <span>Phone No</span>
-            <input
-              type="number"
-              value={Phone}
-              placeholder="x-xxx-xxxx"
-              onChange={(e) => setphone(e.target.value)}
-            />
-            <br />
-            <label className="errorLabel">{phoneerror}</label>
-          </div>
-          <div className="form-state">
-            <span>State</span>
-            <input
-              type="text"
-              value={State}
-              placeholder="e.g Mumbai"
-              onChange={(e) => setstate(e.target.value)}
-            />
-            <br />
-            <label className="errorLabel">{Stateerror}</label>
-          </div>
-          {/* <span>Your Query</span> */}
-          <div className="form-dispute">
-            <span>Your Query</span>
+  return isLoading? <LoaderOverlay loading={isLoading}/> :  <>
+  <Navbar />
+  <div className="Form-main">
+  <div className="Protal">
+  <h1>{Portal.tittle}</h1>
+  <h1>{Portal.desc}</h1>
+  <img src={Portal.image} alt="" />
+  <Link to={Portal.Url}>Go to Ja mara</Link> 
+  </div>
+    <div className="form-fields">
+      <h3>Need Help with Filing Complaint?</h3>
+      <div className="form-name">
+        <span>Name</span>
+        <input
+          type="text"
+          value={Name}
+          placeholder="Name"
+          onChange={(e) => setname(e.target.value)}
+        />
+        <br />
+        <label className="errorLabel">{Nameerror}</label>
+      </div>
+      <div className="form-email">
+        <span>Email</span>
+        <input
+          type="email"
+          name=""
+          id=""
+          value={Email}
+          placeholder="jhonson@abc.com"
+          onChange={(e) => setemail(e.target.value)}
+        />
+        <br />
+        <label className="errorLabel">{emailError}</label>
+      </div>
+      <div className="form-number">
+        <span>Phone No</span>
+        <input
+          type="number"
+          value={Phone}
+          placeholder="x-xxx-xxxx"
+          onChange={(e) => setphone(e.target.value)}
+        />
+        <br />
+        <label className="errorLabel">{phoneerror}</label>
+      </div>
+      <div className="form-state">
+        <span>State</span>
+        <input
+          type="text"
+          value={State}
+          placeholder="e.g Mumbai"
+          onChange={(e) => setstate(e.target.value)}
+        />
+        <br />
+        <label className="errorLabel">{Stateerror}</label>
+      </div>
+      {/* <span>Your Query</span> */}
+      <div className="form-dispute">
+        <span>Your Query</span>
 
-            <textarea
-              name=""
-              id=""
-              cols="33"
-              rows="5"
-              onChange={(e) => settextarea(e.target.value)}
-            ></textarea>
-            <br />
-            <label className="errorLabel">{Textareaerror}</label>
+        <textarea
+          name=""
+          id=""
+          cols="33"
+          rows="5"
+          onChange={(e) => settextarea(e.target.value)}
+        ></textarea>
+        <br />
+        <label className="errorLabel">{Textareaerror}</label>
+      </div>
+      <div className="form-checkbox">
+        <input
+          type="checkbox"
+          name="Terms & Conditions"
+          id=""
+          value={Check}
+          checked={Check}
+          onClick={(e) => handleClick(e.target.value)}
+        />
+        <span>
+          I have read & agreed to the company's Terms and Conditions,
+          disclaimer and refund policy, and also ready to accept calls, SMS,
+          emails, etc.
+        </span>
+        <br />
+        <label className="errorLabel">{Checkerror}</label>
+      </div>
+      <button type="submit" onClick={SubmitPoliceComplaint}>
+        Submit
+      </button>
+    </div>
+  </div>
+  {/* Cities */}
+  <div className="city-portal">
+    <div class="city-Portal-card">
+      <Link to="https://delhipolice.gov.in/">
+        <div className="con">
+          <img src={delhi} />
+          <div class="middle">
+            <div class="text">Delhi</div>
           </div>
-          <div className="form-checkbox">
-            <input
-              type="checkbox"
-              name="Terms & Conditions"
-              id=""
-              value={Check}
-              checked={Check}
-              onClick={(e) => handleClick(e.target.value)}
-            />
-            <span>
-              I have read & agreed to the company's Terms and Conditions,
-              disclaimer and refund policy, and also ready to accept calls, SMS,
-              emails, etc.
-            </span>
-            <br />
-            <label className="errorLabel">{Checkerror}</label>
+        </div>
+      </Link>
+    </div>
+    <div class="city-Portal-card">
+      <Link to="https://uppolice.gov.in/">
+        <div className="con">
+          <img src={ahmadabd} />
+          <div class="middle">
+            <div class="text">Uttar Pradesh</div>
           </div>
-          <button type="submit" onClick={SubmitPoliceComplaint}>
-            Submit
-          </button>
         </div>
-      </div>
-      {/* Cities */}
-      <div className="city-portal">
-        <div class="city-Portal-card">
-          <Link to="https://delhipolice.gov.in/">
-            <div className="con">
-              <img src={delhi} />
-              <div class="middle">
-                <div class="text">Delhi</div>
-              </div>
-            </div>
-          </Link>
+      </Link>
+    </div>
+    <div class="city-Portal-card">
+      <Link to="https://haryanapoliceonline.gov.in/">
+        <div className="con">
+          <img src={mumbai} />
+          <div class="middle">
+            <div class="text">Haryana</div>
+          </div>
         </div>
-        <div class="city-Portal-card">
-          <Link to="https://uppolice.gov.in/">
-            <div className="con">
-              <img src={ahmadabd} />
-              <div class="middle">
-                <div class="text">Uttar Pradesh</div>
-              </div>
-            </div>
-          </Link>
+      </Link>
+    </div>
+    <div class="city-Portal-card">
+      <Link to="https://police.rajasthan.gov.in/">
+        <div className="con">
+          <img src={chennai} />
+          <div class="middle">
+            <div class="text">Rajasthan</div>
+          </div>
         </div>
-        <div class="city-Portal-card">
-          <Link to="https://haryanapoliceonline.gov.in/">
-            <div className="con">
-              <img src={mumbai} />
-              <div class="middle">
-                <div class="text">Haryana</div>
-              </div>
-            </div>
-          </Link>
+      </Link>
+    </div>
+    <div class="city-Portal-card">
+      <Link to="https://citizen.mahapolice.gov.in/">
+        <div className="con">
+          <img src={jaipur} />
+          <div class="middle">
+            <div class="text">Maharastra</div>
+          </div>
         </div>
-        <div class="city-Portal-card">
-          <Link to="https://police.rajasthan.gov.in/">
-            <div className="con">
-              <img src={chennai} />
-              <div class="middle">
-                <div class="text">Rajasthan</div>
-              </div>
-            </div>
-          </Link>
+      </Link>
+    </div>
+  </div>
+  <div className="city-portal">
+    <div class="city-Portal-card">
+      <Link to="https://www.mppolice.gov.in/">
+        <div className="con">
+          <img src={kolkata} />
+          <div class="middle">
+            <div class="text">Madhya Pradesh</div>
+          </div>
         </div>
-        <div class="city-Portal-card">
-          <Link to="https://citizen.mahapolice.gov.in/">
-            <div className="con">
-              <img src={jaipur} />
-              <div class="middle">
-                <div class="text">Maharastra</div>
-              </div>
-            </div>
-          </Link>
+      </Link>
+    </div>
+    <div class="city-Portal-card">
+      <Link to="https://gujhome.gujarat.gov.in/">
+        <div className="con">
+          <img src={lukhnaw} />
+          <div class="middle">
+            <div class="text">Gujarat</div>
+          </div>
         </div>
-      </div>
-      <div className="city-portal">
-        <div class="city-Portal-card">
-          <Link to="https://www.mppolice.gov.in/">
-            <div className="con">
-              <img src={kolkata} />
-              <div class="middle">
-                <div class="text">Madhya Pradesh</div>
-              </div>
-            </div>
-          </Link>
+      </Link>
+    </div>
+    <div class="city-Portal-card">
+      <Link to="https://eservices.tnpolice.gov.in/">
+        <div className="con">
+          <img src={puny} />
+          <div class="middle">
+            <div class="text">Tamil Nadu</div>
+          </div>
         </div>
-        <div class="city-Portal-card">
-          <Link to="https://gujhome.gujarat.gov.in/">
-            <div className="con">
-              <img src={lukhnaw} />
-              <div class="middle">
-                <div class="text">Gujarat</div>
-              </div>
-            </div>
-          </Link>
+      </Link>
+    </div>
+    <div class="city-Portal-card">
+      <Link to="https://jofs.jhpolice.gov.in/">
+        <div className="con">
+          <img src={hyderabad} />
+          <div class="middle">
+            <div class="text">Jharkhand</div>
+          </div>
         </div>
-        <div class="city-Portal-card">
-          <Link to="https://eservices.tnpolice.gov.in/">
-            <div className="con">
-              <img src={puny} />
-              <div class="middle">
-                <div class="text">Tamil Nadu</div>
-              </div>
-            </div>
-          </Link>
+      </Link>
+    </div>
+    <div class="city-Portal-card">
+      <Link to="https://police.bihar.gov.in">
+        <div className="con">
+          <img src={bangaluru} />
+          <div class="middle">
+            <div class="text">Bihar</div>
+          </div>
         </div>
-        <div class="city-Portal-card">
-          <Link to="https://jofs.jhpolice.gov.in/">
-            <div className="con">
-              <img src={hyderabad} />
-              <div class="middle">
-                <div class="text">Jharkhand</div>
-              </div>
-            </div>
-          </Link>
-        </div>
-        <div class="city-Portal-card">
-          <Link to="https://police.bihar.gov.in">
-            <div className="con">
-              <img src={bangaluru} />
-              <div class="middle">
-                <div class="text">Bihar</div>
-              </div>
-            </div>
-          </Link>
-        </div>
-      </div>
-      {/* File Complaint */}
-      <div className="file-complaint-fields">
-        <div className="complain-file">
-          <p>
-            Want us to file your Complaint? <br />
-            <Popup />
-          </p>
-        </div>
-        {/* <div className="not-city">
-        <p>Not Able to find your city ? <br /> give us a call on <br /> 1800 0000 0000</p>
-    </div> */}
-      </div>
+      </Link>
+    </div>
+  </div>
+  {/* File Complaint */}
+  <div className="file-complaint-fields">
+    <div className="complain-file">
+      <p>
+        Want us to file your Complaint? <br />
+        <Popup />
+      </p>
+    </div>
+    {/* <div className="not-city">
+    <p>Not Able to find your city ? <br /> give us a call on <br /> 1800 0000 0000</p>
+</div> */}
+  </div>
 
-      <Footer />
-    </>
-  );
+  <Footer />
+</>
+  ;
 }
 
 export default Form;

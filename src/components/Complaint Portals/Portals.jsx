@@ -1,4 +1,4 @@
-import React from "react";
+import {React} from "react";
 import "./portals.css";
 import { Link } from "react-router-dom";
 import police from "../../assets/portals/police.svg";
@@ -22,8 +22,34 @@ import photo from "../../assets/portals/photo.png";
 import ama from "../../assets/portals/ama.png";
 import airline from "../../assets/portals/airline.png";
 import induslogo from  "./indus.png"
+import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { db } from "../../firebase";
+
+
 
 function Portals() {
+  const [Portal, setPortal] = useState([])
+  useEffect(() => {
+    getdata();
+
+  }, [])
+    const getdata = async () => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "Portals"));
+
+        const portals = querySnapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        console.log("Portals:", portals);
+        setPortal(portals);
+      } catch (error) {
+        console.error("Error fetching contacts:", error.message);
+        return [];
+      }
+    };
   return (
     <div className="Portal">
       <p>
@@ -33,13 +59,29 @@ function Portals() {
         </span>
       </p>
       <div id="Portal-content">
+      {Portal &&
+                            Portal.map((p) => (
+                              
+                              <div class="Portal-content-card">
+                              <Link to={`/form/${p.slug}`}>
+                                <div className="con">
+                                  <img src={p.image} />
+                                  <p>{p.tittle}</p>
+                                  <div class="middle-portal">
+                                  </div>
+                                </div>
+                              </Link>
+                            </div>
+        ))}
+      </div>
+
+      {/* <div id="Portal-content">
         <div class="Portal-content-card">
           <Link to={"/form/Police Complaint"}>
             <div className="con">
               <img src={police} />
               <p>Police Complaint</p>
               <div class="middle-portal">
-                {/* <div class="text-links"></div> */}
               </div>
             </div>
           </Link>
@@ -51,7 +93,6 @@ function Portals() {
               <img src={induslogo} />
               <p>Industrial Dispute</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://samadhan.labour.gov.in/</div> */}
               </div>
             </div>
           </Link>
@@ -63,7 +104,6 @@ function Portals() {
               <img src={Frame42} />
               <p>E-Filling Consumer Commission</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://edaakhil.nic.in/edaakhil</div> */}
               </div>
             </div>
           </Link>
@@ -75,7 +115,6 @@ function Portals() {
               <img src={Frame25} />
               <p> Consumer Help</p>
               <div class="middle-portal">
-                {/* <div class="text-links"></div> */}
               </div>
             </div>
           </Link>
@@ -87,7 +126,6 @@ function Portals() {
               <img src={Frame24} />
               <p>Cyber Crime</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://cybercrime.gov.in/</div> */}
               </div>
             </div>
           </Link>
@@ -99,7 +137,6 @@ function Portals() {
               <img src={Frame23} />
               <p>Women Helpline</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://www.ncwwomenhelpline.in/</div> */}
               </div>
             </div>
           </Link>
@@ -111,7 +148,6 @@ function Portals() {
               <img src={Frame21} />
               <p>Lost And Found</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://lostfound.delhipolice.gov.in/</div> */}
               </div>
             </div>
           </Link>
@@ -123,7 +159,6 @@ function Portals() {
               <img src={Frame41} />
               <p>Consumer Dispute</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://ncdrc.nic.in/</div> */}
               </div>
             </div>
           </Link>
@@ -135,7 +170,6 @@ function Portals() {
               <img src={Frame44} />
               <p>Telecom Dispute</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://tdsat.gov.in/Delhi/Delhi.php</div> */}
               </div>
             </div>
           </Link>
@@ -147,7 +181,6 @@ function Portals() {
               <img src={Frame45} />
               <p>Food Safety</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://fssai.gov.in/cms/grievances.php</div> */}
               </div>
             </div>
           </Link>
@@ -159,7 +192,6 @@ function Portals() {
               <img src={Frame46} />
               <p>Drone Flying License</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://digitalsky.dgca.gov.in/home</div> */}
               </div>
             </div>
           </Link>
@@ -171,7 +203,6 @@ function Portals() {
               <img src={Frame47} />
               <p>National Test House</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://www.nth.gov.in/</div> */}
               </div>
             </div>
           </Link>
@@ -183,7 +214,6 @@ function Portals() {
               <img src={TM} />
               <p>TradeMark Registration</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://ipindiaonline.gov.in/trademarkefiling/user/frmNewRegistration.aspx</div> */}
               </div>
             </div>
           </Link>
@@ -195,7 +225,6 @@ function Portals() {
               <img src={GST} />
               <p>GST Portal for Filling</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://services.gst.gov.in/services/login</div> */}
               </div>
             </div>
           </Link>
@@ -207,7 +236,6 @@ function Portals() {
               <img src={education} />
               <p>Educational Complaints</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://ncte.gov.in/website/grievance.aspx</div> */}
               </div>
             </div>
           </Link>
@@ -219,7 +247,6 @@ function Portals() {
               <img src={phblk} />
               <p>Phone Block Theft</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://www.ceir.gov.in/Home/index.jsp</div> */}
               </div>
             </div>
           </Link>
@@ -231,7 +258,6 @@ function Portals() {
               <img src={photo} />
               <p>Inappropriate Photo Portal</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://stopncii.org/</div> */}
               </div>
             </div>
           </Link>
@@ -243,7 +269,6 @@ function Portals() {
               <img src={insurance} />
               <p>Insurance Complaint Portal</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://irdai.gov.in/igms1</div> */}
               </div>
             </div>
           </Link>
@@ -259,7 +284,6 @@ function Portals() {
               <img src={ama} />
               <p>Online Dispute Resolution</p>
               <div class="middle-portal">
-                {/* <div class="text-links">www.amalegalsolutions.com</div> */}
               </div>
             </div>
           </Link>
@@ -271,12 +295,11 @@ function Portals() {
               <img src={airline} />
               <p>Airlines Complaint Portal</p>
               <div class="middle-portal">
-                {/* <div class="text-links">https://airsewa.gov.in/grievance/grievance-redressal</div> */}
               </div>
             </div>
           </Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
