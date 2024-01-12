@@ -5,7 +5,7 @@ function Complaint() {
     <>
       <div className="Complaint-main">
         <p>
-          Want Us To File Your Comlaint?
+          Want Us To File Your Complaint?
           <br />
           <br /> <a href="/contact/in">Click Here</a>
         </p>

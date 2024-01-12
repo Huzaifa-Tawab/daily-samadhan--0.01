@@ -73,7 +73,7 @@ function Offer() {
         <div className="side-cards">
         <div className="side-card-head">
             <img src={expor} alt="" />
-            <h1>Export & Advice Complaint Assistsnce</h1>
+            <h1>Export & Advice Complaint Assistance</h1>
             </div>
            {/* <p style={{marginTop: "10px"}}> Lorem ipsum dolor sit amet consectetur adipisicing elit. At, temporibus?</p> */}
            <h1>₹499/-</h1>

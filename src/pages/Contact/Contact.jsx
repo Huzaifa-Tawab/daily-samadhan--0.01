@@ -361,7 +361,7 @@ function Contact(props) {
       </div>
 
       <div className="contact-button">
-        <button>Contatct Us Now</button>
+        <button>Contact Us Now</button>
       </div>
       <LoaderOverlay loading={isLoading} />
       {/* <LoaderOverlay loading={true} /> */}
