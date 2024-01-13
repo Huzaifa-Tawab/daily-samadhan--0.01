@@ -7,6 +7,8 @@ import {
 } from "firebase/storage"; 
 import { db, storage } from "../../firebase";
 import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import "../Upload Portal/upload.css";
+import { FaCloudUploadAlt } from "react-icons/fa";
 
 function UploadPortal() {
     const [title, settitle] = useState();
@@ -66,21 +68,62 @@ function UploadPortal() {
   return (
    <>
     <div className="title">
-        <p><label htmlFor="Icon">Icon</label></p>
-        <input type="file" accept="image/*" onChange={(event)=>setimage(event.target.files[0])}/>
+        <div className="form-wrap">
+            <form>
+            <h2 className="form-title">Upload <span className="portal">Portal</span></h2>
+         <div className="form-field"> 
+         
+         <div class="file-wrapper">
+         <div className="upload">Upload File</div>
+      <div class="upload-btn-wrapper">
         
-        <p><label htmlFor="Title">Title</label></p>
-        <input type="text" onChange={(e)=>settitle(e.target.value)}/>
-        <p><label htmlFor="Description">Description</label></p>
+          <button class="btn upload-file font-weight-500">
+          
+              <span class="upload-btn">
+              <FaCloudUploadAlt  className="ic"/>
+                <i class="fas fa-cloud-upload-alt d-block font-50 pb-2"></i>
+                
+                Browse folders here
+              </span>
+              <span class="upload-select-button" id="blankFile">
+                  Supports JPG, JPG2000 and PNG
+              </span>
+              <span class="success">
+                <i class="far fa-check-circle text-success"></i>
+              </span>
+          </button>
+                  
+          <input type="file" name="selectfile" id="selectfile" onChange={(e)=>settitle(e.target.value)}/>
+      </div>
+  </div>
 
-        <textarea name="" id="" cols="30" rows="10" onChange={(e)=>setdescription(e.target.value)}></textarea>
-        <p><label htmlFor="Slug">Slug</label></p>
 
-        <input type="text" onChange={(e)=>setslug(e.target.value)}/>
-        <p><label htmlFor="URL">URL</label></p>
+         <div className="form-group">
+         <p><label htmlFor="Title">Title</label></p>
+         <input className="inp" type="text" onChange={(e)=>settitle(e.target.value)}/>
+         </div>
+         
+         <div className="form-group">
+         <p><label htmlFor="Description">Description</label></p>
+         <textarea className="inp" name="" id="" cols="30" rows="10" onChange={(e)=>setdescription(e.target.value)}></textarea>
+         </div>
+          
+         <div className="form-group">
+         <p><label htmlFor="Slug">Slug</label></p>
 
-        <input type="text" onChange={(e)=>seturl(e.target.value)}/>
-        <button onClick={Submit}>Submit</button>
+         <input className="inp"type="text" onChange={(e)=>setslug(e.target.value)}/>
+         </div>
+         <div className="form-group">
+         <p><label htmlFor="URL">URL</label></p>
+         <input  className="inp" type="text" onChange={(e)=>seturl(e.target.value)}/>
+         </div>
+         
+         
+         <button className="but" onClick={Submit}>Submit</button>
+         </div> 
+         
+         </form>
+    </div>
     </div>
    </>
   )

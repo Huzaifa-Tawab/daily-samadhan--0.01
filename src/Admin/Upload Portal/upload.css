@@ -1,0 +1,225 @@
+.title{
+    background: #FAFAFA;
+}
+.form-wrap{
+    margin-left: 22vw;
+    
+    padding: 40px 25px 35px 25px;
+    border-radius: 0px 30px 30px 0px;
+    
+}
+.form-title{
+    text-align: center;
+    
+    
+    letter-spacing: 0.5px;
+}
+.form-field{
+    background: #fff;
+    position: relative;
+    /* border: 1px solid #e5e5e5; */
+    border-bottom: none;
+    padding: 30px 0;
+    padding-bottom: 0;
+
+/* .form-field::before{
+    bottom: 100%;
+    left: 75px;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #fff;
+    border-width: 10px;
+} */
+}
+/* .form-field input, 
+.form-field textarea{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 18px;
+    color: #555;
+    padding: 20px 10px 20px 5px;
+    width: 100%;
+} */
+.form-field textarea{
+    line-height: 1.2;
+    min-height: 120px;
+    padding: 10px 20px;
+}
+.form-group{
+   
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* border-bottom: 2px solid #e5e5e5; */
+}
+p{
+    width: 90px;
+    color: green;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 11px;
+    margin-left: 4.5vw;
+}
+.inp{
+    background: transparent;
+    line-height: 38px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    color: #666;
+    font-size: 15px;
+    transition: all 0.4s ease;
+    padding: 0 20px;
+    width: 25vw;
+    margin-left: 5vw;
+}
+.form-group .name{
+    width: 188px;
+    color: #333;
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 11px;
+}
+.form-group .value{
+    width: calc(100% - 188px);
+}
+/* .input-group {
+    position: relative;
+    margin: 0;
+}
+.input-file {
+    display: none;
+}
+.input-file + label {
+    font-size: 15px;
+    color: white;
+    line-height: 40px;
+    background-color: #666666;
+    padding: 0 20px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-right: 15px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+} */
+
+
+ 
+.file-wrapper{
+   /* width:50%; */
+   /* margin:auto; */
+   /* height:100vh; */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* margin-left: 5.5vw; */
+   /* border-bottom: 1px solid #e5e5e5; */
+
+}
+.upload-btn-wrapper{
+   position: relative;
+   overflow: hidden;
+   display: inline-block;
+   cursor: pointer;
+   padding-right: 50px;
+    padding-bottom: 40px;
+}
+.upload-file{
+   border:2px dashed #cccccc;
+   color:#9b9b9b;
+   background-color: white;
+   width:320px;
+   height:200px;
+   border-radius: 8px;
+   font-size:15px;
+   cursor: pointer;
+}
+.upload-btn-wrapper input[type=file]{
+   width:100%;
+   position: absolute;
+   left:0;
+   right:0;
+   top:0;
+   opacity: 0;
+   cursor: pointer;
+   min-height: 300px;
+   
+}
+.success{
+   display:none;
+}
+.success i{
+   font-size:22px;
+   margin-left:6px;
+   margin-top:10px;
+   color:#00b665;
+}
+.font-50{
+   font-size:50px;
+}
+.d-block{
+   display: block;
+}
+.btn .upload-file{
+   font-size:13px;
+}
+.upload-btn{
+   display: block;
+   font-size:18px;
+   color:#00b665;
+}
+
+.form-fields .form-group:last-child{
+    width: 96%;
+
+}
+form{
+    width: 70%;
+    box-shadow: 0px 0px 10px 0px;
+    
+}
+
+.upload{
+    position: relative;
+    margin-right: 20px;
+    width: 188px;
+    color: green;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 11px
+}
+.ic{
+    font-size: 60px;
+}
+.portal{
+    color: #31A049;
+}
+h2{
+    color: #0C0B4B;
+    font-size: 44px;
+}
+.but{
+    width: 51.2vw;
+    height: 8vh;
+    margin-top: 40px;
+    /* margin-bottom: 40px;
+    margin-left: 25vw; */
+   background: green;
+   color: white;
+   font-size: 20px;
+   font-weight: 600;
+   /* border-radius: 10px; */
+}
